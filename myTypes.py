@@ -5,6 +5,19 @@ class Translation:
 		self.En = en
 		self.De = de
 
+	def Render(self, ctx):
+		match ctx.Lang:
+			case "ca":
+				ctx.Add(self.Ca)
+			case "es":
+				ctx.Add(self.Es)
+			case "en":
+				ctx.Add(self.En)
+			case "de":
+				ctx.Add(self.De)
+			case _:
+				print (F"Language {ctx.Lang} not implemented.")
+
 class Skill:
 	def __init__(self, tag, name):
 		self.Tag = tag
@@ -46,10 +59,21 @@ class Header:
 		self.Key = key
 		self.Value = value
 
+	def Render(self, ctx):
+		self.Key.Render(ctx)
+		self.Value.Render(ctx)
+
+
 class HeaderData:
 	def __init__(self, headers, quotes):
 		self.Headers = headers
 		self.Quotes = quotes
+
+	def Render(self, ctx):
+		for header in self.Headers:
+			header.Render(ctx)
+		for quote in self.Quotes:
+			quote.Render(ctx)
 
 class Resume:
 	def __init__(self, name, headerData, jobs, trainings, projects):
@@ -58,7 +82,21 @@ class Resume:
 		self.Jobs = jobs
 		self.Trainings = trainings
 		self.Projects = projects
-		
+	
+	def Render(self, ctx):
+		ctx.Add(self.Name)
+		self.HeaderData.Render(ctx)
+
+		# TODO: push section
+		# TODO: add title
+		# TODO: pop section
+
+		for job in self.Jobs:
+			job.Render(ctx)
+		for training in self.Trainings:
+			training.Render(ctx)
+		for project in self.Projects:
+			project.Render(ctx)
 
 
 def main(argv):
