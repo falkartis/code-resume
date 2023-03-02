@@ -23,10 +23,21 @@ class Skill:
 		self.Tag = tag
 		self.Name = name
 
+	def Render(self, ctx):
+		# TODO: detect string or class
+		self.Name.Render(ctx)
+
 class Language(Skill):
-	def __init__(self):
-		super(Language, self).__init__()
+	def __init__(self, tag, name):
+		Skill.__init__(self, tag, name)
 		
+class SkillSet:
+	def __init__(self, skills):
+		self.Skills = skills
+
+	def Render(self, ctx):
+		for skill in self.Skills:
+			skill.Render(ctx)
 
 class Project:
 	def __init__(self, name, description, tasks, skills):
