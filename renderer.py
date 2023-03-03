@@ -10,8 +10,25 @@ class RenderContext:
 		self.Text = ""
 		self.HeadLevel = 1
 
-	def Add(self, text):
-		self.Text += text
+
+	def RenderArg(self, arg):
+		txt = ""
+		if callable(getattr(arg, 'Render', None)):
+			tmp = arg.Render(self)
+			if tmp is None:
+				raise NotImplementedError(F"Render didn't return anything, not correctly implemented {arg}")
+			else:
+				txt += tmp
+		else:
+			txt += arg
+		return txt
+
+	def Render(self, *args):
+		txt = ""
+		for arg in args:
+			txt += self.RenderArg(arg)
+		return txt
+
 
 	def IncHeadLevel(self):
 		self.HeadLevel += 1
@@ -20,56 +37,89 @@ class RenderContext:
 			self.HeadLevel -= 1
 
 	def StartHeader(self):
-		tmp = "#" * self.HeadLevel + " "
-		self.Text += F"\n\n{tmp}"
+		return F"\n\n" + "#" * self.HeadLevel + " "
+
 	def EndHeader(self):
-		self.Text += "\n"
-	def AddHeader(self, text):
-		tmp = "#" * self.HeadLevel + " " + text
-		self.Text += F"\n{tmp}\n"
+		return "\n"
+
+	def Header(self, *args):
+		txt = ""
+		txt += self.StartHeader()
+		for arg in args:
+			txt += self.RenderArg(arg)
+		txt += self.EndHeader()
+		return txt
 
 	def StartItalic(self):
-		self.Text += "*"
+		return "*"
 	def EndItalic(self):
-		self.Text += "*"
-	def AddItalic(self, text):
-		self.StartItalic()
-		self.Add(text)
-		self.EndItalic()
+		return "*"
+	def Italic(self, *args):
+		txt = ""
+		txt += self.StartItalic()
+		for arg in args:
+			txt += self.RenderArg(arg)
+		txt += self.EndItalic()
+		return txt
 
 	def StartBold(self):
-		self.Text += "**"
+		return "**"
 	def EndBold(self):
-		self.Text += "**"
-	def AddBold(self, text):
-		self.StartBold()
-		self.Add(text)
-		self.EndBold()
-
-	def AddNl(self, text):
-		# To create a line break or new line, end a line with two or more spaces, and then type return.
-		self.Text += F"{text}  \n"
+		return "**"
+	def Bold(self, *args):
+		txt = ""
+		txt += self.StartBold()
+		for arg in args:
+			txt += self.RenderArg(arg)
+		txt += self.EndBold()
+		return txt
 
 	def StartParagraph(self):
-		self.Text += "\n\n"
+		return "\n\n"
 	def EndParagraph(self):
-		self.Text += "\n"
-	def AddParagraph(self, text):
-		self.Text += F"\n\n{text}\n"
+		return "\n"
+	def Paragraph(self, *args):
+		txt = ""
+		txt += self.StartParagraph()
+		for arg in args:
+			txt += self.RenderArg(arg)
+		txt += self.EndParagraph()
+		return txt
 
-	def Print(self):
-		print(F"{self.Text}")
+	def NewLine(self):
+		# To create a line break or new line, end a line with two or more spaces, and then type return.
+		return "  \n"
+
+	def KeyAndValueNl(self, key, value):
+		txt = ""
+		txt += self.Bold(key, ":")
+		txt += self.Render(" ", value)
+		txt += self.NewLine()
+		return txt
+
+	def KeyAndValueP(self, key, value):
+		txt = ""
+		txt += self.StartParagraph()
+		txt += self.Bold(key, ":")
+		txt += self.Render(" ", value)
+		txt += self.EndParagraph()
+		return txt
+
+
+
+
+
 
 def main(argv):
-	
+
 	resume = GetResume()
 	extraTranslations = GetExtraTranslations()
 
 	ctx = RenderContext(argv[0], extraTranslations)
 
-	resume.Render(ctx)
+	txt = resume.Render(ctx)
 
-	ctx.Print()
+	print(txt)
 
 	pass
 

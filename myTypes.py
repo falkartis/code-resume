@@ -8,13 +8,13 @@ class Translation:
 	def Render(self, ctx):
 		match ctx.Lang:
 			case "ca":
-				ctx.Add(self.Ca)
+				return ctx.Render(self.Ca)
 			case "es":
-				ctx.Add(self.Es)
+				return ctx.Render(self.Es)
 			case "en":
-				ctx.Add(self.En)
+				return ctx.Render(self.En)
 			case "de":
-				ctx.Add(self.De)
+				return ctx.Render(self.De)
 			case _:
 				print (F"Language {ctx.Lang} not implemented.")
 
@@ -27,11 +27,7 @@ class Skill:
 			self.Name = name
 
 	def Render(self, ctx):
-		# TODO: detect string or class
-		if callable(getattr(self.Name, 'Render', None)):
-			self.Name.Render(ctx)
-		else:
-			ctx.Add(self.Name)
+		return ctx.Render(self.Name)
 
 class Language(Skill):
 	def __init__(self, tag, name):
@@ -42,13 +38,15 @@ class SkillSet:
 		self.Skills = skills
 
 	def Render(self, ctx):
+		txt = ""
 		first = True
 		for skill in self.Skills:
 			if first:
 				first = False
 			else:
-				ctx.Add(", ")
-			skill.Render(ctx)
+				txt += ctx.Render(", ")
+			txt += ctx.Render(skill)
+		return txt
 
 class Project:
 	def __init__(self, name, description, tasks, skills):
@@ -58,33 +56,21 @@ class Project:
 		self.Skills = skills
 
 	def Render(self, ctx):
-		ctx.StartHeader()
-		self.Name.Render(ctx)
-		ctx.EndHeader()
+
+		txt = ""
+		txt += ctx.Header(self.Name)
+
 
 		if self.Description is not None:
-			ctx.StartBold()
-			ctx.Translations["description"].Render(ctx)
-			ctx.Add(": ")
-			ctx.EndBold()
-			self.Description.Render(ctx)
-			ctx.AddNl("")
+			txt += ctx.KeyAndValueP(ctx.Translations["description"], self.Description)
 
 		if self.Tasks is not None:
-			ctx.StartBold()
-			ctx.Translations["tasks"].Render(ctx)
-			ctx.Add(": ")
-			ctx.EndBold()
-			self.Tasks.Render(ctx)
-			ctx.AddNl("")
+			txt += ctx.KeyAndValueP(ctx.Translations["tasks"], self.Tasks)
 
 		if self.Skills is not None:
-			ctx.StartBold()
-			ctx.Translations["skills"].Render(ctx)
-			ctx.Add(": ")
-			ctx.EndBold()
-			self.Skills.Render(ctx)
-			ctx.AddNl("")
+			txt += ctx.KeyAndValueP(ctx.Translations["skills"], self.Skills)
+
+		return txt
 
 class Job:
 	def __init__(self, place, company, startDate, endDate, location, projects):
@@ -95,28 +81,18 @@ class Job:
 		self.Location = location
 		self.Projects = projects
 	def Render(self, ctx):
-		ctx.StartHeader()
-		self.Place.Render(ctx)
-		ctx.Add(" – ")
-		ctx.Add(self.Company)
-		ctx.EndHeader()
+		txt = ""
 
-		ctx.StartBold()
-		ctx.Translations["interval"].Render(ctx)
-		ctx.Add(":")
-		ctx.EndBold()
-		ctx.AddNl(F" {self.StartDate} – {self.EndDate}")
+		txt += ctx.Header(self.Place, " – ", self.Company)
 
-		ctx.StartBold()
-		ctx.Translations["location"].Render(ctx)
-		ctx.Add(":")
-		ctx.EndBold()
-		ctx.AddNl(F" {self.Location}")
+		txt += ctx.KeyAndValueNl(ctx.Translations["interval"], ctx.Render(self.StartDate, " – ", self.EndDate))
+		txt += ctx.KeyAndValueNl(ctx.Translations["location"], self.Location)
 
 		ctx.IncHeadLevel()
 		for project in self.Projects:
-			project.Render(ctx)
+			txt += ctx.Render(project)
 		ctx.DecHeadLevel()
+		return txt
 
 class Training:
 	def __init__(self, name, startDate, endDate, school, location, projects):
@@ -133,13 +109,7 @@ class Header:
 		self.Value = value
 
 	def Render(self, ctx):
-		ctx.StartBold()
-		self.Key.Render(ctx)
-		ctx.Add(":")
-		ctx.EndBold()
-		ctx.Add(" ")
-		self.Value.Render(ctx)
-		ctx.AddNl("")
+		return ctx.KeyAndValueNl(self.Key, self.Value)
 
 
 class HeaderData:
@@ -148,15 +118,12 @@ class HeaderData:
 		self.Quotes = quotes
 
 	def Render(self, ctx):
+		txt = ""
 		for header in self.Headers:
-			header.Render(ctx)
+			txt += ctx.Render(header)
 		for quote in self.Quotes:
-			ctx.StartParagraph()
-			ctx.Add("> ")
-			ctx.StartItalic()
-			quote.Render(ctx)
-			ctx.EndItalic()
-			ctx.EndParagraph()
+			txt += ctx.Paragraph("> ", ctx.Italic(quote))
+		return txt
 
 class Resume:
 	def __init__(self, name, headerData, jobs, trainings, projects):
@@ -168,32 +135,30 @@ class Resume:
 	
 	def Render(self, ctx):
 
-		ctx.AddHeader(self.Name)
-		self.HeaderData.Render(ctx)
+		txt = ""
+		txt += ctx.Header(self.Name)
+		txt += ctx.Render(self.HeaderData)
+		txt += ctx.Header(ctx.Translations["jobsTitle"])
 
-		ctx.StartHeader()
-		ctx.Translations["jobsTitle"].Render(ctx)
-		ctx.EndHeader()
 		ctx.IncHeadLevel()
 		for job in self.Jobs:
-			job.Render(ctx)
+			txt += ctx.Render(job)
 		ctx.DecHeadLevel()
 
-		ctx.StartHeader()
-		ctx.Translations["trainTitle"].Render(ctx)
-		ctx.EndHeader()
+		txt += ctx.Header(ctx.Translations["trainTitle"])
+
 		ctx.IncHeadLevel()
 		for training in self.Trainings:
-			training.Render(ctx)
+			txt += ctx.Render(training)
 		ctx.DecHeadLevel()
 
-		ctx.StartHeader()
-		ctx.Translations["projectsTitle"].Render(ctx)
-		ctx.EndHeader()
+		txt += ctx.Header(ctx.Translations["projectsTitle"])
+
 		ctx.IncHeadLevel()
 		for project in self.Projects:
-			project.Render(ctx)
+			txt += ctx.Render(project)
 		ctx.DecHeadLevel()
+		return txt
 
 
 def main(argv):
