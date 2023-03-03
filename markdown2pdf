@@ -1,0 +1,7 @@
+#!/bin/bash
+
+
+# sudo apt install pandoc
+
+python3 renderer.py ca > resume_ca.md
+pandoc resume_ca.md -o resume_ca.pdf
