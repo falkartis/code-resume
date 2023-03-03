@@ -40,19 +40,40 @@ def GetResume():
 	headerData = HeaderData(headers, quotes)
 
 	dsPlace = T("Tècnic Servei d'assistència tècnica", "Técnico Servicio de asistencia técnica", "Help Desk Technician", "Help Desk Techniker")
-	dsProjects = []
+	dsWeb = Project(
+		T("Revisió i migració web", "Revisión y migración web" , "Web review and migration", "Web-Überprüfung und -Migration"),
+		None,
+		T("La meva funció era la de revisar la migració de la botiga en línia des d’una plataforma obsoleta a una nova plataforma. També revisar continguts del blog i informes de SEO.", "Mi función era la de revisar la migración de la tienda online desde una plataforma obsoleta a una nueva plataforma. También revisar contenidos del blog e informes de SEO.", "My role was to review the migration of the online store from an outdated platform to a new platform. Also to review blog content and SEO reports.", "Meine Rolle bestand darin, die Migration des Online-Shops von einer veralteten Plattform auf eine neue Plattform zu überprüfen. Auch Blog-Inhalte und SEO-Berichte zu überprüfen."),
+		SkillSet([
+			Skill("SEO"),
+			Skill("Prestashop"),
+			Skill("cletu"),
+			Skill("Linux")
+		])
+	)
+	dsProjects = [dsWeb]
 	damiaSolar = Job(dsPlace, "Damia Solar", "2020/08", "2022/07", "La Pobla de Segur", dsProjects)
 	jobs = [damiaSolar]
 	trainings = []
 	projects = []
 
+	resume = Resume(name, headerData, jobs, trainings, projects)
+
+	return resume
+
+def GetExtraTranslations():
+	T = Translation
+
 	translations = {}
 	translations["jobsTitle"] = T("EXPERIÈNCIA PROFESSIONAL", "EXPERIENCIA PROFESIONAL", "PROFESSIONAL EXPERIENCE", "BERUFLICHE ERFAHRUNGEN")
 	translations["trainTitle"] = T("FORMACIÓ ACADÈMICA", "FORMACIÓN ACADÉMICA", "ACADEMIC TRAINING", "AUSBILDUNG")
 	translations["projectsTitle"] = T("PROJECTES PERSONALS", "PROYECTOS PERSONALES", "PERSONAL PROJECTS", "PERSÖNLICHE PROJEKTE")
-	resume = Resume(name, headerData, jobs, trainings, projects, translations)
-
-	return resume
+	translations["interval"] = T("Interval", "Intervalo", "Interval", "Intervall")
+	translations["location"] = T("Localitat", "Localidad", "Location", "Ortschaft")
+	translations["description"] = T("Descripció del projecte", "Descripción del proyecto", "Project description", "Beschreibung des Projekts")
+	translations["tasks"] = T("Tasques realitzades", "Tareas realizadas", "Tasks performed", "Ausgeführte Aufgaben")
+	translations["skills"] = T("Eines i coneixements", "Herramientas y conocimientos", "Skills and tools", "Fähigkeiten und Werkzeuge")
+	return translations
 
 def main(argv):
 	pass

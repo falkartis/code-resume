@@ -1,11 +1,12 @@
 import sys
 
-from data import GetResume
+from data import GetResume, GetExtraTranslations
 
 
 class RenderContext:
-	def __init__(self, lang):
+	def __init__(self, lang, translations):
 		self.Lang = lang
+		self.Translations = translations
 		self.Text = ""
 		self.HeadLevel = 1
 
@@ -60,9 +61,11 @@ class RenderContext:
 		print(F"{self.Text}")
 
 def main(argv):
+	
 	resume = GetResume()
+	extraTranslations = GetExtraTranslations()
 
-	ctx = RenderContext(argv[0])
+	ctx = RenderContext(argv[0], extraTranslations)
 
 	resume.Render(ctx)
 

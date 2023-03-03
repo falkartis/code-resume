@@ -19,13 +19,19 @@ class Translation:
 				print (F"Language {ctx.Lang} not implemented.")
 
 class Skill:
-	def __init__(self, tag, name):
+	def __init__(self, tag, name = None):
 		self.Tag = tag
-		self.Name = name
+		if name is None:
+			self.Name = tag
+		else:
+			self.Name = name
 
 	def Render(self, ctx):
 		# TODO: detect string or class
-		self.Name.Render(ctx)
+		if callable(getattr(self.Name, 'Render', None)):
+			self.Name.Render(ctx)
+		else:
+			ctx.Add(self.Name)
 
 class Language(Skill):
 	def __init__(self, tag, name):
@@ -51,6 +57,35 @@ class Project:
 		self.Tasks = tasks
 		self.Skills = skills
 
+	def Render(self, ctx):
+		ctx.StartHeader()
+		self.Name.Render(ctx)
+		ctx.EndHeader()
+
+		if self.Description is not None:
+			ctx.StartBold()
+			ctx.Translations["description"].Render(ctx)
+			ctx.Add(": ")
+			ctx.EndBold()
+			self.Description.Render(ctx)
+			ctx.AddNl("")
+
+		if self.Tasks is not None:
+			ctx.StartBold()
+			ctx.Translations["tasks"].Render(ctx)
+			ctx.Add(": ")
+			ctx.EndBold()
+			self.Tasks.Render(ctx)
+			ctx.AddNl("")
+
+		if self.Skills is not None:
+			ctx.StartBold()
+			ctx.Translations["skills"].Render(ctx)
+			ctx.Add(": ")
+			ctx.EndBold()
+			self.Skills.Render(ctx)
+			ctx.AddNl("")
+
 class Job:
 	def __init__(self, place, company, startDate, endDate, location, projects):
 		self.Place = place
@@ -67,13 +102,21 @@ class Job:
 		ctx.EndHeader()
 
 		ctx.StartBold()
-		# TODO: where do I put translations for stuff like startDate, endDate, Location
+		ctx.Translations["interval"].Render(ctx)
 		ctx.Add(":")
 		ctx.EndBold()
 		ctx.AddNl(F" {self.StartDate} – {self.EndDate}")
 
+		ctx.StartBold()
+		ctx.Translations["location"].Render(ctx)
+		ctx.Add(":")
+		ctx.EndBold()
+		ctx.AddNl(F" {self.Location}")
+
+		ctx.IncHeadLevel()
 		for project in self.Projects:
 			project.Render(ctx)
+		ctx.DecHeadLevel()
 
 class Training:
 	def __init__(self, name, startDate, endDate, school, location, projects):
@@ -116,13 +159,12 @@ class HeaderData:
 			ctx.EndParagraph()
 
 class Resume:
-	def __init__(self, name, headerData, jobs, trainings, projects, translations):
+	def __init__(self, name, headerData, jobs, trainings, projects):
 		self.Name = name
 		self.HeaderData = headerData
 		self.Jobs = jobs
 		self.Trainings = trainings
 		self.Projects = projects
-		self.Translations = translations
 	
 	def Render(self, ctx):
 
@@ -130,7 +172,7 @@ class Resume:
 		self.HeaderData.Render(ctx)
 
 		ctx.StartHeader()
-		self.Translations["jobsTitle"].Render(ctx)
+		ctx.Translations["jobsTitle"].Render(ctx)
 		ctx.EndHeader()
 		ctx.IncHeadLevel()
 		for job in self.Jobs:
@@ -138,7 +180,7 @@ class Resume:
 		ctx.DecHeadLevel()
 
 		ctx.StartHeader()
-		self.Translations["trainTitle"].Render(ctx)
+		ctx.Translations["trainTitle"].Render(ctx)
 		ctx.EndHeader()
 		ctx.IncHeadLevel()
 		for training in self.Trainings:
@@ -146,7 +188,7 @@ class Resume:
 		ctx.DecHeadLevel()
 
 		ctx.StartHeader()
-		self.Translations["projectsTitle"].Render(ctx)
+		ctx.Translations["projectsTitle"].Render(ctx)
 		ctx.EndHeader()
 		ctx.IncHeadLevel()
 		for project in self.Projects:
