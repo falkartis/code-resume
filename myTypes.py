@@ -36,7 +36,12 @@ class SkillSet:
 		self.Skills = skills
 
 	def Render(self, ctx):
+		first = True
 		for skill in self.Skills:
+			if first:
+				first = False
+			else:
+				ctx.Add(", ")
 			skill.Render(ctx)
 
 class Project:
@@ -54,7 +59,21 @@ class Job:
 		self.EndDate = endDate
 		self.Location = location
 		self.Projects = projects
-						
+	def Render(self, ctx):
+		ctx.StartHeader()
+		self.Place.Render(ctx)
+		ctx.Add(" – ")
+		ctx.Add(self.Company)
+		ctx.EndHeader()
+
+		ctx.StartBold()
+		# TODO: where do I put translations for stuff like startDate, endDate, Location
+		ctx.Add(":")
+		ctx.EndBold()
+		ctx.AddNl(F" {self.StartDate} – {self.EndDate}")
+
+		for project in self.Projects:
+			project.Render(ctx)
 
 class Training:
 	def __init__(self, name, startDate, endDate, school, location, projects):
@@ -71,8 +90,13 @@ class Header:
 		self.Value = value
 
 	def Render(self, ctx):
+		ctx.StartBold()
 		self.Key.Render(ctx)
+		ctx.Add(":")
+		ctx.EndBold()
+		ctx.Add(" ")
 		self.Value.Render(ctx)
+		ctx.AddNl("")
 
 
 class HeaderData:
@@ -84,30 +108,50 @@ class HeaderData:
 		for header in self.Headers:
 			header.Render(ctx)
 		for quote in self.Quotes:
+			ctx.StartParagraph()
+			ctx.Add("> ")
+			ctx.StartItalic()
 			quote.Render(ctx)
+			ctx.EndItalic()
+			ctx.EndParagraph()
 
 class Resume:
-	def __init__(self, name, headerData, jobs, trainings, projects):
+	def __init__(self, name, headerData, jobs, trainings, projects, translations):
 		self.Name = name
 		self.HeaderData = headerData
 		self.Jobs = jobs
 		self.Trainings = trainings
 		self.Projects = projects
+		self.Translations = translations
 	
 	def Render(self, ctx):
-		ctx.Add(self.Name)
+
+		ctx.AddHeader(self.Name)
 		self.HeaderData.Render(ctx)
 
-		# TODO: push section
-		# TODO: add title
-		# TODO: pop section
-
+		ctx.StartHeader()
+		self.Translations["jobsTitle"].Render(ctx)
+		ctx.EndHeader()
+		ctx.IncHeadLevel()
 		for job in self.Jobs:
 			job.Render(ctx)
+		ctx.DecHeadLevel()
+
+		ctx.StartHeader()
+		self.Translations["trainTitle"].Render(ctx)
+		ctx.EndHeader()
+		ctx.IncHeadLevel()
 		for training in self.Trainings:
 			training.Render(ctx)
+		ctx.DecHeadLevel()
+
+		ctx.StartHeader()
+		self.Translations["projectsTitle"].Render(ctx)
+		ctx.EndHeader()
+		ctx.IncHeadLevel()
 		for project in self.Projects:
 			project.Render(ctx)
+		ctx.DecHeadLevel()
 
 
 def main(argv):

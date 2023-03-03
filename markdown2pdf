@@ -4,4 +4,5 @@
 # sudo apt install pandoc
 
 python3 renderer.py ca > resume_ca.md
-pandoc resume_ca.md -o resume_ca.pdf
+#pandoc -V 'mainfont:tablaksh.ttf' -V geometry:margin=2cm resume_ca.md -o resume_ca.pdf
+pandoc -V geometry:margin=2cm resume_ca.md -o resume_ca.pdf
