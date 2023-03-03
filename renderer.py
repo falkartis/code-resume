@@ -20,14 +20,21 @@ class RenderContext:
 			else:
 				txt += tmp
 		else:
-			txt += arg
+			if type(arg) is tuple:
+				txt += self.RenderThem(arg)
+			else:
+				txt += arg
 		return txt
 
-	def Render(self, *args):
+	def RenderThem(self, args):
 		txt = ""
 		for arg in args:
 			txt += self.RenderArg(arg)
 		return txt
+
+
+	def Render(self, *args):
+		return self.RenderThem(args)
 
 
 	def IncHeadLevel(self):
@@ -45,8 +52,7 @@ class RenderContext:
 	def Header(self, *args):
 		txt = ""
 		txt += self.StartHeader()
-		for arg in args:
-			txt += self.RenderArg(arg)
+		txt += self.RenderThem(args)
 		txt += self.EndHeader()
 		return txt
 
@@ -57,8 +63,7 @@ class RenderContext:
 	def Italic(self, *args):
 		txt = ""
 		txt += self.StartItalic()
-		for arg in args:
-			txt += self.RenderArg(arg)
+		txt += self.RenderThem(args)
 		txt += self.EndItalic()
 		return txt
 
@@ -69,8 +74,7 @@ class RenderContext:
 	def Bold(self, *args):
 		txt = ""
 		txt += self.StartBold()
-		for arg in args:
-			txt += self.RenderArg(arg)
+		txt += self.RenderThem(args)
 		txt += self.EndBold()
 		return txt
 
@@ -81,8 +85,7 @@ class RenderContext:
 	def Paragraph(self, *args):
 		txt = ""
 		txt += self.StartParagraph()
-		for arg in args:
-			txt += self.RenderArg(arg)
+		txt += self.RenderThem(args)
 		txt += self.EndParagraph()
 		return txt
 
@@ -104,7 +107,6 @@ class RenderContext:
 		txt += self.Render(" ", value)
 		txt += self.EndParagraph()
 		return txt
-
 
 
 
