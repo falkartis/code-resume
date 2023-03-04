@@ -89,6 +89,7 @@ def GetResume():
 	python = Skill("Python")
 	plone = Skill("Plone CMS")
 	googlemaps = Skill("Google Maps API")
+	xml = Skill("XML")
 
 
 
@@ -408,8 +409,21 @@ def GetResume():
 		"https://web.archive.org/web/20150815021539/http://www.eixcomerciallleida.com/ca"
 	)
 
+	jqueralt = Project(
+		"JQueralt",
+		T(
+			"JQueralt es una immobiliària de Lleida que precisava d’una pagina web.",
+			"JQueralt es una inmobiliaria de Lleida que precisaba de una pagina web.",
+			"JQueralt is a real estate company in Lleida that needed a website.",
+			"JQueralt ist ein Immobilienunternehmen in Lleida, das eine Website brauchte."
+		),
+		webamida,
+		SkillSet([html, css, php, mysql, js, codeigniter, grocerycrud, api, xml, bootstrap, responsive, optim]),
+		"https://web.archive.org/web/20160112013443/http://www.jqueralt.com/"
+	)
 
-	lagraficaProjects = [okhabitat, eixcomercial]
+
+	lagraficaProjects = [okhabitat, eixcomercial, jqueralt]
 	lagrafica = Job(webDeveloper, "LaGrafica", "2014/06", "2015/07", "Lleida", lagraficaProjects)
 
 
