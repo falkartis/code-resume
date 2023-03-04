@@ -373,13 +373,17 @@ def GetResume():
 		SkillSet([html, css, js, python, plone, drupal, linux])
 	)
 
-
 	semicProjects = [inaem, tmi, semicOther]
 	semic = Job(webDeveloper, "SEMIC", "2015/09", "2016/06", "Lleida", semicProjects)
 
 
 
-	jobs = [damiaSolar, handle, becariAlcoletge, grupindex, semic]
+	lagraficaProjects = []
+	lagrafica = Job(webDeveloper, "LaGrafica", "2014/06", "2015/07", "Lleida", lagraficaProjects)
+
+
+
+	jobs = [damiaSolar, handle, becariAlcoletge, grupindex, semic, lagrafica]
 	trainings = []
 	projects = []
 
