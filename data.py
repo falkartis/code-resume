@@ -83,6 +83,11 @@ def GetResume():
 	grocerycrud = Skill("GroceryCRUD")
 	bootstrap = Skill("Bootstrap")
 	vuejs = Skill("VueJS")
+	drupal = Skill("Drupal")
+	remoteaccess = Skill("remote-access", T("Accés remot", "Acceso remoto", "remote access", "Fernzugriff"))
+	dns = Skill("DNS")
+	python = Skill("Python")
+	plone = Skill("Plone CMS")
 
 
 
@@ -309,10 +314,9 @@ def GetResume():
 		SkillSet([html, css, js, vuejs, php, mysql, linux, bootstrap, responsive])
 	)
 
-	gIother = Project(
-		T("Altres webs", "Otras webs", "Other websites", "Andere Webseiten"), None, webamida,
-		SkillSet([html, css, php, mysql, js, codeigniter, grocerycrud, linux, bootstrap, responsive, en])
-	)
+	otherWebsites = T("Altres webs", "Otras webs", "Other websites", "Andere Webseiten")
+
+	gIother = Project(otherWebsites, None, webamida, SkillSet([html, css, php, mysql, js, codeigniter, grocerycrud, linux, bootstrap, responsive, en]))
 
 	gIProjects = [tuteorica, emilio, josepBP, gIother]
 	grupindex = Job(webDeveloper, "grupIndex", "2017/02", "2018/02", "Balaguer", gIProjects)
@@ -320,21 +324,57 @@ def GetResume():
 	inaem = Project(
 		"Inaem",
 		T(
-			"",
-			"",
-			"",
-			""
+			"L’Inaem es un catàleg en línia de cultura que ofereix una API per a accedir a les dades del catàleg.",
+			"Inaem es un catálogo online de cultura que ofrece una API para acceder a los datos del catálogo.",
+			"Inaem is an online culture catalog that offers an API to access catalog data.",
+			"Inaem ist ein Online-Kulturkatalog, der eine API für den Zugriff auf Katalogdaten bietet."
 		),
 		T(
-			"",
-			"",
-			"",
-			""
+			"Implementar un client de la API.",
+			"Implementar un cliente de la API.",
+			"Implement an API client.",
+			"Implementieren eines API-Client."
 		),
-		SkillSet([])
+		SkillSet([html, js, api, css])
 	)
 
-	semicProjects = [inaem]
+	tmi = Project(
+		"TMIPal",
+		T(
+			"TMI es una empresa que fabrica maquinaria per al paletitzat de mercaderies.",
+			"TMI es una empresa que fabrica maquinaria para el paletizado de mercancías.",
+			"TMI is a company that manufactures machinery for the palletizing of goods.",
+			"TMI ist ein Unternehmen, das Maschinen zum Palettieren von Waren herstellt."
+		),
+		T(
+			"Realitzar tasques de manteniment de la web. Resoldre incidència en la xarxa del client.",
+			"Realizar labores de mantenimiento de la web. Resolver incidencia en la red del cliente.",
+			"Perform website maintenance tasks. Resolve incidents in the client's network.",
+			"Durchführen von Webwartungsaufgaben. Störungsbeseitigung im Netzwerk des Kunden."
+		),
+		SkillSet([html, css, js, php, mysql, drupal, remoteaccess, dns])
+	)
+
+
+	semicOther = Project(
+		otherWebsites, 
+		T(
+			"A SEMIC un gran volum dels clients son les administracions publiques com ajuntaments.",
+			"En SEMIC un gran volumen de clientes son las administraciones públicas como ayuntamientos.",
+			"At SEMIC, a large volume of customers are public administrations such as town councils.",
+			"Ein großer Teil der Kunden von SEMIC sind öffentliche Verwaltungen wie Stadtverwaltungen."
+		),
+		T(
+			"Realitzar tasques de manteniment de les pagines web fetes amb plone o drupal.",
+			"Realizar tareas de mantenimiento de las paginas web hechas con plone o drupal.",
+			"Carry out maintenance tasks for web pages made with plone or drupal.",
+			"Durchführen von Webwartungsaufgaben für Webseiten, die mit Plone oder Drupal erstellt wurden."
+		),
+		SkillSet([html, css, js, python, plone, drupal, linux])
+	)
+
+
+	semicProjects = [inaem, tmi, semicOther]
 	semic = Job(webDeveloper, "SEMIC", "2015/09", "2016/06", "Lleida", semicProjects)
 
 

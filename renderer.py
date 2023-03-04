@@ -2,7 +2,6 @@ import sys
 
 from data import GetResume, GetExtraTranslations
 
-
 class RenderContext:
 	def __init__(self, lang, translations):
 		self.Lang = lang
