@@ -34,7 +34,33 @@ def GetResume():
 	document = Skill("document", T("Documentació", "Documentación", "Documentation", "Dokumentation"))
 	warranty = Skill("warranty", T("Gestió de garanties", "Gestión de garantías", "Warranty Management", "Garantiemanagement"))
 	optim = Skill("optim", T("Optimització de processos", "Optimización de procesos", "Process Optimization", "Prozessoptimierung"))
-
+	oop = Skill("oop",T("Programació orientada a objectes","Programación orientada a objetos","Object Oriented Programming","Objektorientierte Programmierung"))
+	cs = Skill("C#")
+	dotnet = Skill("dotnet", ".Net (Framework, Core, Standard)")
+	antlr = Skill("ANTLR")
+	grammar = Skill("grammar", T("Gramàtica", "Gramática", "Grammar", "Grammatik"))
+	syntax = Skill("syntax", T("Sintaxis", "Sintaxis", "Syntax", "Syntax"))
+	visualstudio = Skill("Visual studio")
+	jenkins = Skill("Jenkins")
+	bash = Skill("Bash")
+	sonarQube = Skill("Sonar Qube")
+	ci = Skill("ci", T("Integració continua", "Integración continua", "Continuous Integration", "Continuous Integration"))
+	cd = Skill("cd", T("Entrega continua", "Entrega continua", "Continuous Delivery", "Continuous Delivery"))
+	ifc = Skill("IFC")
+	geo3d = Skill("3D", T("geometria 3D", "geometría 3D", "3D Geometry", "3D-Geometrie"))
+	algebra = Skill("linear-algebra", T("Àlgebra lineal", "Álgebra lineal", "Linear Algebra", "Lineare Algebra"))
+	sqlite = Skill("SqLite")
+	litedb = Skill("LiteDB")
+	json = Skill("JSON")
+	blender = Skill("Blender")
+	unity = Skill("Unity 3D")
+	aspnet = Skill("ASP.NET")
+	html = Skill("HTML")
+	js = Skill("JavaScript")
+	webservice = Skill("WebService")
+	api = Skill("API")
+	doxygen = Skill("Doxygen")
+	entityFrame = Skill("Entity Framework")
 
 	others = T("Altres dades", "Otros datos", "Other information", "Sonstige angaben")
 	myOthers = T(
@@ -94,7 +120,34 @@ def GetResume():
 	dsProjects = [dsWeb, dsTesting, dsSAT]
 	damiaSolar = Job(dsPlace, "Damia Solar", "2020/08", "2022/07", "La Pobla de Segur", dsProjects)
 
-	hscProjects = []
+
+	iCore9 = Project(
+		"iCore9",
+		T(
+			"iCore9 es un paquet de llibreries de gestió i procés de dades BIM desenvolupat conjuntament amb Apogea consulting.",
+			"iCore9 es un paquete de librerías de gestión y proceso de datos BIM desarrollado conjuntamente con Apogea consulting.",
+			"iCore9 is a package of BIM data management and process libraries developed together with Apogea consulting.",
+			"iCore9 ist ein Paket aus BIM-Datenmanagement und Prozessbibliotheken, das zusammen mit Apogea Consulting entwickelt wurde."
+		),
+		T(
+			"Implementació d’un parser d’arxius IFC (similar a step), una llibreria de geometria 3D, un tessel·lador, un processador/optimitzador geomètric, un visor 3D web, funcions de desat i exportació, un sistema de llicencies. Documentació de funcionalitats.",
+			"Implementación de un parser de archivos IFC (similar a step), una librería de geometría 3D, un teselador, un procesador/optimizador geométrico, un visor 3D web, funciones de guardado y exportación, un sistema de licencias. Documentación de funcionalidades.",
+			"Implementation of an IFC (similar to step) file parser, a 3D geometry library, a tessellator, a geometric processor/optimizer, a 3D web viewer, save and export functions, a licensing system. Functionality documentation.",
+			"Implementierung eines IFC-Dateiparsers (ähnlich zu step), einer 3D-Geometriebibliothek, eines Tessellators, eines geometrischen Prozessors/Optimierers, eines 3D-Web-Viewers, Speicher- und Exportfunktionen, eines Lizenzsystems. Dokumentation der Funktionalität."
+		),
+		SkillSet([oop, cs, dotnet, antlr, grammar, syntax, visualstudio, git, jenkins, linux, bash, sonarQube, ci, cd, ifc, geo3d, algebra, sqlite, litedb, json, blender, unity, aspnet, html, js, webservice, api, team, doxygen, entityFrame, en, optim])
+	)
+
+
+
+
+
+
+
+
+
+
+	hscProjects = [iCore9]
 
 	handle = Job(T("Programador", "Programador", "Programmer", "Programmierer"),"Handle Software Company", "2018/06", "2020/03", "Lleida", hscProjects)
 
