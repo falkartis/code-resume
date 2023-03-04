@@ -317,8 +317,24 @@ def GetResume():
 	gIProjects = [tuteorica, emilio, josepBP, gIother]
 	grupindex = Job(webDeveloper, "grupIndex", "2017/02", "2018/02", "Balaguer", gIProjects)
 
+	inaem = Project(
+		"Inaem",
+		T(
+			"",
+			"",
+			"",
+			""
+		),
+		T(
+			"",
+			"",
+			"",
+			""
+		),
+		SkillSet([])
+	)
 
-	semicProjects = []
+	semicProjects = [inaem]
 	semic = Job(webDeveloper, "SEMIC", "2015/09", "2016/06", "Lleida", semicProjects)
 
 
