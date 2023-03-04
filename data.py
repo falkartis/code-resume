@@ -72,7 +72,7 @@ def GetResume():
 	css = Skill("CSS")
 	responsive = Skill("Responsive")
 	cpp = Skill("C/C++")
-
+	repair = Skill("repair", T("Diagnòstic i reparació d'avaries", "Diagnóstico y reparación de averías", "Diagnosis and repair of faults", "Diagnose und Behebung von Störungen"))
 
 
 
@@ -212,12 +212,33 @@ def GetResume():
 	hscProjects = [iCore9, ndbim, oda, bim360]
 	handle = Job(T("Programador", "Programador", "Programmer", "Programmierer"),"Handle Software Company", "2018/06", "2020/03", "Lleida", hscProjects)
 
-
-
 	alcoletgeProjects = [
 		Project(
+			T("Reparació de dispositius electrònics", "Reparación de dispositivos electrónicos", "Repair of electronic devices", "Reparatur von elektronischen Geräten"),
+			None,
+			T(
+				"Diagnosticar i reparar tota mena de components electrònics, des de radiadors elèctrics fins a centraletes de maquines industrials.",
+				"Diagnosticar y reparar todo tipo de componentes electrónicos, desde radiadores eléctricos hasta centralitas de máquinas industriales.",
+				"Diagnose and repair all kinds of electronic components, from electric radiators to industrial machine control units.",
+				"Diagnose und reparatur alle Arten von elektronischen Komponenten, von elektrischen Heizkörpern bis hin zu Steuereinheiten für industrielle Maschinen."
+			),
+			SkillSet([repair])
 		),
 		Project(
+			T("Trasllat de botiga", "Traslado de tienda", "Store move", "Betriebsumzug"),
+			T(
+				"A més a més del taller de reparació el nou local havia de comptar amb una botiga.",
+				"Además del taller de reparación, el nuevo local debía contar con una tienda.",
+				"In addition to the repair workshop, the new premises had to have a shop.",
+				"Zusätzlich zur Reparaturwerkstatt sollte in den neuen Räumlichkeiten auch ein Laden vorhanden sein."
+			),
+			T(
+				"Preparació de la botiga. Trasllat del mobiliari i les eines del taller.",
+				"Preparación de la tienda. Traslado del mobiliario y herramientas del taller.",
+				"Store preparation. Transfer of workshop furniture and tools.",
+				"Shop-Vorbereitung. Transport von Möbeln und Werkzeug."
+			),
+			None
 		)
 	]
 	becariAlcoletge = Job(
