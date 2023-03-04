@@ -376,9 +376,25 @@ def GetResume():
 	semicProjects = [inaem, tmi, semicOther]
 	semic = Job(webDeveloper, "SEMIC", "2015/09", "2016/06", "Lleida", semicProjects)
 
+	okhabitat = Project(
+		"OkHabitat",
+		T(
+			"OkHabitat era una plataforma immobiliaria pensada per a anunciar immobles d’agents immobiliaris i de bancs.",
+			"OkHabitat era una plataforma inmobiliaria pensada para anunciar inmuebles de agentes inmobiliarios y bancos.",
+			"OkHabitat was a real estate platform designed to advertise properties from real estate agents and banks.",
+			"OkHabitat war eine Immobilienplattform, die entwickelt wurde, um Immobilien von Immobilienmaklern und Banken zu bewerben."
+		),
+		T(
+			"Realitzar tasques de manteniment i d’ampliació de la plataforma. Optimitzar consultes a la base de dades.",
+			"Realizar tareas de mantenimiento y ampliación de la plataforma. Optimizar consultas en la base de datos.",
+			"Carry out maintenance and expansion tasks of the platform. Optimize database queries.",
+			"Wartungs- und Erweiterungsaufgaben der Plattform durchführen. Datenbankabfragen optimieren."
+		),
+		SkillSet([html, css, php, mysql, optim, team, bootstrap, responsive]),
+		"https://web.archive.org/web/20150221231551/http://okhabitat.com:80/"
+	)
 
-
-	lagraficaProjects = []
+	lagraficaProjects = [okhabitat]
 	lagrafica = Job(webDeveloper, "LaGrafica", "2014/06", "2015/07", "Lleida", lagraficaProjects)
 
 
