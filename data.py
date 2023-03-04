@@ -82,6 +82,7 @@ def GetResume():
 	codeigniter = Skill("CodeIgniter")
 	grocerycrud = Skill("GroceryCRUD")
 	bootstrap = Skill("Bootstrap")
+	vuejs = Skill("VueJS")
 
 
 
@@ -276,6 +277,13 @@ def GetResume():
 		SkillSet([html, css, php, mysql, js, youtubeApi, linux, optim])
 	)
 
+	webamida = T(
+		"Crear la pagina web des de zero, completament a mida de les seves necessitats.",
+		"Crear la pagina web desde cero, completamente a medida de sus necesidades.",
+		"Create the website from scratch, completely tailored to his needs.",
+		"Erstellung der Website von Grund auf neu, vollständig an seine Bedürfnisse angepasst."
+	)
+
 	emilio = Project(
 		"Emilio Ferrer Fotos",
 		T(
@@ -284,20 +292,32 @@ def GetResume():
 			"Emilio Ferrer is a renowned photographer with the need to exhibit his works through a website.",
 			"Emilio Ferrer ist ein renommierter Fotograf, der seine Werke über eine Website ausstellen möchte."
 		),
+		webamida,
+		SkillSet([html, css, php, mysql, js, codeigniter, grocerycrud, linux, bootstrap, responsive, en]),
+		"https://www.emilioferrerfotos.com/ca/"
+	)
+
+	josepBP = Project(
+		"Josep Ball i Papiol",
 		T(
-			"Crear la pagina web des de zero, completament a mida de les seves necessitats.",
-			"Crear la pagina web desde cero, completamente a medida de sus necesidades.",
-			"Create the website from scratch, completely tailored to his needs.",
-			"Erstellung der Website von Grund auf neu, vollständig an seine Bedürfnisse angepasst."
+			"Josep Ball i Papiol es un reconegut psicòleg amb la necessitat d’anunciar els seus serveis a través d’una pàgina web.",
+			"Josep Ball i Papiol es un reconocido psicólogo con la necesidad de anunciar sus servicios a través de una página web.",
+			"Josep Ball i Papiol is a renowned psychologist with the need to advertise his services through a website.",
+			"Josep Ball i Papiol ist ein renommierter Psychologe, der seine Dienste über eine Website bewerben möchte."
 		),
+		webamida,
+		SkillSet([html, css, js, vuejs, php, mysql, linux, bootstrap, responsive])
+	)
+
+	gIother = Project(
+		T("Altres webs", "Otras webs", "Other websites", "Andere Webseiten"), None, webamida,
 		SkillSet([html, css, php, mysql, js, codeigniter, grocerycrud, linux, bootstrap, responsive, en])
 	)
 
-
-
-	gIProjects = [tuteorica, emilio]
+	gIProjects = [tuteorica, emilio, josepBP, gIother]
 	grupindex = Job(webDeveloper, "grupIndex", "2017/02", "2018/02", "Balaguer", gIProjects)
 
+	# HTML, CSS, PHP, MySQL, JavaScript, CodeIgniter, GroceryCrud, Linux, Bootstrap, Responsive, Anglès.
 
 
 
@@ -322,6 +342,7 @@ def GetExtraTranslations():
 	translations["description"] = T("Descripció del projecte", "Descripción del proyecto", "Project description", "Beschreibung des Projekts")
 	translations["tasks"] = T("Tasques realitzades", "Tareas realizadas", "Tasks performed", "Ausgeführte Aufgaben")
 	translations["skills"] = T("Eines i coneixements", "Herramientas y conocimientos", "Skills and tools", "Fähigkeiten und Werkzeuge")
+	translations["link"] = T("Enllaç", "Enlace", "Link", "Verknüpfung")
 	return translations
 
 def main(argv):

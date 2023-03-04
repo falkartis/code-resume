@@ -108,7 +108,11 @@ class RenderContext:
 		txt += self.EndParagraph()
 		return txt
 
-
+	def Link(self, text, url, title = None):
+		if title is None:
+			return F"[{text}]({url})"
+		else:
+			return F"[{text}]({url} \"{title}\")"
 
 
 

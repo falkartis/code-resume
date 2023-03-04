@@ -49,11 +49,12 @@ class SkillSet:
 		return txt
 
 class Project:
-	def __init__(self, name, description, tasks, skills):
+	def __init__(self, name, description, tasks, skills, url = None):
 		self.Name = name
 		self.Description = description
 		self.Tasks = tasks
 		self.Skills = skills
+		self.Url = url
 
 	def Render(self, ctx):
 
@@ -69,6 +70,11 @@ class Project:
 
 		if self.Skills is not None:
 			txt += ctx.KeyAndValueP(ctx.Translations["skills"], self.Skills)
+
+		if self.Url is not None:
+			txt += ctx.KeyAndValueP(ctx.Translations["link"], ctx.Link(self.Url, self.Url))
+			# TODO: put a link
+			pass
 
 		return txt
 
