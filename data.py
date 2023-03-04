@@ -317,12 +317,13 @@ def GetResume():
 	gIProjects = [tuteorica, emilio, josepBP, gIother]
 	grupindex = Job(webDeveloper, "grupIndex", "2017/02", "2018/02", "Balaguer", gIProjects)
 
-	# HTML, CSS, PHP, MySQL, JavaScript, CodeIgniter, GroceryCrud, Linux, Bootstrap, Responsive, Anglès.
+
+	semicProjects = []
+	semic = Job(webDeveloper, "SEMIC", "2015/09", "2016/06", "Lleida", semicProjects)
 
 
 
-
-	jobs = [damiaSolar, handle, becariAlcoletge, grupindex]
+	jobs = [damiaSolar, handle, becariAlcoletge, grupindex, semic]
 	trainings = []
 	projects = []
 
