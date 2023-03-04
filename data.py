@@ -88,6 +88,7 @@ def GetResume():
 	dns = Skill("DNS")
 	python = Skill("Python")
 	plone = Skill("Plone CMS")
+	googlemaps = Skill("Google Maps API")
 
 
 
@@ -394,7 +395,21 @@ def GetResume():
 		"https://web.archive.org/web/20150221231551/http://okhabitat.com:80/"
 	)
 
-	lagraficaProjects = [okhabitat]
+	eixcomercial = Project(
+		"Eix comercial Lleida",
+		T(
+			"L’Eix comercial es una associació de negocis de Lleida. El projecte consistia en crear una plataforma en línia per donar visibilitat als negocis en qüestió.",
+			"Eix comercial es una asociación de negocios de Lleida. El proyecto consistía en crear una plataforma online para dar visibilidad a los negocios en cuestión.",
+			"Eix comercial is a business association from Lleida. The project consisted of creating an online platform to give visibility to the businesses in question.",
+			"Eix comercial ist ein Unternehmensverband aus Lleida. Das Projekt bestand darin, eine Online-Plattform zu schaffen, um die betreffenden Unternehmen sichtbar zu machen."
+		),
+		webamida,
+		SkillSet([html, css, php, mysql, js, codeigniter, grocerycrud, googlemaps, bootstrap, responsive]),
+		"https://web.archive.org/web/20150815021539/http://www.eixcomerciallleida.com/ca"
+	)
+
+
+	lagraficaProjects = [okhabitat, eixcomercial]
 	lagrafica = Job(webDeveloper, "LaGrafica", "2014/06", "2015/07", "Lleida", lagraficaProjects)
 
 
