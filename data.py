@@ -91,11 +91,14 @@ def GetResume():
 		),
 		SkillSet([customer, incident, logistic, diplomacy, document, team, warranty, en, de, linux, solar, wind, optim])
 	)
-
 	dsProjects = [dsWeb, dsTesting, dsSAT]
 	damiaSolar = Job(dsPlace, "Damia Solar", "2020/08", "2022/07", "La Pobla de Segur", dsProjects)
 
-	jobs = [damiaSolar]
+	hscProjects = []
+
+	handle = Job(T("Programador", "Programador", "Programmer", "Programmierer"),"Handle Software Company", "2018/06", "2020/03", "Lleida", hscProjects)
+
+	jobs = [damiaSolar, handle]
 	trainings = []
 	projects = []
 
