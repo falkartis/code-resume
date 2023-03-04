@@ -61,7 +61,6 @@ def GetResume():
 	api = Skill("API")
 	doxygen = Skill("Doxygen")
 	entityFrame = Skill("Entity Framework")
-
 	distributed = Skill("distributed-systems", T("Sistemes distribuïts", "Sistemas distribuidos", "Distributed Systems", "Verteilte Systeme"))
 	sqlServer = Skill("SQL Server")
 	entityFrCore = Skill("Entity Framework Core")
@@ -72,7 +71,7 @@ def GetResume():
 	ts = Skill("TypeScript")
 	css = Skill("CSS")
 	responsive = Skill("Responsive")
-
+	cpp = Skill("C/C++")
 
 
 
@@ -91,12 +90,18 @@ def GetResume():
 		Header(others, myOthers)
 	]
 	doctors = T(
-		"Si el cos humà canvies al ritme que ho fa la tecnologia, els metges també es passarien el dia fent consultes a Google.",
-		"Si el cuerpo humano cambiara al ritmo que lo hace la tecnología, los médicos también se pasarían el día haciendo consultas a Google.",
-		"If the human body changed at the rate that technology does, doctors would also spend the entire day making queries on Google.",
-		"Wenn sich der menschliche Körper so schnell verändern würde wie die Technologie, würden Ärzte auch den ganzen Tag mit Google verbringen."
+		"Si el cos humà canvies al ritme que ho fa la tecnologia, els metges també es passarien el dia fent consultes a internet.",
+		"Si el cuerpo humano cambiara al ritmo que lo hace la tecnología, los médicos también se pasarían el día haciendo consultas a internet.",
+		"If the human body changed at the rate that technology does, doctors would also spend the entire day making queries on internet.",
+		"Wenn sich der menschliche Körper so schnell verändern würde wie die Technologie, würden Ärzte auch den ganzen Tag mit Internet verbringen."
 	)
-	quotes = [doctors]
+	tractor = T(
+		"Amb un cotxe de carreres no pots llaurar el camp, amb un tractor si.",
+		"Con un coche de carreras no puedes labrar el campo, con un tractor sí.",
+		"With a racing car you can't plow the field, with a tractor you can.",
+		"Mit einem Rennwagen kann man das Feld nicht pflügen, mit einem Traktor schon."
+	)
+	quotes = [doctors, tractor]
 	headerData = HeaderData(headers, quotes)
 
 	dsPlace = T("Tècnic Servei d'assistència tècnica", "Técnico Servicio de asistencia técnica", "Help Desk Technician", "Help Desk Techniker")
@@ -170,18 +175,60 @@ def GetResume():
 		SkillSet([distributed, oop, cs, antlr, grammar, syntax, visualstudio, git, jenkins, sonarQube, ci, cd, sqlServer, entityFrCore, security, crypto, api, graphql, html, angular, ts, css, team, responsive, en])
 	)
 
+	oda = Project(
+		"Open Design Alliance",
+		T(
+			"La llibreria de l’open design alliance, es coneguda per ser farragosa i complicada de fer servir. L’objectiu era d’aportar un conjunt de funcionalitats per facilitar la implantació de la llibreria.",
+			"La librería del open design aliance, es conocida por ser engorrosas y complicada de utilizar. El objetivo era aportar un conjunto de funcionalidades para facilitar la implantación de la librería.",
+			"The open design alliance library is known to be cumbersome and complicated to use. The goal was to provide a set of functionalities to facilitate the implementation of the library.",
+			"Die Open Design Alliance Funktionenbibliothek ist bekanntermaßen umständlich und kompliziert zu bedienen. Das Ziel war es, eine Reihe von Funktionalitäten bereitzustellen, um die Implementierung der Bibliothek zu erleichtern."
+		),
+		T(
+			"Implementar un conjunt de funcionalitats embolcall per a accedir a les funcions pròpies de la ODA.",
+			"Implementar un conjunto de funcionalidades envoltura para acceder a las funciones propias de la ODA.",
+			"Implement a set of wrapper functions to access the ODA's own functions.",
+			"Implementierung von eine Reihe von Wrapper-Funktionen, um auf die eigenen Funktionen des ODA zuzugreifen."
+		),
+		SkillSet([oop, cpp, visualstudio, git, jenkins, ci, cd, api, team])
+	)
 
+	bim360 = Project(
+		T("Client API BIM-360", "Cliente API BIM-360", "BIM-360 API Client", "BIM-360-API-Client"),
+		T(
+			"La api BIM-360 d’Autodesk ofereix una plataforma de gestió de documents relacionats amb l’arquitectura.",
+			"La apio BIM-360 de Autodesk ofrece una plataforma de gestión de documentos relacionados con la arquitectura.",
+			"Autodesk's BIM-360 API provides an architecture-related document management platform.",
+			"Die BIM-360-API von Autodesk bietet eine architekturbezogene Dokumentenverwaltungsplattform."
+		),
+		T(
+			"Dissenyar i implementar un client de la API.",
+			"Diseñar e implementar un cliente de la API.",
+			"Design and implement an API client.",
+			"Entwurf und implementierung von einen API-Client."
+		),
+		SkillSet([oop, cs, visualstudio, git, linux, bash, api, json])
+	)
 
-
-
-
-
-
-	hscProjects = [iCore9, ndbim]
-
+	hscProjects = [iCore9, ndbim, oda, bim360]
 	handle = Job(T("Programador", "Programador", "Programmer", "Programmierer"),"Handle Software Company", "2018/06", "2020/03", "Lleida", hscProjects)
 
-	jobs = [damiaSolar, handle]
+
+
+	alcoletgeProjects = [
+		Project(
+		),
+		Project(
+		)
+	]
+	becariAlcoletge = Job(
+		T("Becari", "Becario", "Intern", "Praktikant"),
+		T("Taller de electrònica", "Taller de electrónica", "Electronics workshop", "Elektronik Werkstatt"),
+		"2018/02", "2018/06", "Alcoletge", alcoletgeProjects
+	)
+
+
+
+	jobs = [damiaSolar, handle, becariAlcoletge]
 	trainings = []
 	projects = []
 

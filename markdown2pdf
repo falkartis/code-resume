@@ -4,5 +4,11 @@
 # sudo apt install pandoc
 
 time python3 renderer.py ca > resume_ca.md
-#pandoc -V 'mainfont:tablaksh.ttf' -V geometry:margin=2cm resume_ca.md -o resume_ca.pdf
+time python3 renderer.py es > resume_es.md
+time python3 renderer.py en > resume_en.md
+time python3 renderer.py de > resume_de.md
+
 time pandoc -V geometry:margin=2cm resume_ca.md -o resume_ca.pdf
+time pandoc -V geometry:margin=2cm resume_es.md -o resume_es.pdf
+time pandoc -V geometry:margin=2cm resume_en.md -o resume_en.pdf
+time pandoc -V geometry:margin=2cm resume_de.md -o resume_de.pdf
