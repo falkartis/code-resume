@@ -72,7 +72,17 @@ def GetResume():
 	css = Skill("CSS")
 	responsive = Skill("Responsive")
 	cpp = Skill("C/C++")
-	repair = Skill("repair", T("Diagnòstic i reparació d'avaries", "Diagnóstico y reparación de averías", "Diagnosis and repair of faults", "Diagnose und Behebung von Störungen"))
+	repair = Skill(
+		"repair",
+		T("Diagnòstic i reparació d'avaries", "Diagnóstico y reparación de averías", "Diagnosis and repair of faults", "Diagnose und Behebung von Störungen")
+	)
+	php = Skill("PHP")
+	mysql = Skill("MySQL")
+	youtubeApi = Skill("youtube-api", T("API de YouTube", "API de YouTube", "YouTube API", "YouTube-API"))
+	codeigniter = Skill("CodeIgniter")
+	grocerycrud = Skill("GroceryCRUD")
+	bootstrap = Skill("Bootstrap")
+
 
 
 
@@ -247,9 +257,52 @@ def GetResume():
 		"2018/02", "2018/06", "Alcoletge", alcoletgeProjects
 	)
 
+	webDeveloper = T("Desenvolupador web", "Desarrollador web", "Web developer", "Web-Entwickler")
+
+	tuteorica = Project(
+		"Tuteorica",
+		T(
+			"Tuteorica es una plataforma en línia de curs teòric de permisos de conduir.",
+			"Tuteorica es una plataforma online de curso teórico de permisos de conducir.",
+			"Tuteorica is an online platform for theoretical driving license courses.",
+			"Tuteorica ist eine Online-Plattform für theoretische Führerscheinkurse."
+		),
+		T(
+			"Realitzar un informe de l’estat de la plataforma. Aportar propostes de millora.",
+			"Realizar un informe del estado de la plataforma. Aportar propuestas de mejora.",
+			"Create a platform status report. Provide improvement proposals.",
+			"Erstellen Sie einen Plattformstatusbericht. Verbesserungsvorschläge einbringen."
+		),
+		SkillSet([html, css, php, mysql, js, youtubeApi, linux, optim])
+	)
+
+	emilio = Project(
+		"Emilio Ferrer Fotos",
+		T(
+			"Emilio Ferrer es un reconegut fotògraf amb la necessitat d’exposar les seves obres a través d’una pàgina web.",
+			"Emilio Ferrer es un reconocido fotógrafo con la necesidad de exponer sus obras a través de una página web.",
+			"Emilio Ferrer is a renowned photographer with the need to exhibit his works through a website.",
+			"Emilio Ferrer ist ein renommierter Fotograf, der seine Werke über eine Website ausstellen möchte."
+		),
+		T(
+			"Crear la pagina web des de zero, completament a mida de les seves necessitats.",
+			"Crear la pagina web desde cero, completamente a medida de sus necesidades.",
+			"Create the website from scratch, completely tailored to his needs.",
+			"Erstellung der Website von Grund auf neu, vollständig an seine Bedürfnisse angepasst."
+		),
+		SkillSet([html, css, php, mysql, js, codeigniter, grocerycrud, linux, bootstrap, responsive, en])
+	)
 
 
-	jobs = [damiaSolar, handle, becariAlcoletge]
+
+	gIProjects = [tuteorica, emilio]
+	grupindex = Job(webDeveloper, "grupIndex", "2017/02", "2018/02", "Balaguer", gIProjects)
+
+
+
+
+
+	jobs = [damiaSolar, handle, becariAlcoletge, grupindex]
 	trainings = []
 	projects = []
 
