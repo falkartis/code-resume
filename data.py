@@ -62,6 +62,21 @@ def GetResume():
 	doxygen = Skill("Doxygen")
 	entityFrame = Skill("Entity Framework")
 
+	distributed = Skill("distributed-systems", T("Sistemes distribuïts", "Sistemas distribuidos", "Distributed Systems", "Verteilte Systeme"))
+	sqlServer = Skill("SQL Server")
+	entityFrCore = Skill("Entity Framework Core")
+	security = Skill("security", T("Seguretat", "Seguridad", "Security", "Sicherheit"))
+	crypto = Skill("crypto", T("Criptografia", "Criptografía", "Cryptography", "Kryptografie"))
+	graphql = Skill("GraphQL")
+	angular = Skill("Angular")
+	ts = Skill("TypeScript")
+	css = Skill("CSS")
+	responsive = Skill("Responsive")
+
+
+
+
+
 	others = T("Altres dades", "Otros datos", "Other information", "Sonstige angaben")
 	myOthers = T(
 		"Disponibilitat per desplaçar-me, canviar de residencia, fer torns rotatius, etc. segons retribució.",
@@ -138,6 +153,22 @@ def GetResume():
 		SkillSet([oop, cs, dotnet, antlr, grammar, syntax, visualstudio, git, jenkins, linux, bash, sonarQube, ci, cd, ifc, geo3d, algebra, sqlite, litedb, json, blender, unity, aspnet, html, js, webservice, api, team, doxygen, entityFrame, en, optim])
 	)
 
+	ndbim = Project(
+		"NdBim",
+		T(
+			"ndBim es una plataforma en línia de treball col·laboratiu especialitzat en totes les fases de una obra.",
+			"ndBim es una plataforma online de trabajo colaborativo especializado en todas las fases de una obra.",
+			"ndBim is an online platform for collaborative work specialized in all phases of construction.",
+			"ndBim ist eine kollaborative Online-Arbeitsplattform, die auf alle Bauphasen spezialisiert ist"
+		),
+		T(
+			"Disseny i implementació del backend de la plataforma, la base de dades, els sistemes de seguretat, el xifrat de les dades d’usuari, calculadora de costos. Implementació del frontend.",
+			"Diseño e implementación del backend de la plataforma, base de datos, sistemas de seguridad, cifrado de los datos de usuario, calculadora de costes. Implementación del frontendo.",
+			"Design and implementation of the platform backend, database, security systems, user data encryption, cost calculator. Implementation of the frontend.",
+			"Design und Implementierung des Plattform-Backends, der Datenbank, der Sicherheitssysteme, der Benutzerdatenverschlüsselung, des Kostenrechners. Implementierung des Frontends."
+		),
+		SkillSet([distributed, oop, cs, antlr, grammar, syntax, visualstudio, git, jenkins, sonarQube, ci, cd, sqlServer, entityFrCore, security, crypto, api, graphql, html, angular, ts, css, team, responsive, en])
+	)
 
 
 
@@ -146,8 +177,7 @@ def GetResume():
 
 
 
-
-	hscProjects = [iCore9]
+	hscProjects = [iCore9, ndbim]
 
 	handle = Job(T("Programador", "Programador", "Programmer", "Programmierer"),"Handle Software Company", "2018/06", "2020/03", "Lleida", hscProjects)
 
