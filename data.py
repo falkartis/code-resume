@@ -667,10 +667,20 @@ def GetResume():
 			"Higher Level Training Curse – Computer Network Systems Administration",
 			"Fachabitur – Verwaltung von Netzwerkcomputersystemen"
 		),
-		"2011", "2013", "IES Joan Brudieu", "La Seu d'Urgell", [aversicuela, programame3, programame2, programame1]
+		"2011", "2013", "IES Joan Brudieu", "La Seu d'Urgell", [programame3, programame2, aversicuela, programame1]
 	)
 
-	trainings = [udl, caparrella, joanBrudieu]
+	hugRoger = Training(
+		T(
+			"CFGM – Explotació de Sistemes Informàtics",
+			"CFGM – Explotación de Sistemas Informáticos",
+			"Intermediate Level Training Curse – Use of Computer Systems",
+			"Fachabitur – Nutzung von Computersystemen"
+		),
+		"2007", "2009", "IES Hug Roger III", "Sort", []
+	)
+
+	trainings = [udl, caparrella, joanBrudieu, hugRoger]
 	projects = []
 
 	resume = Resume(name, headerData, jobs, trainings, projects)
