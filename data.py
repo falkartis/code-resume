@@ -441,8 +441,25 @@ def GetResume():
 	lagraficaProjects = [okhabitat, eixcomercial, jqueralt, oceanAlmond, lagraficaOther]
 	lagrafica = Job(webDeveloper, "LaGrafica", "2014/06", "2015/07", "Lleida", lagraficaProjects)
 
+	timebank = Project(
+		T("Banc del temps", "Banco del tiempo", "Time bank", "Zeitbank"),
+		T(
+			"Un banc del temps es una forma de intercambiar feines entre els membres d’una comunitat sense que s’hi involucrin els diners. En canvi es comptabilitzen hores.",
+			"Un banco del tiempo es una forma de intercambiar trabajos entre los miembros de una comunidad sin que se involucre el dinero. En cambio, se contabilizan horas.",
+			"A time bank is a way of exchanging jobs between members of a community without money being involved. Instead, hours are counted.",
+			"Eine Zeitbank ist eine Möglichkeit, Jobs zwischen Mitgliedern einer Gemeinschaft auszutauschen, ohne dass Geld im Spiel ist. Stattdessen werden Stunden gezählt."
+		),
+		T(
+			"Implementació d'una eina de gestió del membres i les hores  aportades per cadascun.",
+			"Implementación de una herramienta de gestión de los miembros y las horas aportadas por cada uno.",
+			"Implementation of a member management tool and the hours contributed by each.",
+			"Implementierung eines Mitgliederverwaltungstools und der von jedem geleisteten Stunden."
+		),
+		SkillSet([html, php, mysql, codeigniter, grocerycrud])
+	)
 
-	laseuProjects = []
+
+	laseuProjects = [timebank]
 	ajLaseu = Job(
 		becari,
 		T(
