@@ -91,6 +91,7 @@ def GetResume():
 	googlemaps = Skill("Google Maps API")
 	xml = Skill("XML")
 	wordpress = Skill("WordPress")
+	cron = Skill("Cron")
 
 
 
@@ -128,7 +129,7 @@ def GetResume():
 		T("Revisió i migració web", "Revisión y migración web" , "Web review and migration", "Web-Überprüfung und -Migration"),
 		None,
 		T(
-			"La meva funció era la de revisar la migració de la botiga en línia des d’una plataforma obsoleta a una nova plataforma. També revisar continguts del blog i informes de SEO.",
+			"La meva funció era la de revisar la migració de la botiga en línia des d'una plataforma obsoleta a una nova plataforma. També revisar continguts del blog i informes de SEO.",
 			"Mi función era la de revisar la migración de la tienda online desde una plataforma obsoleta a una nueva plataforma. También revisar contenidos del blog e informes de SEO.",
 			"My role was to review the migration of the online store from an outdated platform to a new platform. Also to review blog content and SEO reports.",
 			"Meine Rolle bestand darin, die Migration des Online-Shops von einer veralteten Plattform auf eine neue Plattform zu überprüfen. Auch Blog-Inhalte und SEO-Berichte zu überprüfen."),
@@ -149,7 +150,7 @@ def GetResume():
 		T("Servei d'assistència tècnica", "Servicio de asistencia técnica", "Help Desk", "Help Desk"),
 		None,
 		T(
-			"Resoldre els dubtes i les incidències que es poden trobar els clients amb els productes de l’empresa. Donar consells i indicacions a companys/es de l’empresa. Diagnosticar avaries i reparar equips. Implementar millores.",
+			"Resoldre els dubtes i les incidències que es poden trobar els clients amb els productes de l'empresa. Donar consells i indicacions a companys/es de l'empresa. Diagnosticar avaries i reparar equips. Implementar millores.",
 			"Resolver las dudas y las incidencias que pueden encontrarse los clientes con los productos de la empresa. Dar consejos e indicaciones a compañeros/as de la empresa. Diagnosticar averías y reparar equipos. Implementar mejoras.",
 			"Resolve doubts and incidents that customers may encounter with the company's products. Give advice and instructions to company colleagues. Diagnose faults and repair equipment. Implement improvements.",
 			"Beheben von Zweifel und Vorfälle, die Kunden mit den Produkten des Unternehmens begegnen können. Kollegen im Unternehmen Ratschläge und Anweisungen Geben. Fehler diagnostizieren und Geräte reparieren. Verbesserungen implementieren."
@@ -169,7 +170,7 @@ def GetResume():
 			"iCore9 ist ein Paket aus BIM-Datenmanagement und Prozessbibliotheken, das zusammen mit Apogea Consulting entwickelt wurde."
 		),
 		T(
-			"Implementació d’un parser d’arxius IFC (similar a step), una llibreria de geometria 3D, un tessel·lador, un processador/optimitzador geomètric, un visor 3D web, funcions de desat i exportació, un sistema de llicencies. Documentació de funcionalitats.",
+			"Implementació d'un parser d'arxius IFC (similar a step), una llibreria de geometria 3D, un tessel·lador, un processador/optimitzador geomètric, un visor 3D web, funcions de desat i exportació, un sistema de llicencies. Documentació de funcionalitats.",
 			"Implementación de un parser de archivos IFC (similar a step), una librería de geometría 3D, un teselador, un procesador/optimizador geométrico, un visor 3D web, funciones de guardado y exportación, un sistema de licencias. Documentación de funcionalidades.",
 			"Implementation of an IFC (similar to step) file parser, a 3D geometry library, a tessellator, a geometric processor/optimizer, a 3D web viewer, save and export functions, a licensing system. Functionality documentation.",
 			"Implementierung eines IFC-Dateiparsers (ähnlich zu step), einer 3D-Geometriebibliothek, eines Tessellators, eines geometrischen Prozessors/Optimierers, eines 3D-Web-Viewers, Speicher- und Exportfunktionen, eines Lizenzsystems. Dokumentation der Funktionalität."
@@ -186,7 +187,7 @@ def GetResume():
 			"ndBim ist eine kollaborative Online-Arbeitsplattform, die auf alle Bauphasen spezialisiert ist"
 		),
 		T(
-			"Disseny i implementació del backend de la plataforma, la base de dades, els sistemes de seguretat, el xifrat de les dades d’usuari, calculadora de costos. Implementació del frontend.",
+			"Disseny i implementació del backend de la plataforma, la base de dades, els sistemes de seguretat, el xifrat de les dades d'usuari, calculadora de costos. Implementació del frontend.",
 			"Diseño e implementación del backend de la plataforma, base de datos, sistemas de seguridad, cifrado de los datos de usuario, calculadora de costes. Implementación del frontendo.",
 			"Design and implementation of the platform backend, database, security systems, user data encryption, cost calculator. Implementation of the frontend.",
 			"Design und Implementierung des Plattform-Backends, der Datenbank, der Sicherheitssysteme, der Benutzerdatenverschlüsselung, des Kostenrechners. Implementierung des Frontends."
@@ -197,7 +198,7 @@ def GetResume():
 	oda = Project(
 		"Open Design Alliance",
 		T(
-			"La llibreria de l’open design alliance, es coneguda per ser farragosa i complicada de fer servir. L’objectiu era d’aportar un conjunt de funcionalitats per facilitar la implantació de la llibreria.",
+			"La llibreria de l'open design alliance, es coneguda per ser farragosa i complicada de fer servir. L'objectiu era d'aportar un conjunt de funcionalitats per facilitar la implantació de la llibreria.",
 			"La librería del open design aliance, es conocida por ser engorrosas y complicada de utilizar. El objetivo era aportar un conjunto de funcionalidades para facilitar la implantación de la librería.",
 			"The open design alliance library is known to be cumbersome and complicated to use. The goal was to provide a set of functionalities to facilitate the implementation of the library.",
 			"Die Open Design Alliance Funktionenbibliothek ist bekanntermaßen umständlich und kompliziert zu bedienen. Das Ziel war es, eine Reihe von Funktionalitäten bereitzustellen, um die Implementierung der Bibliothek zu erleichtern."
@@ -214,7 +215,7 @@ def GetResume():
 	bim360 = Project(
 		T("Client API BIM-360", "Cliente API BIM-360", "BIM-360 API Client", "BIM-360-API-Client"),
 		T(
-			"La api BIM-360 d’Autodesk ofereix una plataforma de gestió de documents relacionats amb l’arquitectura.",
+			"La api BIM-360 d'Autodesk ofereix una plataforma de gestió de documents relacionats amb l'arquitectura.",
 			"La apio BIM-360 de Autodesk ofrece una plataforma de gestión de documentos relacionados con la arquitectura.",
 			"Autodesk's BIM-360 API provides an architecture-related document management platform.",
 			"Die BIM-360-API von Autodesk bietet eine architekturbezogene Dokumentenverwaltungsplattform."
@@ -278,7 +279,7 @@ def GetResume():
 			"Tuteorica ist eine Online-Plattform für theoretische Führerscheinkurse."
 		),
 		T(
-			"Realitzar un informe de l’estat de la plataforma. Aportar propostes de millora.",
+			"Realitzar un informe de l'estat de la plataforma. Aportar propostes de millora.",
 			"Realizar un informe del estado de la plataforma. Aportar propuestas de mejora.",
 			"Create a platform status report. Provide improvement proposals.",
 			"Erstellen Sie einen Plattformstatusbericht. Verbesserungsvorschläge einbringen."
@@ -296,7 +297,7 @@ def GetResume():
 	emilio = Project(
 		"Emilio Ferrer Fotos",
 		T(
-			"Emilio Ferrer es un reconegut fotògraf amb la necessitat d’exposar les seves obres a través d’una pàgina web.",
+			"Emilio Ferrer es un reconegut fotògraf amb la necessitat d'exposar les seves obres a través d'una pàgina web.",
 			"Emilio Ferrer es un reconocido fotógrafo con la necesidad de exponer sus obras a través de una página web.",
 			"Emilio Ferrer is a renowned photographer with the need to exhibit his works through a website.",
 			"Emilio Ferrer ist ein renommierter Fotograf, der seine Werke über eine Website ausstellen möchte."
@@ -309,7 +310,7 @@ def GetResume():
 	josepBP = Project(
 		"Josep Ball i Papiol",
 		T(
-			"Josep Ball i Papiol es un reconegut psicòleg amb la necessitat d’anunciar els seus serveis a través d’una pàgina web.",
+			"Josep Ball i Papiol es un reconegut psicòleg amb la necessitat d'anunciar els seus serveis a través d'una pàgina web.",
 			"Josep Ball i Papiol es un reconocido psicólogo con la necesidad de anunciar sus servicios a través de una página web.",
 			"Josep Ball i Papiol is a renowned psychologist with the need to advertise his services through a website.",
 			"Josep Ball i Papiol ist ein renommierter Psychologe, der seine Dienste über eine Website bewerben möchte."
@@ -328,7 +329,7 @@ def GetResume():
 	inaem = Project(
 		"Inaem",
 		T(
-			"L’Inaem es un catàleg en línia de cultura que ofereix una API per a accedir a les dades del catàleg.",
+			"L'Inaem es un catàleg en línia de cultura que ofereix una API per a accedir a les dades del catàleg.",
 			"Inaem es un catálogo online de cultura que ofrece una API para acceder a los datos del catálogo.",
 			"Inaem is an online culture catalog that offers an API to access catalog data.",
 			"Inaem ist ein Online-Kulturkatalog, der eine API für den Zugriff auf Katalogdaten bietet."
@@ -383,13 +384,13 @@ def GetResume():
 	okhabitat = Project(
 		"OkHabitat",
 		T(
-			"OkHabitat era una plataforma immobiliaria pensada per a anunciar immobles d’agents immobiliaris i de bancs.",
+			"OkHabitat era una plataforma immobiliaria pensada per a anunciar immobles d'agents immobiliaris i de bancs.",
 			"OkHabitat era una plataforma inmobiliaria pensada para anunciar inmuebles de agentes inmobiliarios y bancos.",
 			"OkHabitat was a real estate platform designed to advertise properties from real estate agents and banks.",
 			"OkHabitat war eine Immobilienplattform, die entwickelt wurde, um Immobilien von Immobilienmaklern und Banken zu bewerben."
 		),
 		T(
-			"Realitzar tasques de manteniment i d’ampliació de la plataforma. Optimitzar consultes a la base de dades.",
+			"Realitzar tasques de manteniment i d'ampliació de la plataforma. Optimitzar consultes a la base de dades.",
 			"Realizar tareas de mantenimiento y ampliación de la plataforma. Optimizar consultas en la base de datos.",
 			"Carry out maintenance and expansion tasks of the platform. Optimize database queries.",
 			"Wartungs- und Erweiterungsaufgaben der Plattform durchführen. Datenbankabfragen optimieren."
@@ -401,7 +402,7 @@ def GetResume():
 	eixcomercial = Project(
 		"Eix comercial Lleida",
 		T(
-			"L’Eix comercial es una associació de negocis de Lleida. El projecte consistia en crear una plataforma en línia per donar visibilitat als negocis en qüestió.",
+			"L'Eix comercial es una associació de negocis de Lleida. El projecte consistia en crear una plataforma en línia per donar visibilitat als negocis en qüestió.",
 			"Eix comercial es una asociación de negocios de Lleida. El proyecto consistía en crear una plataforma online para dar visibilidad a los negocios en cuestión.",
 			"Eix comercial is a business association from Lleida. The project consisted of creating an online platform to give visibility to the businesses in question.",
 			"Eix comercial ist ein Unternehmensverband aus Lleida. Das Projekt bestand darin, eine Online-Plattform zu schaffen, um die betreffenden Unternehmen sichtbar zu machen."
@@ -414,7 +415,7 @@ def GetResume():
 	jqueralt = Project(
 		"JQueralt",
 		T(
-			"JQueralt es una immobiliària de Lleida que precisava d’una pagina web.",
+			"JQueralt es una immobiliària de Lleida que precisava d'una pagina web.",
 			"JQueralt es una inmobiliaria de Lleida que precisaba de una pagina web.",
 			"JQueralt is a real estate company in Lleida that needed a website.",
 			"JQueralt ist ein Immobilienunternehmen in Lleida, das eine Website brauchte."
@@ -427,7 +428,7 @@ def GetResume():
 	oceanAlmond = Project(
 		"OceanAlmond",
 		T(
-			"OceanAlmond es una empresa agrònoma especialitzada en el cultiu d'ametlles que precisava d’una pagina web.",
+			"OceanAlmond es una empresa agrònoma especialitzada en el cultiu d'ametlles que precisava d'una pagina web.",
 			"OceanAlmond es una empresa agrónoma especializada en el cultivo de almendras que precisaba de una pagina web.",
 			"OceanAlmond is an agricultural company specialized in the cultivation of almonds that needed a website.",
 			"OceanAlmond ist ein landwirtschaftliches Unternehmen, das sich auf den Anbau von Mandeln spezialisiert hat und eine Website benötigte."
@@ -444,7 +445,7 @@ def GetResume():
 	timebank = Project(
 		T("Banc del temps", "Banco del tiempo", "Time bank", "Zeitbank"),
 		T(
-			"Un banc del temps es una forma de intercambiar feines entre els membres d’una comunitat sense que s’hi involucrin els diners. En canvi es comptabilitzen hores.",
+			"Un banc del temps es una forma de intercambiar feines entre els membres d'una comunitat sense que s'hi involucrin els diners. En canvi es comptabilitzen hores.",
 			"Un banco del tiempo es una forma de intercambiar trabajos entre los miembros de una comunidad sin que se involucre el dinero. En cambio, se contabilizan horas.",
 			"A time bank is a way of exchanging jobs between members of a community without money being involved. Instead, hours are counted.",
 			"Eine Zeitbank ist eine Möglichkeit, Jobs zwischen Mitgliedern einer Gemeinschaft auszutauschen, ohne dass Geld im Spiel ist. Stattdessen werden Stunden gezählt."
@@ -458,8 +459,25 @@ def GetResume():
 		SkillSet([html, php, mysql, codeigniter, grocerycrud])
 	)
 
+	camimages = Project(
+		T("Ordenació imatges càmeres", "Ordenación imágenes cámaras", "Sorting camera images", "Sortieren von Kamerabildern"),
+		T(
+			"En compliment de la LOPD, les imatges gravades per les càmeres de vigilància s'han d'eliminar passat un període de temps determinat.",
+			"En cumplimiento de la LOPD, las imágenes grabadas por las cámaras de vigilancia deben eliminarse pasado un período de tiempo determinado.",
+			"In compliance with the LOPD, the images recorded by the surveillance cameras must be deleted after a certain period of time.",
+			"Gemäß LOPD müssen die von den Überwachungskameras aufgenommenen Bilder nach einer bestimmten Zeit gelöscht werden."
+		),
+		T(
+			"Implementar un script que s'executi de forma regular, que crei un directori per cada dia i que mogui les imatges al seu directori corresponent.",
+			"Implementar un script que se ejecute de forma regular, que cree un directorio por cada día y que mueva las imágenes en su directorio correspondiente.",
+			"Implement a script that runs regularly, creates a directory for each day and moves the images to their corresponding directory.",
+			"Implementierung eines regelmäßig ausgeführten Skripts, das für jeden Tag ein Verzeichnis erstellt und die Bilder in das entsprechende Verzeichnis verschiebt."
+		),
+		SkillSet([linux, bash, cron, php])
+	)
 
-	laseuProjects = [timebank]
+
+	laseuProjects = [timebank, camimages]
 	ajLaseu = Job(
 		becari,
 		T(
