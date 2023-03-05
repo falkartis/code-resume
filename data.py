@@ -476,8 +476,25 @@ def GetResume():
 		SkillSet([linux, bash, cron, php])
 	)
 
+	smssending = Project(
+		T("Enviament d'SMS", "Envío de SMS", "Sending SMS", "SMS senden"),
+		T(
+			"El poliesportiu de la ciutat demana que se li faci arribar als membres subscrits informació de forma diària per SMS.",
+			"El polideportivo de la ciudad pide que se le haga llegar a los miembros suscritos información de forma diaria por SMS.",
+			"The city's sports center requests that subscribed members receive information on a daily basis by SMS.",
+			"Das Sportzentrum der Stadt fordert, dass abonnierte Mitglieder täglich Informationen per SMS erhalten."
+		),
+		T(
+			"Implementar un script que obtingui la informació en qüestió i l’envii als destinataris subscrits.",
+			"Implementar un script que obtenga la información en cuestión y lo envíe a los destinatarios suscritos.",
+			"Implement a script that obtains the information in question and sends it to the subscribed recipients.",
+			"Implementierung eines Skripts, das die betreffenden Informationen erhält und an die abonnierten Empfänger sendet."
+		),
+		SkillSet([linux, bash, cron])
+	)
 
-	laseuProjects = [timebank, camimages]
+
+	laseuProjects = [timebank, camimages, smssending]
 	ajLaseu = Job(
 		becari,
 		T(
