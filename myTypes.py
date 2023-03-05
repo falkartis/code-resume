@@ -48,27 +48,31 @@ class SkillSet:
 			txt += ctx.Render(skill)
 		return txt
 
-class Project:
-	def __init__(self, name, description, tasks, skills, url = None, startDate = None, endDate = None):
+class Activity:
+	def __init__(self, name, description, skills, url, date):
 		self.Name = name
 		self.Description = description
-		self.Tasks = tasks
 		self.Skills = skills
+		self.Date = date
 		self.Url = url
+
+class Project(Activity):
+	def __init__(self, name, description, tasks, skills, url = None, startDate = None, endDate = None):
+		Activity.__init__(self, name, description, skills, url, endDate)
+		self.Tasks = tasks
 		self.StartDate = startDate
-		self.EndDate = endDate
 
 	def Render(self, ctx):
 
 		txt = ""
 		txt += ctx.Header(self.Name)
 
-		if self.StartDate is not None and self.EndDate is not None:
-			txt += ctx.KeyAndValueNl(ctx.Translations["interval"], ctx.Render(self.StartDate, " – ", self.EndDate))
+		if self.StartDate is not None and self.Date is not None:
+			txt += ctx.KeyAndValueNl(ctx.Translations["interval"], ctx.Render(self.StartDate, " – ", self.Date))
 		elif self.StartDate is not None:
 			txt += ctx.KeyAndValueNl(ctx.Translations["date"], ctx.Render(self.StartDate))
-		elif self.EndDate is not None:
-			txt += ctx.KeyAndValueNl(ctx.Translations["date"], ctx.Render(self.EndDate))
+		elif self.Date is not None:
+			txt += ctx.KeyAndValueNl(ctx.Translations["date"], ctx.Render(self.Date))
 
 		if self.Description is not None:
 			txt += ctx.KeyAndValueP(ctx.Translations["description"], self.Description)
@@ -83,6 +87,33 @@ class Project:
 			txt += ctx.KeyAndValueP(ctx.Translations["link"], ctx.Link(self.Url, self.Url))
 
 		return txt
+
+class Event(Activity):
+	def __init__(self, name, description, skills, url, date, location):
+		Activity.__init__(self, name, description, skills, url, date)
+		self.Location = location
+	
+	def Render(self, ctx):
+		txt = ""
+		txt += ctx.Header(self.Name)
+
+		if self.Location is not None:
+			txt += ctx.KeyAndValueNl(ctx.Translations["location"], self.Location)
+			
+		if self.Date is not None:
+			txt += ctx.KeyAndValueNl(ctx.Translations["date"], ctx.Render(self.Date))
+
+		if self.Description is not None:
+			txt += ctx.KeyAndValueP(ctx.Translations["event-description"], self.Description)
+
+		if self.Skills is not None:
+			txt += ctx.KeyAndValueP(ctx.Translations["skills"], self.Skills)
+
+		if self.Url is not None:
+			txt += ctx.KeyAndValueP(ctx.Translations["link"], ctx.Link(self.Url, self.Url))
+
+		return txt
+
 
 class Job:
 	def __init__(self, place, company, startDate, endDate, location, projects, skills = None):

@@ -594,6 +594,24 @@ def GetResume():
 		None, "2014", "2015"
 	)
 
+	sensors = Skill("sensors", T("Sensors", "Sensores", "Sensors", "Sensoren"))
+	robolot = Event(
+		T(
+			"Concursant – Competició de robots rastrejadors – Robolot",
+			"Concursante – Competición de robots rastreadores – Robolot",
+			"Contestant – Crawler Robot Competition – Robolot",
+			"Kandidat – Crawler-Roboter-Wettbewerb – Robolot"
+		),
+		T(
+			"Els concursants havíem de presentar un robot que fos capaç de seguir una línia pintada al ring.",
+			"Los concursantes debíamos presentar un robot que fuera capaz de seguir una línea pintada en el ring.",
+			"We contestants had to present a robot that was able to follow a line painted in the ring.",
+			"Wir Teilnehmer mussten einen Roboter präsentieren, der einer in den Ring gemalten Linie folgen konnte."
+		),
+		SkillSet([analog, digital, component, schema, pcb, proteus, firmware, cpp, sensors, team]),
+		None, "2014/04/26", "Olot"
+	)
+
 	caparrella = Training(
 		T(
 			"CFGS – Manteniment Electrònic",
@@ -602,7 +620,7 @@ def GetResume():
 			"Fachabitur – Elektronische Wartung"
 		),
 		"2013", "2015", "IES la Caparrella", "Lleida",
-		[pick2light]
+		[pick2light, robolot]
 	)
 
 
@@ -627,6 +645,8 @@ def GetExtraTranslations():
 	translations["skills"] = T("Eines i coneixements", "Herramientas y conocimientos", "Skills and tools", "Fähigkeiten und Werkzeuge")
 	translations["link"] = T("Enllaç", "Enlace", "Link", "Verknüpfung")
 	translations["school"] = T("Centre", "Centro", "School", "Schule")
+	translations["date"] = T("Data", "Fecha", "Date", "Datum")
+	translations["event-description"] = T("Descripció de l'esdeveniment", "Descripción del evento", "Event description", "Beschreibung der Veranstaltung")
 	return translations
 
 def main(argv):
