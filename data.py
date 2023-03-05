@@ -90,6 +90,7 @@ def GetResume():
 	plone = Skill("Plone CMS")
 	googlemaps = Skill("Google Maps API")
 	xml = Skill("XML")
+	wordpress = Skill("WordPress")
 
 
 
@@ -434,7 +435,9 @@ def GetResume():
 		SkillSet([html,css, php, mysql, js, codeigniter, grocerycrud, googlemaps, bootstrap, responsive])
 	)
 
-	lagraficaProjects = [okhabitat, eixcomercial, jqueralt, oceanAlmond]
+	lagraficaOther = Project(otherWebsites,None,webamida,SkillSet([html,css,php,mysql,js,codeigniter,grocerycrud,bootstrap,responsive,wordpress,en]))
+
+	lagraficaProjects = [okhabitat, eixcomercial, jqueralt, oceanAlmond, lagraficaOther]
 	lagrafica = Job(webDeveloper, "LaGrafica", "2014/06", "2015/07", "Lleida", lagraficaProjects)
 
 
