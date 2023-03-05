@@ -98,6 +98,14 @@ def GetResume():
 	networkmonitoring = Skill("network-monitoring", T("supervisió de la xarxa", "supervisión de la red", "network monitoring", "Netzwerküberwachung"))
 	computermaint = Skill("computer-maintenance", T("Manteniment d’ordenadors", "Mantenimiento de ordenadores", "Computer maintenance", "Computerwartung"))
 	access = Skill("Access")
+	analog = Skill("analog-electronics", T("Electrònica analògica", "Electrónica analógica", "Analog electronics", "Analoge Elektronik"))
+	digital = Skill("digital-electronics", T("Electrònica digital", "Electrónica digital", "Digital electronics", "Digitale Elektronik"))
+	component = Skill("component-selection", T("selecció de components", "selección de componentes", "component selection", "Komponentenauswahl"))
+	pcb = Skill("pcb", T("disseny de circuits impresos", "diseño de circuitos impresos", "printed circuit design", "Leiterplattenentwurf"))
+	proteus = Skill("Proteus")
+	firmware = Skill("Firmware")
+	tcpIp = Skill("TCP/IP")
+	http = Skill("HTTP")
 
 
 
@@ -568,6 +576,24 @@ def GetResume():
 		"Lleida"
 	)
 
+	pick2light = Project(
+		T(
+			"Disseny i desenvolupament prototip – Pick to light",
+			"Diseño y desarrollo prototipo – Pick to light",
+			"Prototype design and development – Pick to light",
+			"Prototypendesign und -entwicklung – Pick to light"
+		),
+		None,
+		T(
+			"Disseny i construcció d’un guia visual per a empleats de magatzem d’una empresa de logística amb connexió a la xarxa de l’empresa.",
+			"Diseño y construcción de un guía visual para empleados de almacén de una empresa de logística con conexión a la red de la empresa.",
+			"Design and construction of a visual guide for warehouse employees of a logistics company connected to the company's network.",
+			"Design und Aufbau eines visuellen Leitfadens für Lagermitarbeiter eines Logistikunternehmens, das an das Netzwerk des Unternehmens angeschlossen ist."
+		),
+		SkillSet([analog, digital, component, schema, pcb, proteus, firmware, cpp, tcpIp, http, html, css, team]),
+		None, "2014", "2015"
+	)
+
 	caparrella = Training(
 		T(
 			"CFGS – Manteniment Electrònic",
@@ -576,7 +602,7 @@ def GetResume():
 			"Fachabitur – Elektronische Wartung"
 		),
 		"2013", "2015", "IES la Caparrella", "Lleida",
-		[]
+		[pick2light]
 	)
 
 

@@ -49,18 +49,26 @@ class SkillSet:
 		return txt
 
 class Project:
-	def __init__(self, name, description, tasks, skills, url = None):
+	def __init__(self, name, description, tasks, skills, url = None, startDate = None, endDate = None):
 		self.Name = name
 		self.Description = description
 		self.Tasks = tasks
 		self.Skills = skills
 		self.Url = url
+		self.StartDate = startDate
+		self.EndDate = endDate
 
 	def Render(self, ctx):
 
 		txt = ""
 		txt += ctx.Header(self.Name)
 
+		if self.StartDate is not None and self.EndDate is not None:
+			txt += ctx.KeyAndValueNl(ctx.Translations["interval"], ctx.Render(self.StartDate, " – ", self.EndDate))
+		elif self.StartDate is not None:
+			txt += ctx.KeyAndValueNl(ctx.Translations["date"], ctx.Render(self.StartDate))
+		elif self.EndDate is not None:
+			txt += ctx.KeyAndValueNl(ctx.Translations["date"], ctx.Render(self.EndDate))
 
 		if self.Description is not None:
 			txt += ctx.KeyAndValueP(ctx.Translations["description"], self.Description)
@@ -73,8 +81,6 @@ class Project:
 
 		if self.Url is not None:
 			txt += ctx.KeyAndValueP(ctx.Translations["link"], ctx.Link(self.Url, self.Url))
-			# TODO: put a link
-			pass
 
 		return txt
 
