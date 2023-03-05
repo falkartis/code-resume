@@ -5,7 +5,6 @@ def GetResume():
 
 	T = Translation
 
-
 	name = "Falk Artis Bay"
 	drivingLicense = T("Permís de conduir", "Permiso de conducir", "Driving license", "Führerschein")
 	myDLicense = T("B, vehicle propi.", "B, vehículo propio.", "B, own vehicle.", "B, eigenes fahzeug.")
@@ -135,8 +134,7 @@ def GetResume():
 		"With a racing car you can't plow the field, with a tractor you can.",
 		"Mit einem Rennwagen kann man das Feld nicht pflügen, mit einem Traktor schon."
 	)
-	quotes = [doctors, tractor]
-	headerData = HeaderData(headers, quotes)
+	headerData = HeaderData(headers, [doctors, tractor])
 
 	dsPlace = T("Tècnic Servei d'assistència tècnica", "Técnico Servicio de asistencia técnica", "Help Desk Technician", "Help Desk Techniker")
 	dsWeb = Project(
@@ -171,9 +169,7 @@ def GetResume():
 		),
 		SkillSet([customer, incident, logistic, diplomacy, document, team, warranty, en, de, linux, solar, wind, optim])
 	)
-	dsProjects = [dsWeb, dsTesting, dsSAT]
-	damiaSolar = Job(dsPlace, "Damia Solar", "2020/08", "2022/07", "La Pobla de Segur", dsProjects)
-
+	damiaSolar = Job(dsPlace, "Damia Solar", "2020/08", "2022/07", "La Pobla de Segur", [dsWeb, dsTesting, dsSAT])
 
 	iCore9 = Project(
 		"iCore9",
@@ -337,8 +333,7 @@ def GetResume():
 
 	gIother = Project(otherWebsites, None, webamida, SkillSet([html, css, php, mysql, js, codeigniter, grocerycrud, linux, bootstrap, responsive, en]))
 
-	gIProjects = [tuteorica, emilio, josepBP, gIother]
-	grupindex = Job(webDeveloper, "grupIndex", "2017/02", "2018/02", "Balaguer", gIProjects)
+	grupindex = Job(webDeveloper, "grupIndex", "2017/02", "2018/02", "Balaguer", [tuteorica, emilio, josepBP, gIother])
 
 	inaem = Project(
 		"Inaem",
@@ -374,7 +369,6 @@ def GetResume():
 		SkillSet([html, css, js, php, mysql, drupal, remoteaccess, dns])
 	)
 
-
 	semicOther = Project(
 		otherWebsites, 
 		T(
@@ -392,8 +386,7 @@ def GetResume():
 		SkillSet([html, css, js, python, plone, drupal, linux])
 	)
 
-	semicProjects = [inaem, tmi, semicOther]
-	semic = Job(webDeveloper, "SEMIC", "2015/09", "2016/06", "Lleida", semicProjects)
+	semic = Job(webDeveloper, "SEMIC", "2015/09", "2016/06", "Lleida", [inaem, tmi, semicOther])
 
 	okhabitat = Project(
 		"OkHabitat",
@@ -453,8 +446,7 @@ def GetResume():
 
 	lagraficaOther = Project(otherWebsites,None,webamida,SkillSet([html,css,php,mysql,js,codeigniter,grocerycrud,bootstrap,responsive,wordpress,en]))
 
-	lagraficaProjects = [okhabitat, eixcomercial, jqueralt, oceanAlmond, lagraficaOther]
-	lagrafica = Job(webDeveloper, "LaGrafica", "2014/06", "2015/07", "Lleida", lagraficaProjects)
+	lagrafica = Job(webDeveloper, "LaGrafica", "2014/06", "2015/07", "Lleida", [okhabitat, eixcomercial, jqueralt, oceanAlmond, lagraficaOther])
 
 	timebank = Project(
 		T("Banc del temps", "Banco del tiempo", "Time bank", "Zeitbank"),
@@ -541,11 +533,10 @@ def GetResume():
 		SkillSet([snorby, linux, security, networkmonitoring, incident, computermaint])
 	)
 
-	laseuProjects = [timebank, camimages, smssending, hiking, ids]
 	ajLaseu = Job(
 		becari,
 		T("Ajuntament de La Seu d'Urgell", "Ayuntamiento de La Seu d'Urgell", "City Council of La Seu d'Urgell", "Rathaus von La Seu d'Urgell"),
-		"2012", "2013", "La Seu d'Urgell", laseuProjects
+		"2012", "2013", "La Seu d'Urgell", [timebank, camimages, smssending, hiking, ids]
 	)
 
 	telecentrePallars = Job(
@@ -621,6 +612,11 @@ def GetResume():
 		),
 		"2013", "2015", "IES la Caparrella", "Lleida", [pick2light, robolot]
 	)
+
+
+
+
+
 
 	joanBrudieu = Training(
 		T(
