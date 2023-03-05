@@ -670,6 +670,22 @@ def GetResume():
 		"2011", "2013", "IES Joan Brudieu", "La Seu d'Urgell", [programame3, programame2, aversicuela, programame1]
 	)
 
+	catskills = Event(
+		T(
+			"Concursant – Competició de disseny de pagines web – CatSkills",
+			"Concursante – Competición de diseño de paginas web – CatSkills",
+			"Contestant – Web page design competition – CatSkills",
+			"Kandidat – Webseiten-Designwettbewerb – CatSkills"
+		),
+		T(
+			"Els concursants havien de crear un lloc web d'una empresa immobiliària.",
+			"Los concursantes debían crear un sitio web de una empresa inmobiliaria.",
+			"Contestants had to create a website for a real estate company.",
+			"Die Teilnehmer mussten eine Website für ein Immobilienunternehmen erstellen."
+		),
+		SkillSet([html, css, php, mysql]), None, "2009/01/28", "IES Esteve Terradas i Illa, Cornellà de Llobregat"
+	)
+
 	hugRoger = Training(
 		T(
 			"CFGM – Explotació de Sistemes Informàtics",
@@ -677,7 +693,7 @@ def GetResume():
 			"Intermediate Level Training Curse – Use of Computer Systems",
 			"Fachabitur – Nutzung von Computersystemen"
 		),
-		"2007", "2009", "IES Hug Roger III", "Sort", []
+		"2007", "2009", "IES Hug Roger III", "Sort", [catskills]
 	)
 
 	trainings = [udl, caparrella, joanBrudieu, hugRoger]
