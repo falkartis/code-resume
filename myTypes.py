@@ -89,22 +89,26 @@ class Project(Activity):
 		return txt
 
 class Event(Activity):
-	def __init__(self, name, description, skills, url, date, location):
+	def __init__(self, name, description, skills, url, date, location, extraData = None):
 		Activity.__init__(self, name, description, skills, url, date)
 		self.Location = location
+		self.ExtraData = extraData
 	
 	def Render(self, ctx):
 		txt = ""
 		txt += ctx.Header(self.Name)
 
-		if self.Location is not None:
-			txt += ctx.KeyAndValueNl(ctx.Translations["location"], self.Location)
-			
 		if self.Date is not None:
 			txt += ctx.KeyAndValueNl(ctx.Translations["date"], ctx.Render(self.Date))
 
+		if self.Location is not None:
+			txt += ctx.KeyAndValueNl(ctx.Translations["location"], self.Location)
+
 		if self.Description is not None:
 			txt += ctx.KeyAndValueP(ctx.Translations["event-description"], self.Description)
+
+		if self.ExtraData is not None:
+			txt += ctx.Paragraph(self.ExtraData)
 
 		if self.Skills is not None:
 			txt += ctx.KeyAndValueP(ctx.Translations["skills"], self.Skills)
@@ -171,7 +175,6 @@ class Training:
 		
 		return txt
 
-
 class Header:
 	def __init__(self, key, value):
 		self.Key = key
@@ -179,7 +182,6 @@ class Header:
 
 	def Render(self, ctx):
 		return ctx.KeyAndValueNl(self.Key, self.Value)
-
 
 class HeaderData:
 	def __init__(self, headers, quotes):

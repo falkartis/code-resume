@@ -105,6 +105,7 @@ def GetResume():
 	firmware = Skill("Firmware")
 	tcpIp = Skill("TCP/IP")
 	http = Skill("HTTP")
+	design = Skill("design", T("Disseny", "Diseño", "Design", "Design"))
 
 
 
@@ -613,8 +614,31 @@ def GetResume():
 		"2013", "2015", "IES la Caparrella", "Lleida", [pick2light, robolot]
 	)
 
-
-
+	aversicuela = Event(
+		T(
+			"Concursant – Jornada de petits i joves emprenedors",
+			"Concursante – Jornada de pequeños y jóvenes emprendedores",
+			"Contestant – Day of small and young entrepreneurs",
+			"Kandidat – Tag der Klein- und Jungunternehmer"
+		),
+		T(
+			"L'objectiu de la jornada era el de donar una oportunitat als alumnes de diferents instituts de presentar els seus respectius projectes emprenedors.",
+			"El objetivo de la jornada era dar una oportunidad a los alumnos de diferentes institutos de presentar sus respectivos proyectos emprendedores.",
+			"The aim of the day was to give students from different institutes an opportunity to present their respective entrepreneurial projects.",
+			"Ziel des Tages war es, Studierenden verschiedener Institute die Möglichkeit zu geben, ihre jeweiligen unternehmerischen Projekte vorzustellen."
+		),
+		SkillSet([php, html, css, mysql, security, design, team]),
+		None, "2012/05/17", "La Seu d’Urgell",
+		Header(
+			T("Projecte presentat", "Proyecto presentado", "Project presented", "Vorgestelltes Projekt"),
+			T(
+				"A ver si cuela (aversicuela.com) es el projecte que varem presentar en el nostre equip. Es tracta d’una plataforma social en línia per compartir contingut d'humor. La plataforma va estar en producció, funcionant i amb usuaris reals entre el 2012/04/01 i el 2013/02/21.",
+				"A ver si cuela (aversicuela.com) es el proyecto que presentamos en nuestro equipo. Se trata de una plataforma social online para compartir contenido de humor. La plataforma estuvo en producción, funcionando y con usuarios reales entre el 2012/04/01 y el 2013/02/21.",
+				"A ver si cuela (aversicuela.com) is the project that we presented in our team. It is an online social platform for sharing humorous content. The platform was in production, working and with real users between 2012/04/01 and 2013/02/21.",
+				"A ver si cuela (aversicuela.com) ist das Projekt, das wir in unserem Team vorgestellt haben. Es ist eine soziale Online-Plattform zum Teilen von humorvollen Inhalten. Die Plattform war zwischen dem 2012/04/01 und dem 2013/02/21 in Betrieb und mit echten Benutzern."
+			)
+		)
+	)
 
 
 
@@ -625,7 +649,7 @@ def GetResume():
 			"Higher Level Training Curse – Computer Network Systems Administration",
 			"Fachabitur – Verwaltung von Netzwerkcomputersystemen"
 		),
-		"2011", "2013", "IES Joan Brudieu", "La Seu d'Urgell", []
+		"2011", "2013", "IES Joan Brudieu", "La Seu d'Urgell", [aversicuela]
 	)
 
 	trainings = [udl, caparrella, joanBrudieu]
