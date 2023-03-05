@@ -79,13 +79,15 @@ class Project:
 		return txt
 
 class Job:
-	def __init__(self, place, company, startDate, endDate, location, projects):
+	def __init__(self, place, company, startDate, endDate, location, projects, skills = None):
 		self.Place = place
 		self.Company = company
 		self.StartDate = startDate
 		self.EndDate = endDate
 		self.Location = location
 		self.Projects = projects
+		self.Skills = skills
+
 	def Render(self, ctx):
 		txt = ""
 
@@ -94,10 +96,15 @@ class Job:
 		txt += ctx.KeyAndValueNl(ctx.Translations["interval"], ctx.Render(self.StartDate, " – ", self.EndDate))
 		txt += ctx.KeyAndValueNl(ctx.Translations["location"], self.Location)
 
-		ctx.IncHeadLevel()
-		for project in self.Projects:
-			txt += ctx.Render(project)
-		ctx.DecHeadLevel()
+		if self.Skills is not None:
+			txt += ctx.KeyAndValueP(ctx.Translations["skills"], self.Skills)
+
+		if self.Projects is not None:
+			ctx.IncHeadLevel()
+			for project in self.Projects:
+				txt += ctx.Render(project)
+			ctx.DecHeadLevel()
+		
 		return txt
 
 class Training:

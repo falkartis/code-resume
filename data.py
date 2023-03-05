@@ -97,6 +97,7 @@ def GetResume():
 	snorby = Skill("Snorby")
 	networkmonitoring = Skill("network-monitoring", T("supervisió de la xarxa", "supervisión de la red", "network monitoring", "Netzwerküberwachung"))
 	computermaint = Skill("computer-maintenance", T("Manteniment d’ordenadors", "Mantenimiento de ordenadores", "Computer maintenance", "Computerwartung"))
+	access = Skill("Access")
 
 
 
@@ -535,17 +536,20 @@ def GetResume():
 	laseuProjects = [timebank, camimages, smssending, hiking, ids]
 	ajLaseu = Job(
 		becari,
-		T(
-			"Ajuntament de La Seu d'Urgell",
-			"Ayuntamiento de La Seu d'Urgell",
-			"City Council of La Seu d'Urgell",
-			"Rathaus von La Seu d'Urgell"
-		),
+		T("Ajuntament de La Seu d'Urgell", "Ayuntamiento de La Seu d'Urgell", "City Council of La Seu d'Urgell", "Rathaus von La Seu d'Urgell"),
 		"2012", "2013", "La Seu d'Urgell", laseuProjects
 	)
 
 
-	jobs = [damiaSolar, handle, becariAlcoletge, grupindex, semic, lagrafica, ajLaseu]
+	telecentrePallars = Job(
+		becari,
+		T("Telecentre del Pallars Sobirà", "Telecentro del Pallars Sobirà", "Pallars Sobirà telecentre", "Telezentrum Pallars Sobirà"),
+		"2009", "2010", "Sort",
+		None,
+		SkillSet([html, css, drupal, access, computermaint])
+	)
+
+	jobs = [damiaSolar, handle, becariAlcoletge, grupindex, semic, lagrafica, ajLaseu, telecentrePallars]
 	trainings = []
 	projects = []
 
