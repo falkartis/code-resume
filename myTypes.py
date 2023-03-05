@@ -92,7 +92,6 @@ class Job:
 		txt = ""
 
 		txt += ctx.Header(self.Place, " – ", self.Company)
-
 		txt += ctx.KeyAndValueNl(ctx.Translations["interval"], ctx.Render(self.StartDate, " – ", self.EndDate))
 		txt += ctx.KeyAndValueNl(ctx.Translations["location"], self.Location)
 
@@ -108,13 +107,33 @@ class Job:
 		return txt
 
 class Training:
-	def __init__(self, name, startDate, endDate, school, location, projects):
+	def __init__(self, name, startDate, endDate, school, location, projects = None, skills = None):
 		self.Name = name
 		self.StartDate = startDate
 		self.EndDate = endDate
 		self.School = school
 		self.Location = location
 		self.Projects = projects
+		self.Skills = skills
+
+	def Render(self, ctx):
+		txt = ""
+		txt += ctx.Header(self.Name)
+		txt += ctx.KeyAndValueNl(ctx.Translations["interval"], ctx.Render(self.StartDate, " – ", self.EndDate))
+		txt += ctx.KeyAndValueNl(ctx.Translations["school"], self.School)
+		txt += ctx.KeyAndValueNl(ctx.Translations["location"], self.Location)
+
+		if self.Skills is not None:
+			txt += ctx.KeyAndValueP(ctx.Translations["skills"], self.Skills)
+
+		if self.Projects is not None:
+			ctx.IncHeadLevel()
+			for project in self.Projects:
+				txt += ctx.Render(project)
+			ctx.DecHeadLevel()
+		
+		return txt
+
 
 class Header:
 	def __init__(self, key, value):

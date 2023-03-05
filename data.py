@@ -540,7 +540,6 @@ def GetResume():
 		"2012", "2013", "La Seu d'Urgell", laseuProjects
 	)
 
-
 	telecentrePallars = Job(
 		becari,
 		T("Telecentre del Pallars Sobirà", "Telecentro del Pallars Sobirà", "Pallars Sobirà telecentre", "Telezentrum Pallars Sobirà"),
@@ -550,7 +549,27 @@ def GetResume():
 	)
 
 	jobs = [damiaSolar, handle, becariAlcoletge, grupindex, semic, lagrafica, ajLaseu, telecentrePallars]
-	trainings = []
+
+	geeia = Training(
+		T(
+			"Grau en Enginyeria Electrònica Industrial i Automàtica",
+			"Grado en Ingeniería Electrónica Industrial y Automática",
+			"Degree in Industrial and Automatic Electronic Engineering",
+			"Studium der Industrie- und Automatisierungstechnik"
+		),
+		"2015",
+		T("(en curs)", "(en curso)", "(in progress)", "(im Gange)"),
+		T(
+			"Escola Politècnica Superior – Universitat de Lleida",
+			"Escuela Politécnica Superior - Universidad de Lleida",
+			"Higher Polytechnic School – University of Lleida",
+			"Höhere Polytechnische Schule – Universität Lleida"
+		),
+		"Lleida"
+	)
+
+
+	trainings = [geeia]
 	projects = []
 
 	resume = Resume(name, headerData, jobs, trainings, projects)
@@ -570,6 +589,7 @@ def GetExtraTranslations():
 	translations["tasks"] = T("Tasques realitzades", "Tareas realizadas", "Tasks performed", "Ausgeführte Aufgaben")
 	translations["skills"] = T("Eines i coneixements", "Herramientas y conocimientos", "Skills and tools", "Fähigkeiten und Werkzeuge")
 	translations["link"] = T("Enllaç", "Enlace", "Link", "Verknüpfung")
+	translations["school"] = T("Centre", "Centro", "School", "Schule")
 	return translations
 
 def main(argv):
