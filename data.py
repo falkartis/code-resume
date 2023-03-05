@@ -92,6 +92,8 @@ def GetResume():
 	xml = Skill("XML")
 	wordpress = Skill("WordPress")
 	cron = Skill("Cron")
+	pdf = Skill("PDF")
+	kml = Skill("KML")
 
 
 
@@ -485,7 +487,7 @@ def GetResume():
 			"Das Sportzentrum der Stadt fordert, dass abonnierte Mitglieder täglich Informationen per SMS erhalten."
 		),
 		T(
-			"Implementar un script que obtingui la informació en qüestió i l’envii als destinataris subscrits.",
+			"Implementar un script que obtingui la informació en qüestió i l'envii als destinataris subscrits.",
 			"Implementar un script que obtenga la información en cuestión y lo envíe a los destinatarios suscritos.",
 			"Implement a script that obtains the information in question and sends it to the subscribed recipients.",
 			"Implementierung eines Skripts, das die betreffenden Informationen erhält und an die abonnierten Empfänger sendet."
@@ -493,8 +495,25 @@ def GetResume():
 		SkillSet([linux, bash, cron])
 	)
 
+	hiking = Project(
+		T("Generació de fitxes de rutes", "Generación de fichas de rutas", "Generation of route files", "Generierung von Routendateien"),
+		T(
+			"L'oficina de turisme precisava un conjunt de fitxes descriptives per a varies rutes d'excursionisme.",
+			"La oficina de turismo precisaba de un conjunto de fichas descriptivas para varias rutas de excursionismo.",
+			"The tourism office required a set of descriptive cards for various hiking routes.",
+			"Das Tourismusbüro verlangte einen Satz beschreibender Karten für verschiedene Wanderrouten."
+		),
+		T(
+			"Implementar un script que obtingui les dades d'una API i generi els arxius PDF.",
+			"Implementar un script que obtenga los datos de una API y genere los archivos PDF.",
+			"Implement a script that obtains the data from an API and generates the PDF files.",
+			"Implementierung eines Skripts, das die Daten von einer API bezieht und die PDF-Dateien generiert."
+		),
+		SkillSet([php, pdf, kml, api, xml])
+	)
 
-	laseuProjects = [timebank, camimages, smssending]
+
+	laseuProjects = [timebank, camimages, smssending, hiking]
 	ajLaseu = Job(
 		becari,
 		T(
