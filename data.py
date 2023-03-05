@@ -94,6 +94,9 @@ def GetResume():
 	cron = Skill("Cron")
 	pdf = Skill("PDF")
 	kml = Skill("KML")
+	snorby = Skill("Snorby")
+	networkmonitoring = Skill("network-monitoring", T("supervisió de la xarxa", "supervisión de la red", "network monitoring", "Netzwerküberwachung"))
+	computermaint = Skill("computer-maintenance", T("Manteniment d’ordenadors", "Mantenimiento de ordenadores", "Computer maintenance", "Computerwartung"))
 
 
 
@@ -512,8 +515,24 @@ def GetResume():
 		SkillSet([php, pdf, kml, api, xml])
 	)
 
+	ids = Project(
+		"IDS",
+		T(
+			"Per tal de garantir la seguretat i el bon funcionament de la xarxa de l'ajuntament es va implantar un sistema de detecció d'intrusions.",
+			"Para garantizar la seguridad y buen funcionamiento de la red del ayuntamiento se implantó un sistema de detección de intrusiones.",
+			"In order to guarantee the security and proper functioning of the council's network, an intrusion detection system was implemented.",
+			"Um die Sicherheit und das ordnungsgemäße Funktionieren des Gemeindenetzwerks zu gewährleisten, wurde ein Intrusion Detection System implementiert."
+		),
+		T(
+			"Instalar i conectar un servidor dedicat, instal·lació del sistema operatiu i del programari necessari. Detectar vulnerabilitats en els equips de la xarxa i resoldre-les.",
+			"Instalar y conectar un servidor dedicado, instalación del sistema operativo y del software necesario. Detectar vulnerabilidades en los equipos de la red y resolverlas.",
+			"Install and connect a dedicated server, installation of the operating system and the necessary software. Detect vulnerabilities in network equipment and resolve them.",
+			"Installation und Anschluss eines dedizierten Servers, Installation des Betriebssystems und der notwendigen Software. Erkennung von Schwachstellen in Netzwerkgeräten und deren Behebung."
+		),
+		SkillSet([snorby, linux, security, networkmonitoring, incident, computermaint])
+	)
 
-	laseuProjects = [timebank, camimages, smssending, hiking]
+	laseuProjects = [timebank, camimages, smssending, hiking, ids]
 	ajLaseu = Job(
 		becari,
 		T(
