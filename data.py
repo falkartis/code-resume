@@ -260,8 +260,9 @@ def GetResume():
 			None
 		)
 	]
+	becari = T("Becari", "Becario", "Intern", "Praktikant")
 	becariAlcoletge = Job(
-		T("Becari", "Becario", "Intern", "Praktikant"),
+		becari,
 		T("Taller de electrònica", "Taller de electrónica", "Electronics workshop", "Elektronik Werkstatt"),
 		"2018/02", "2018/06", "Alcoletge", alcoletgeProjects
 	)
@@ -441,8 +442,20 @@ def GetResume():
 	lagrafica = Job(webDeveloper, "LaGrafica", "2014/06", "2015/07", "Lleida", lagraficaProjects)
 
 
+	laseuProjects = []
+	ajLaseu = Job(
+		becari,
+		T(
+			"Ajuntament de La Seu d'Urgell",
+			"Ayuntamiento de La Seu d'Urgell",
+			"City Council of La Seu d'Urgell",
+			"Rathaus von La Seu d'Urgell"
+		),
+		"2012", "2013", "La Seu d'Urgell", laseuProjects
+	)
 
-	jobs = [damiaSolar, handle, becariAlcoletge, grupindex, semic, lagrafica]
+
+	jobs = [damiaSolar, handle, becariAlcoletge, grupindex, semic, lagrafica, ajLaseu]
 	trainings = []
 	projects = []
 
