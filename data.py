@@ -696,7 +696,12 @@ def GetResume():
 		"2007", "2009", "IES Hug Roger III", "Sort", [catskills]
 	)
 
-	trainings = [udl, caparrella, joanBrudieu, hugRoger]
+	eso = Training(
+		T("Educació Secundària Obligatòria", "Educación Secundaria Obligatoria", "High school", "Weiterführende Schule"),
+		"2003", "2007", "IES de Tremp", "Tremp", []
+	)
+
+	trainings = [udl, caparrella, joanBrudieu, hugRoger, eso]
 	projects = []
 
 	resume = Resume(name, headerData, jobs, trainings, projects)
