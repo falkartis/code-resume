@@ -550,7 +550,7 @@ def GetResume():
 
 	jobs = [damiaSolar, handle, becariAlcoletge, grupindex, semic, lagrafica, ajLaseu, telecentrePallars]
 
-	geeia = Training(
+	udl = Training(
 		T(
 			"Grau en Enginyeria Electrònica Industrial i Automàtica",
 			"Grado en Ingeniería Electrónica Industrial y Automática",
@@ -568,8 +568,19 @@ def GetResume():
 		"Lleida"
 	)
 
+	caparrella = Training(
+		T(
+			"CFGS – Manteniment Electrònic",
+			"CFGS – Mantenimiento Electrónico",
+			"Higher Level Training Curse – Electronic Maintenance",
+			"Fachabitur – Elektronische Wartung"
+		),
+		"2013", "2015", "IES la Caparrella", "Lleida",
+		[]
+	)
 
-	trainings = [geeia]
+
+	trainings = [udl, caparrella]
 	projects = []
 
 	resume = Resume(name, headerData, jobs, trainings, projects)
