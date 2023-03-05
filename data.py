@@ -422,8 +422,19 @@ def GetResume():
 		"https://web.archive.org/web/20160112013443/http://www.jqueralt.com/"
 	)
 
+	oceanAlmond = Project(
+		"OceanAlmond",
+		T(
+			"OceanAlmond es una empresa agrònoma especialitzada en el cultiu d'ametlles que precisava d’una pagina web.",
+			"OceanAlmond es una empresa agrónoma especializada en el cultivo de almendras que precisaba de una pagina web.",
+			"OceanAlmond is an agricultural company specialized in the cultivation of almonds that needed a website.",
+			"OceanAlmond ist ein landwirtschaftliches Unternehmen, das sich auf den Anbau von Mandeln spezialisiert hat und eine Website benötigte."
+		),
+		webamida,
+		SkillSet([html,css, php, mysql, js, codeigniter, grocerycrud, googlemaps, bootstrap, responsive])
+	)
 
-	lagraficaProjects = [okhabitat, eixcomercial, jqueralt]
+	lagraficaProjects = [okhabitat, eixcomercial, jqueralt, oceanAlmond]
 	lagrafica = Job(webDeveloper, "LaGrafica", "2014/06", "2015/07", "Lleida", lagraficaProjects)
 
 
