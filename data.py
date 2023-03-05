@@ -640,7 +640,25 @@ def GetResume():
 		)
 	)
 
+	programameName = T(
+		"Concursant – Competició de programació – ProgramaMe",
+		"Concursante – Competición de programación – ProgramaMe",
+		"Contestant – Programming competition – ProgramaMe",
+		"Teilnehmer – Programmierwettbewerb – ProgramaMe"
+	)
+	programameDesc = T(
+		"Els concursants havien de resoldre problemes matemàtics amb l'ajuda de lògica i codi.",
+		"Los concursantes debían resolver problemas matemáticos con ayuda de lógica y código.",
+		"Contestants had to solve math problems with the help of logic and code.",
+		"Die Teilnehmer mussten mathematische Probleme mit Hilfe von Logik und Code lösen."
+	)
 
+	programame3 = Event(programameName, programameDesc, SkillSet([cpp, team]), None, "2013/03/14", "IES Baix Camp, Reus")
+	programame2 = Event(programameName, programameDesc, SkillSet([cpp, team]), None, "2012/06/05", "IES Antonio de Nebrija, Móstoles")
+	programame1 = Event(
+		programameName, programameDesc, SkillSet([cpp, team]), None, "2012/03/27", "IES Baix Camp, Reus",
+		T("Varem obtenir el 2n premi.", "Obtuvimos el 2º premio.", "We won the 2nd prize.", "Wir hatten den 2en Preis gewonnen.")
+	)
 
 	joanBrudieu = Training(
 		T(
@@ -649,7 +667,7 @@ def GetResume():
 			"Higher Level Training Curse – Computer Network Systems Administration",
 			"Fachabitur – Verwaltung von Netzwerkcomputersystemen"
 		),
-		"2011", "2013", "IES Joan Brudieu", "La Seu d'Urgell", [aversicuela]
+		"2011", "2013", "IES Joan Brudieu", "La Seu d'Urgell", [aversicuela, programame3, programame2, programame1]
 	)
 
 	trainings = [udl, caparrella, joanBrudieu]
