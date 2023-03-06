@@ -107,7 +107,7 @@ def GetResume():
 	tcpIp = Skill("TCP/IP")
 	http = Skill("HTTP")
 	design = Skill("design", T("Disseny", "Diseño", "Design", "Design"))
-
+	apache = Skill("Apache")
 
 
 
@@ -662,6 +662,24 @@ def GetResume():
 	)
 
 	# TODO: Add linux classroom
+	# name, description, tasks, skills, url = None, startDate = None, endDate = None
+	linuxClassroom = Project(
+		T("Aula Linux", "Aula Linux", "Linux classroom", "Linux-Klassenzimmer"),
+		T(
+			"Implementació d'una aula d'informatica de baix cost que aprofiti el maquinari antic o de gama baixa i un o varis servidors que asumeixin la carrega de treball.",
+			"Implementación de un aula de informática de bajo coste que aproveche el hardware antiguo o de gama baja y uno o varios servidores que asuman la carga de trabajo.",
+			"Implementation of a low-cost IT classroom that takes advantage of old or low-end hardware and one or more servers that take on the workload.",
+			"Implementierung eines kostengünstigen IT-Klassenzimmers, das alte oder Low-End-Hardware und einen oder mehrere Server nutzt, die die Arbeitslast übernehmen."
+		),
+		T(
+			"Dissenyar la topologia de la xarxa. Cercar solucions de software disponibles. Instal·lar i configurar Linux Terminal Server Project. Cercar ordinadors de baix cost que facin de client.",
+			"Diseñar la topología de la red. Buscar soluciones de software disponibles. Instalar y configurar Linux Terminal Server Project. Buscar ordenadores de bajo coste que hagan de cliente.",
+			"Design the topology of the network. Search for available software solutions. Install and configure Linux Terminal Server Project. Look for low-cost computers that act as clients.",
+			"Entwurf der Netzwerktopologie. Suche von verfügbaren Software-Lösungen. Installation und Konfiguration des Linux Terminal Server Project. Suche von kostengünstigen Computern, um als Client zu fungieren."
+		),
+		SkillSet([linux, apache, php, mysql, codeigniter, team, component]),
+		startDate = "2013"
+	)
 
 	joanBrudieu = Training(
 		T(
@@ -670,7 +688,7 @@ def GetResume():
 			"Higher Level Training Curse – Computer Network Systems Administration",
 			"Fachabitur – Verwaltung von Netzwerkcomputersystemen"
 		),
-		"2011", "2013", "IES Joan Brudieu", "La Seu d'Urgell", [programame3, programame2, aversicuela, programame1]
+		"2011", "2013", "IES Joan Brudieu", "La Seu d'Urgell", [programame3, linuxClassroom, programame2, aversicuela, programame1]
 	)
 
 	catskills = Event(
@@ -705,6 +723,9 @@ def GetResume():
 	)
 
 	trainings = [udl, caparrella, joanBrudieu, hugRoger, eso]
+
+
+
 	projects = []
 
 	resume = Resume(name, headerData, jobs, trainings, projects)
