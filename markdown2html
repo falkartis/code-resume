@@ -1,14 +1,11 @@
 #!/bin/bash
 
-
-# sudo apt install pandoc
-
 time python3 renderer.py ca > resume_ca.md
 time python3 renderer.py es > resume_es.md
 time python3 renderer.py en > resume_en.md
 time python3 renderer.py de > resume_de.md
 
-time pandoc -V geometry:margin=2cm resume_ca.md -o resume_ca.html
-time pandoc -V geometry:margin=2cm resume_es.md -o resume_es.html
-time pandoc -V geometry:margin=2cm resume_en.md -o resume_en.html
-time pandoc -V geometry:margin=2cm resume_de.md -o resume_de.html
+time pandoc -H head.html -B before.html -A foot.html resume_ca.md -o resume_ca.html
+time pandoc -H head.html -B before.html -A foot.html resume_es.md -o resume_es.html
+time pandoc -H head.html -B before.html -A foot.html resume_en.md -o resume_en.html
+time pandoc -H head.html -B before.html -A foot.html resume_de.md -o resume_de.html

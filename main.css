@@ -1,0 +1,10 @@
+body {
+	background: #888;
+}
+.content {
+	width: 210mm;
+	margin: 10mm auto;
+	background: #FFF;
+	padding: 15mm;
+	box-sizing: border-box;
+}
