@@ -116,6 +116,15 @@ def GetResume():
 	mandel = Skill("Mandelbrot")
 	julia = Skill("julia-set", T("Conjunt Julia", "Conjunto Julia", "Julia Set", "Julia Set"))
 	video = Skill("video", T("Edició de vídeos", "Edición de vídeos", "Video editing", "Videobearbeitung"))
+	softwarePlan = Skill("software-planning", T("Planificació de software", "Planificación de software", "Software planning", "Softwareplanung"))
+	database = Skill("database", T("Bases de dades", "Bases de datos", "Databases", "Datenbanken"))
+	arduino = Skill("Arduino")
+	raspberry = Skill("Raspberry Pi")
+	protocols = Skill("protocols", T("Protocols de comunicació", "Protocolos de comunicación", "Protocols of communication", "Kommunikationsprotokolle"))
+	design3d = Skill("3d-design", T("disseny 3D", "diseño 3D", "3D design", "3D-Design"))
+	gsm = Skill("GSM/GPRS")
+	mongodb = Skill("MongoDB")
+	ssh = Skill("SSH")
 
 
 
@@ -841,8 +850,23 @@ def GetResume():
 		)
 	)
 
+	newak = Project(
+		T("Soci i desenvolupador – Newak", "Socio y desarrollador – Newak", "Partner and developer – Newak", "Partner und Entwickler – Newak"),
+		T(
+			"Degut al contracte de confidencialitat que vaig signar no hi han detalls.",
+			"Debido al contrato de confidencialidad que firmé no hay detalles.",
+			"Due to the confidentiality agreement I signed there are no details.",
+			"Aufgrund der von mir unterzeichneten Vertraulichkeitsvereinbarung gibt es keine Details."
+		),
+		skills = SkillSet([
+			python, cpp, api, git, digital, analog, pcb, component, team, softwarePlan, database, kicad, arduino, raspberry, protocols, design3d, document, tcpIp, gsm, http, html, css, mysql, mongodb, firmware, js, linux, bash, ssh, en, blender
+		]),
+		startDate = "2016",
+		endDate = "2021"
+	)
 
-	projects = [freelance, multiIsochrone, loom, youtube, rgb]
+
+	projects = [freelance, multiIsochrone, loom, youtube, rgb, newak]
 
 	resume = Resume(name, headerData, jobs, trainings, projects)
 
@@ -855,7 +879,8 @@ def GetExtraTranslations():
 	translations["jobsTitle"] = T("EXPERIÈNCIA PROFESSIONAL", "EXPERIENCIA PROFESIONAL", "PROFESSIONAL EXPERIENCE", "BERUFLICHE ERFAHRUNGEN")
 	translations["trainTitle"] = T("FORMACIÓ ACADÈMICA", "FORMACIÓN ACADÉMICA", "ACADEMIC TRAINING", "AUSBILDUNG")
 	translations["projectsTitle"] = T("PROJECTES PERSONALS", "PROYECTOS PERSONALES", "PERSONAL PROJECTS", "PERSÖNLICHE PROJEKTE")
-	translations["interval"] = T("Interval", "Intervalo", "Interval", "Intervall")
+	#translations["interval"] = T("Interval", "Intervalo", "Interval", "Intervall")
+	translations["interval"] = T("Període", "Periodo", "Period", "Zeitraum")
 	translations["location"] = T("Localitat", "Localidad", "Location", "Ortschaft")
 	translations["description"] = T("Descripció del projecte", "Descripción del proyecto", "Project description", "Beschreibung des Projekts")
 	translations["tasks"] = T("Tasques realitzades", "Tareas realizadas", "Tasks performed", "Ausgeführte Aufgaben")
