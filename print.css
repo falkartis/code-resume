@@ -1,7 +1,34 @@
-.content {
-	width: auto;
+body, .content {
 	margin: 0;
-	background: #FFF;
-	padding: 15mm;
-	box-sizing: border-box;
+	border: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+}
+p {
+	page-break-before: avoid;
+	break-before: avoid;
+
+	page-break-inside: avoid;
+	break-inside: avoid;
+
+	page-break-after: auto;
+	break-after: auto;
+}
+h1, h2, h3, h4, h5, h6 {
+	page-break-before: auto;
+	break-before: auto;
+	page-break-after: avoid;
+	break-after: avoid;
+	page-break-inside: avoid;
+	break-inside: avoid;
+}
+
+@page {
+    size: auto;
+    margin: 20mm;
+}
+
+#falk-artis-bay {
+	margin-top: 0;
 }
