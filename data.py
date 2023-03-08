@@ -818,9 +818,31 @@ def GetResume():
 		"https://www.youtube.com/channel/UCNtWQJFXRJU-9qtVpBPASxQ", "2014", "2022"
 	)
 
+	rgb = Event(
+		T(
+			"Membre de Jurat – Robots Great Battle RGB Zaragoza",
+			"Miembro de Jurado – Robots Great Battle RGB Zaragoza",
+			"Jury member – Robots Great Battle RGB Zaragoza",
+			"Jurymitglied – Robots Great Battle RGB Zaragoza"
+		),
+		T(
+			"Competició de robots de lluita RGB Zaragoza.",
+			"Competición de robots de lucha RGB Zaragoza.",
+			"Competition of RGB Zaragoza fighting robots.",
+			"Wettbewerb der Kampfroboter RGB Zaragoza."
+		),
+		None, "https://rgb.codelearn.es", None, "Zaragoza",
+		HeaderData(
+			[
+			Header(T("Primera edició", "Primera edición", "First edition", "Erstausgabe"), "2021/07/31"),
+			Header(T("Segona edició","Segunda edición","Second edition","Zweite Auflage"), "2022/07/30")
+			],
+			[]
+		)
+	)
 
 
-	projects = [freelance, multiIsochrone, loom, youtube]
+	projects = [freelance, multiIsochrone, loom, youtube, rgb]
 
 	resume = Resume(name, headerData, jobs, trainings, projects)
 
