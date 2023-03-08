@@ -82,9 +82,11 @@ class Project(Activity):
 		if self.Tasks is not None:
 			if isinstance(self.Tasks, collections.abc.Sequence):
 				txt += ctx.KeyAndValueP(ctx.Translations["tasks"], "")
-				txt += ctx.Paragraph()
+				txt += ctx.StartList()
 				for task in self.Tasks:
-					txt += ctx.Render(F" + ", task, "\n")
+					txt += ctx.ListItem(task)
+				txt += ctx.EndList()
+
 			else:
 				txt += ctx.KeyAndValueP(ctx.Translations["tasks"], self.Tasks)
 

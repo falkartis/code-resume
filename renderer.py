@@ -46,7 +46,7 @@ class RenderContext:
 		return F"\n\n" + "#" * self.HeadLevel + " "
 
 	def EndHeader(self):
-		return "\n"
+		return "\n\n"
 
 	def Header(self, *args):
 		txt = ""
@@ -113,6 +113,17 @@ class RenderContext:
 		else:
 			return F"[{text}]({url} \"{title}\")"
 
+
+	def EndList(self):
+		return "\n\n"
+	def StartList(self):
+		return "\n\n"
+	def ListItem(self, *args):
+		txt = ""
+		txt += " + "
+		txt += self.RenderThem(args)
+		txt += "\n"
+		return txt
 
 
 def main(argv):
