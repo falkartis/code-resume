@@ -904,9 +904,21 @@ def GetResume():
 		endDate = "2021/10"
 	)
 
-	
+	threeDprinter = Project(
+		T("Curs d'impressores 3D", "Curso de impresoras 3D", "3D printer course", "3D-Drucker Kurs"),
+		T(
+			"Juntament amb 2 altres professors varem impartir un curs pràctic per crear, configurar i fer servir una impressora 3D.",
+			"Junto con otros 2 profesores impartimos un curso práctico para crear, configurar y utilizar una impresora 3D.",
+			"Together with 2 other teachers we taught a practical course to create, configure and use a 3D printer.",
+			"Zusammen mit 2 anderen Lehrern haben wir einen praktischen Kurs zum Erstellen, Konfigurieren und Verwenden eines 3D-Druckers durchgeführt."
+		),
+		skills = SkillSet([digital, analog, firmware, design3d, team]),
+		startDate = "2015/09",
+		endDate = "2015/11"
+	)
 
-	projects = [freelance, multiIsochrone, loom, youtube, rgb, newak, battery, pump]
+
+	projects = [freelance, multiIsochrone, loom, youtube, rgb, newak, battery, pump, threeDprinter]
 
 	resume = Resume(name, headerData, jobs, trainings, projects)
 
