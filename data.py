@@ -128,6 +128,7 @@ def GetResume():
 	batteries = Skill("batteries", T("Bateries", "Baterías", "Batteries", "Batterien"))
 	field = Skill("field-work", T("Treball de camp", "Trabajo de campo", "Field work", "Feldarbeit"))
 	feedback = Skill("feedback", T("Bucle de realimentació", "Bucle de retroalimentación", "Feedback loop", "Rückkopplungsschleife"))
+	translation = Skill("translation", T("Traducció", "Traducción", "Translation", "Übersetzung"))
 
 
 
@@ -788,6 +789,18 @@ def GetResume():
 		None, None, "2007", "2023"
 	)
 
+	thisresume = Project(
+		T("Aquest currículum", "Este currículum", "This resume", "Dieser Lebenslauf"),
+		T(
+			"Com que mantenir 4 versions diferents d'aquest document em semblava un treball molt tediós he decidit generar aquest document amb codi. Les dades del meu currículum son exportades a un document markdown i posteriorment mitjançant pandoc aquest es transforma a PDF.",
+			"Puesto que mantener 4 versiones distintas de este documento me parecía un trabajo muy tedioso he decidido generar este documento con código. Los datos de mi currículum son exportados a un documento markdown y posteriormente mediante pandoc éste se transforma a PDF.",
+			"Since maintaining 4 different versions of this document seemed like a very tedious task I decided to generate this document with code. The data of my resume is exported to a markdown document and subsequently using pandoc it is transformed into a PDF.",
+			"Da die Pflege von 4 verschiedenen Versionen dieses Dokuments eine sehr mühsame Aufgabe zu sein schien, entschied ich mich, dieses Dokument mit Code zu generieren. Die Daten meines Lebenslaufs werden in ein Markdown-Dokument exportiert und anschließend mit pandoc in ein PDF umgewandelt."
+		),
+		skills = SkillSet([python, git, linux, bash, es, ca, en, de, translation]),
+		startDate = "2023/03/02", endDate = "2023/03/08"
+	)
+
 	multiIsochrone = Project(
 		"Multi-Isochrone",
 		T(
@@ -928,7 +941,7 @@ def GetResume():
 		None, None, date = "2014/05/31", location = "Soses"
 	)
 
-	projects = [freelance, multiIsochrone, loom, youtube, rgb, newak, battery, pump, threeDprinter, lanParty]
+	projects = [freelance, thisresume, multiIsochrone, loom, youtube, rgb, newak, battery, pump, threeDprinter, lanParty]
 
 	resume = Resume(name, headerData, jobs, trainings, projects)
 
