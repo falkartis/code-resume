@@ -1,3 +1,5 @@
+import collections.abc
+
 class Translation:
 	def __init__(self, ca, es, en, de):
 		self.Ca = ca
@@ -78,7 +80,13 @@ class Project(Activity):
 			txt += ctx.KeyAndValueP(ctx.Translations["description"], self.Description)
 
 		if self.Tasks is not None:
-			txt += ctx.KeyAndValueP(ctx.Translations["tasks"], self.Tasks)
+			if isinstance(self.Tasks, collections.abc.Sequence):
+				txt += ctx.KeyAndValueP(ctx.Translations["tasks"], "")
+				txt += ctx.Paragraph()
+				for task in self.Tasks:
+					txt += ctx.Render(F" + ", task, "\n")
+			else:
+				txt += ctx.KeyAndValueP(ctx.Translations["tasks"], self.Tasks)
 
 		if self.Skills is not None:
 			txt += ctx.KeyAndValueP(ctx.Translations["skills"], self.Skills)

@@ -96,7 +96,7 @@ def GetResume():
 	kml = Skill("KML")
 	snorby = Skill("Snorby")
 	networkmonitoring = Skill("network-monitoring", T("supervisió de la xarxa", "supervisión de la red", "network monitoring", "Netzwerküberwachung"))
-	computermaint = Skill("computer-maintenance", T("Manteniment d’ordenadors", "Mantenimiento de ordenadores", "Computer maintenance", "Computerwartung"))
+	computermaint = Skill("computer-maintenance", T("Manteniment d'ordenadors", "Mantenimiento de ordenadores", "Computer maintenance", "Computerwartung"))
 	access = Skill("Access")
 	analog = Skill("analog-electronics", T("Electrònica analògica", "Electrónica analógica", "Analog electronics", "Analoge Elektronik"))
 	digital = Skill("digital-electronics", T("Electrònica digital", "Electrónica digital", "Digital electronics", "Digitale Elektronik"))
@@ -108,6 +108,8 @@ def GetResume():
 	http = Skill("HTTP")
 	design = Skill("design", T("Disseny", "Diseño", "Design", "Design"))
 	apache = Skill("Apache")
+	npm = Skill("NPM"),
+	algorithms = Skill("algorithms", T("Algorismes", "Algoritmos", "Algorithms", "Algorithmen"))
 
 
 
@@ -578,7 +580,7 @@ def GetResume():
 		),
 		None,
 		T(
-			"Disseny i construcció d’un guia visual per a empleats de magatzem d’una empresa de logística amb connexió a la xarxa de l’empresa.",
+			"Disseny i construcció d'un guia visual per a empleats de magatzem d'una empresa de logística amb connexió a la xarxa de l'empresa.",
 			"Diseño y construcción de un guía visual para empleados de almacén de una empresa de logística con conexión a la red de la empresa.",
 			"Design and construction of a visual guide for warehouse employees of a logistics company connected to the company's network.",
 			"Design und Aufbau eines visuellen Leitfadens für Lagermitarbeiter eines Logistikunternehmens, das an das Netzwerk des Unternehmens angeschlossen ist."
@@ -629,11 +631,11 @@ def GetResume():
 			"Ziel des Tages war es, Studierenden verschiedener Institute die Möglichkeit zu geben, ihre jeweiligen unternehmerischen Projekte vorzustellen."
 		),
 		SkillSet([php, html, css, mysql, security, design, team]),
-		None, "2012/05/17", "La Seu d’Urgell",
+		None, "2012/05/17", "La Seu d'Urgell",
 		Header(
 			T("Projecte presentat", "Proyecto presentado", "Project presented", "Vorgestelltes Projekt"),
 			T(
-				"A ver si cuela (aversicuela.com) es el projecte que varem presentar en el nostre equip. Es tracta d’una plataforma social en línia per compartir contingut d'humor. La plataforma va estar en producció, funcionant i amb usuaris reals entre el 2012/04/01 i el 2013/02/21.",
+				"A ver si cuela (aversicuela.com) es el projecte que varem presentar en el nostre equip. Es tracta d'una plataforma social en línia per compartir contingut d'humor. La plataforma va estar en producció, funcionant i amb usuaris reals entre el 2012/04/01 i el 2013/02/21.",
 				"A ver si cuela (aversicuela.com) es el proyecto que presentamos en nuestro equipo. Se trata de una plataforma social online para compartir contenido de humor. La plataforma estuvo en producción, funcionando y con usuarios reales entre el 2012/04/01 y el 2013/02/21.",
 				"A ver si cuela (aversicuela.com) is the project that we presented in our team. It is an online social platform for sharing humorous content. The platform was in production, working and with real users between 2012/04/01 and 2013/02/21.",
 				"A ver si cuela (aversicuela.com) ist das Projekt, das wir in unserem Team vorgestellt haben. Es ist eine soziale Online-Plattform zum Teilen von humorvollen Inhalten. Die Plattform war zwischen dem 2012/04/01 und dem 2013/02/21 in Betrieb und mit echten Benutzern."
@@ -724,9 +726,66 @@ def GetResume():
 
 	trainings = [udl, caparrella, joanBrudieu, hugRoger, eso]
 
+	freelance = Project(
+		T("Consultor tecnològic freelance", "Consultor tecnológico freelance", "Freelance technology consultant", "Freiberuflicher Technologieberater"),
+		None,
+		[
+		T(
+			"Implementació d'un client API REST per a pantalles informatives d'estacions d'esquí. HTML, JavaScript, JSON, jQuery, CSS.",
+			"Implementación de un cliente API REST para pantallas informativas de estaciones de esquí. HTML, JavaScript, JSON, jQuery, CSS.",
+			"Implementation of a REST API client for ski resort information screens. HTML, JavaScript, JSON, jQuery, CSS.",
+			"Implementierung eines REST-API-Clients für Skigebiets-Informationsbildschirme. HTML, JavaScript, JSON, jQuery, CSS."
+		),
+		T(
+			"Manteniment de instal·lació fotovoltaica aïllada. Manteniment de bateries estacionaries i inversor, energia solar.",
+			"Mantenimiento de instalación fotovoltaica aislada. Mantenimiento de baterías estacionarias e inversor, energía solar.",
+			"Maintenance of isolated photovoltaic installation. Maintenance of stationary batteries and inverter, solar energy.",
+			"Wartung einer isolierten Photovoltaikanlage. Wartung von stationären Batterien und Wechselrichter, Solarenergie."
+		),
+		T(
+			"Manteniment de instal·lació fotovoltaica aïllada. Substitució de regulador, inversor i proteccions, energia solar.",
+			"Mantenimiento de instalación fotovoltaica aislada. Sustitución de regulador, inversor y protecciones, energía solar.",
+			"Maintenance of isolated photovoltaic installation. Replacement of regulator, inverter and protections, solar energy.",
+			"Wartung einer isolierten Photovoltaikanlage. Austausch von Laderegler, Wechselrichter und Schutzvorrichtungen, Solarenergie."
+		),
+		T(
+			"Implementació del frontend d'una botiga en línia de productes d'hostaleria a l'engròs. HTML, CSS, PHP, MYSQL, JavaScript, SOAP, XML.",
+			"Implementación del frontendo de una tienda online de productos de hostelería al por mayor. HTML, CSS, PHP, MYSQL, JavaScript, SOAP, XML.",
+			"Implementation of the frontend of an online store of wholesale hospitality products. HTML, CSS, PHP, MYSQL, JavaScript, SOAP, XML.",
+			"Implementierung des Frontends eines Online-Shops für Großhandelsprodukte für das Gastgewerbe. HTML, CSS, PHP, MYSQL, JavaScript, SOAP, XML."
+		),
+		T(
+			"Creació de pagina web d'una casa rural. HTML, PHP, CSS,  JavaScript, MySQL, Photoshop.",
+			"Creación de pagina web de una casa rural. HTML, PHP, CSS, JavaScript, MySQL, Photoshop.",
+			"Creation of a rural house website. HTML, PHP, CSS, JavaScript, MySQL, Photoshop.",
+			"Erstellung einer Landhaus-Website. HTML, PHP, CSS, JavaScript, MySQL, Photoshop."
+		),
+		T(
+			"Altres. Recomanacions tècniques varies.",
+			"Otros. Recomendaciones técnicas varias.",
+			"Others. Various technical recommendations.",
+			"Andere. Verschiedene technische Empfehlungen."
+		)
+		],
+		None, None, "2007", "2023"
+	)
+
+	multiIsochrone = Project(
+		"Multi-Isochrone",
+		T(
+			"La funció d'aquesta eina es la de generar corbes isòcrones en escenari de múltiples destinacions recurrents.",
+			"La función de esta herramienta es la de generar curvas isócronas en escenario de múltiples destinos recurrentes.",
+			"The function of this tool is to generate isochronous curves in the scenario of multiple recurring destinations.",
+			"Die Funktion dieses Tools besteht darin, im Szenario mehrerer wiederkehrender Ziele isochrone Kurven zu erzeugen."
+		),
+		None,
+		SkillSet([html, css, ts, git, googlemaps, npm, algorithms, optim]),
+		None, "2023/02", "2023/03"
+	)
 
 
-	projects = []
+
+	projects = [freelance, multiIsochrone]
 
 	resume = Resume(name, headerData, jobs, trainings, projects)
 
