@@ -59,7 +59,7 @@ class Activity:
 		self.Url = url
 
 class Project(Activity):
-	def __init__(self, name, description, tasks, skills, url = None, startDate = None, endDate = None):
+	def __init__(self, name, description = None, tasks = None, skills = None, url = None, startDate = None, endDate = None):
 		Activity.__init__(self, name, description, skills, url, endDate)
 		self.Tasks = tasks
 		self.StartDate = startDate

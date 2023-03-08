@@ -110,6 +110,12 @@ def GetResume():
 	apache = Skill("Apache")
 	npm = Skill("NPM"),
 	algorithms = Skill("algorithms", T("Algorismes", "Algoritmos", "Algorithms", "Algorithmen"))
+	foto = Skill("foto", T("fotografia", "fotografía", "photography", "Fotografie"))
+	simu = Skill("simulations", T("simulacions", "simulaciones", "simulations", "Simulationen"))
+	compNum = Skill("complex", T("Nombres complexos", "Números complejos", "Complex numbers", "Komplexe Zahlen"))
+	mandel = Skill("Mandelbrot")
+	julia = Skill("julia-set", T("Conjunt Julia", "Conjunto Julia", "Julia Set", "Julia Set"))
+	video = Skill("video", T("Edició de vídeos", "Edición de vídeos", "Video editing", "Videobearbeitung"))
 
 
 
@@ -448,9 +454,9 @@ def GetResume():
 		SkillSet([html,css, php, mysql, js, codeigniter, grocerycrud, googlemaps, bootstrap, responsive])
 	)
 
-	lagraficaOther = Project(otherWebsites,None,webamida,SkillSet([html,css,php,mysql,js,codeigniter,grocerycrud,bootstrap,responsive,wordpress,en]))
+	lagraficaOthr = Project(otherWebsites,None,webamida,SkillSet([html,css,php,mysql,js,codeigniter,grocerycrud,bootstrap,responsive,wordpress,en,video]))
 
-	lagrafica = Job(webDeveloper, "LaGrafica", "2014/06", "2015/07", "Lleida", [okhabitat, eixcomercial, jqueralt, oceanAlmond, lagraficaOther])
+	lagrafica = Job(webDeveloper, "LaGrafica", "2014/06", "2015/07", "Lleida", [okhabitat, eixcomercial, jqueralt, oceanAlmond, lagraficaOthr])
 
 	timebank = Project(
 		T("Banc del temps", "Banco del tiempo", "Time bank", "Zeitbank"),
@@ -783,9 +789,38 @@ def GetResume():
 		None, "2023/02", "2023/03"
 	)
 
+	loom = Project(
+		T(
+			"Creació d'un teler artesanal de 4 lliços, mida sobretaula",
+			"Creación de un telar artesanal de 4 lizos, tamaño sobremesa",
+			"Creation of an artisan loom of 4 looms, tabletop size",
+			"Herstellung eines handwerklichen Webrahmen mit 4 schäfte"
+		),
+		url = "https://youtu.be/rWfuz8Ocmzg", startDate = "2022/09", endDate = "2022/11"
+	)
 
 
-	projects = [freelance, multiIsochrone]
+	youtube = Project(
+		T(
+			"Projecte artístic – Fractals & More – disponible a YouTube",
+			"Proyecto artístico – Fractals & More – disponible en YouTube",
+			"Art project – Fractals & More – available on YouTube",
+			"Kunstprojekt – Fractals & More – verfügbar auf YouTube"
+		),
+		T(
+			"L'art generatiu sempre m’ha apassionat. Des de que vaig descobrir que aquest tipus d’art està a l’abast de tothom que tingui 4 nocions de programació m’he anat endinsant cada vegada més en aquest mon.",
+			"El arte generativo siempre me ha apasionado. Desde que descubrí que este tipo de arte está al alcance de todo el mundo que tenga 4 nociones de programación me he ido adentrando cada vez más en este mundo.",
+			"I have always been passionate about generative art. Since I discovered that this type of art is within the reach of everyone who has 4 notions of programming, I have been getting deeper and deeper into this world.",
+			"Generative Kunst hat mich schon immer begeistert. Seit ich entdeckt habe, dass diese Art von Kunst für jeden erreichbar ist, der 4 Vorstellungen von Programmierung hat, bin ich immer tiefer in diese Welt eingedrungen."
+		),
+		None,
+		SkillSet([php, python, cpp, json, git, foto, simu, compNum, mandel, julia, algebra, algorithms, optim, bash, video, en]),
+		"https://www.youtube.com/channel/UCNtWQJFXRJU-9qtVpBPASxQ", "2014", "2022"
+	)
+
+
+
+	projects = [freelance, multiIsochrone, loom, youtube]
 
 	resume = Resume(name, headerData, jobs, trainings, projects)
 
