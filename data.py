@@ -125,6 +125,7 @@ def GetResume():
 	gsm = Skill("GSM/GPRS")
 	mongodb = Skill("MongoDB")
 	ssh = Skill("SSH")
+	batteries = Skill("batteries", T("Bateries", "Baterías", "Batteries", "Batterien"))
 
 
 
@@ -618,7 +619,7 @@ def GetResume():
 			"We contestants had to present a robot that was able to follow a line painted in the ring.",
 			"Wir Teilnehmer mussten einen Roboter präsentieren, der einer in den Ring gemalten Linie folgen konnte."
 		),
-		SkillSet([analog, digital, component, schema, pcb, proteus, firmware, cpp, sensors, team]),
+		SkillSet([analog, digital, component, schema, pcb, proteus, firmware, cpp, sensors, team, batteries]),
 		None, "2014/04/26", "Olot"
 	)
 
@@ -865,8 +866,26 @@ def GetResume():
 		endDate = "2021"
 	)
 
+	battery = Project(
+		T(
+			"Disseny i desenvolupament prototip – Anàlisis de bateries",
+			"Diseño y desarrollo prototipo – Análisis de baterías",
+			"Prototype design and development – Battery analyses",
+			"Prototypendesign und -entwicklung – Batterieanalysen"
+		),
+		T(
+			"La funció del prototip es la de mesurar el voltatge de múltiples bateries estacionaries i mostrar els respectius voltatges en una pantalla LCD. La missió del projecte es desenvolupar una eina que pugui detectar de forma precoç anomalies en bateries individuals del banc.",
+			"La función del prototipo es medir el voltaje de múltiples baterías estacionarias y mostrar los respectivos voltajes en una pantalla LCD. La misión del proyecto es desarrollar una herramienta que pueda detectar de forma precoz anomalías en baterías individuales del banco.",
+			"The function of the prototype is to measure the voltage of multiple stationary batteries and display the respective voltages on an LCD screen. The mission of the project is to develop a tool that can early detect anomalies in individual batteries in the bank.",
+			"Die Funktion des Prototyps besteht darin, die Spannung mehrerer stationärer Batterien zu messen und die jeweiligen Spannungen auf einem LCD-Bildschirm anzuzeigen. Die Mission des Projekts ist die Entwicklung eines Werkzeugs, das Anomalien in einzelnen Batterien in der Bank frühzeitig erkennen kann."
+		),
+		skills = SkillSet([analog, digital, component, schema, pcb, kicad, git, firmware, cpp, batteries, solar]),
+		startDate = "2020/04",
+		endDate = "2020/06"
+	)
 
-	projects = [freelance, multiIsochrone, loom, youtube, rgb, newak]
+
+	projects = [freelance, multiIsochrone, loom, youtube, rgb, newak, battery]
 
 	resume = Resume(name, headerData, jobs, trainings, projects)
 
