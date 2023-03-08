@@ -1,4 +1,10 @@
 #!/bin/bash
 
-python3 renderer.py ca > resume_ca.md
-pandoc -V geometry:margin=2cm resume_ca.md -o resume_ca.odt
+time python3 renderer.py ca > resume_ca.md
+time python3 renderer.py es > resume_es.md
+time python3 renderer.py en > resume_en.md
+time python3 renderer.py de > resume_de.md
+time pandoc -V geometry:margin=2cm resume_ca.md -o resume_ca.odt
+time pandoc -V geometry:margin=2cm resume_es.md -o resume_es.odt
+time pandoc -V geometry:margin=2cm resume_en.md -o resume_en.odt
+time pandoc -V geometry:margin=2cm resume_de.md -o resume_de.odt

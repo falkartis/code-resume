@@ -221,8 +221,8 @@ def GetResume():
 		),
 		T(
 			"Disseny i implementació del backend de la plataforma, la base de dades, els sistemes de seguretat, el xifrat de les dades d'usuari, un parser d'expressions matemàtiques, calculadora de costos. Implementació del frontend.",
-			"Diseño e implementación del backend de la plataforma, base de datos, sistemas de seguridad, cifrado de los datos de usuario, un parser de expresiones matemáticas, calculadora de costes. Implementación del frontendo.",
-			"Design and implementation of the platform backend, database, security systems, user data encryption, a mathematical expression parser, cost calculator. Implementation of the frontend.",
+			"Diseño e implementación del backend de la plataforma, base de datos, sistemas de seguridad, cifrado de los datos de usuario, un parser de expresiones matemáticas, calculadora de costes. Implementación del frontend.",
+			"Design and implementation of the platform backend, database, security systems, user data encryption, a mathematical expression parser, cost calculator. Implementation of the front-end.",
 			"Design und Implementierung des Plattform-Backends, der Datenbank, der Sicherheitssysteme, der Benutzerdatenverschlüsselung, ein mathematischer Ausdrucksparser, des Kostenrechners. Implementierung des Frontends."
 		),
 		SkillSet([distributed, oop, cs, antlr, grammar, syntax, visualstudio, git, jenkins, sonarQube, ci, cd, sqlServer, entityFrCore, security, crypto, api, graphql, html, angular, ts, css, team, responsive, en])
@@ -414,7 +414,7 @@ def GetResume():
 	okhabitat = Project(
 		"OkHabitat",
 		T(
-			"OkHabitat era una plataforma immobiliaria pensada per a anunciar immobles d'agents immobiliaris i de bancs.",
+			"OkHabitat era una plataforma immobiliària pensada per a anunciar immobles d'agents immobiliaris i de bancs.",
 			"OkHabitat era una plataforma inmobiliaria pensada para anunciar inmuebles de agentes inmobiliarios y bancos.",
 			"OkHabitat was a real estate platform designed to advertise properties from real estate agents and banks.",
 			"OkHabitat war eine Immobilienplattform, die entwickelt wurde, um Immobilien von Immobilienmaklern und Banken zu bewerben."
@@ -474,7 +474,7 @@ def GetResume():
 	timebank = Project(
 		T("Banc del temps", "Banco del tiempo", "Time bank", "Zeitbank"),
 		T(
-			"Un banc del temps es una forma de intercambiar feines entre els membres d'una comunitat sense que s'hi involucrin els diners. En canvi es comptabilitzen hores.",
+			"Un banc del temps es una forma de intercanviar feines entre els membres d'una comunitat sense que s'hi involucrin els diners. En canvi es comptabilitzen hores.",
 			"Un banco del tiempo es una forma de intercambiar trabajos entre los miembros de una comunidad sin que se involucre el dinero. En cambio, se contabilizan horas.",
 			"A time bank is a way of exchanging jobs between members of a community without money being involved. Instead, hours are counted.",
 			"Eine Zeitbank ist eine Möglichkeit, Jobs zwischen Mitgliedern einer Gemeinschaft auszutauschen, ohne dass Geld im Spiel ist. Stattdessen werden Stunden gezählt."
@@ -548,7 +548,7 @@ def GetResume():
 			"Um die Sicherheit und das ordnungsgemäße Funktionieren des Gemeindenetzwerks zu gewährleisten, wurde ein Intrusion Detection System implementiert."
 		),
 		T(
-			"Instalar i conectar un servidor dedicat, instal·lació del sistema operatiu i del programari necessari. Detectar vulnerabilitats en els equips de la xarxa i resoldre-les.",
+			"Instal·lar i connectar un servidor dedicat, instal·lació del sistema operatiu i del programari necessari. Detectar vulnerabilitats en els equips de la xarxa i resoldre-les.",
 			"Instalar y conectar un servidor dedicado, instalación del sistema operativo y del software necesario. Detectar vulnerabilidades en los equipos de la red y resolverlas.",
 			"Install and connect a dedicated server, installation of the operating system and the necessary software. Detect vulnerabilities in network equipment and resolve them.",
 			"Installation und Anschluss eines dedizierten Servers, Installation des Betriebssystems und der notwendigen Software. Erkennung von Schwachstellen in Netzwerkgeräten und deren Behebung."
@@ -682,12 +682,10 @@ def GetResume():
 		T("Varem obtenir el 2n premi.", "Obtuvimos el 2º premio.", "We won the 2nd prize.", "Wir hatten den 2en Preis gewonnen.")
 	)
 
-	# TODO: Add linux classroom
-	# name, description, tasks, skills, url = None, startDate = None, endDate = None
 	linuxClassroom = Project(
 		T("Aula Linux", "Aula Linux", "Linux classroom", "Linux-Klassenzimmer"),
 		T(
-			"Implementació d'una aula d'informatica de baix cost que aprofiti el maquinari antic o de gama baixa i un o varis servidors que asumeixin la carrega de treball.",
+			"Implementació d'una aula d'informàtica de baix cost que aprofiti el maquinari antic o de gamma baixa i un o varis servidors que assumeixin la carrega de treball.",
 			"Implementación de un aula de informática de bajo coste que aproveche el hardware antiguo o de gama baja y uno o varios servidores que asuman la carga de trabajo.",
 			"Implementation of a low-cost IT classroom that takes advantage of old or low-end hardware and one or more servers that take on the workload.",
 			"Implementierung eines kostengünstigen IT-Klassenzimmers, das alte oder Low-End-Hardware und einen oder mehrere Server nutzt, die die Arbeitslast übernehmen."
@@ -770,7 +768,7 @@ def GetResume():
 		T(
 			"Implementació del frontend d'una botiga en línia de productes d'hostaleria a l'engròs. HTML, CSS, PHP, MYSQL, JavaScript, SOAP, XML.",
 			"Implementación del frontendo de una tienda online de productos de hostelería al por mayor. HTML, CSS, PHP, MYSQL, JavaScript, SOAP, XML.",
-			"Implementation of the frontend of an online store of wholesale hospitality products. HTML, CSS, PHP, MYSQL, JavaScript, SOAP, XML.",
+			"Implementation of the front-end of an online store of wholesale hospitality products. HTML, CSS, PHP, MYSQL, JavaScript, SOAP, XML.",
 			"Implementierung des Frontends eines Online-Shops für Großhandelsprodukte für das Gastgewerbe. HTML, CSS, PHP, MYSQL, JavaScript, SOAP, XML."
 		),
 		T(
