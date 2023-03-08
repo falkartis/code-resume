@@ -126,6 +126,8 @@ def GetResume():
 	mongodb = Skill("MongoDB")
 	ssh = Skill("SSH")
 	batteries = Skill("batteries", T("Bateries", "Baterías", "Batteries", "Batterien"))
+	field = Skill("field-work", T("Treball de camp", "Trabajo de campo", "Field work", "Feldarbeit"))
+	feedback = Skill("feedback", T("Bucle de realimentació", "Bucle de retroalimentación", "Feedback loop", "Rückkopplungsschleife"))
 
 
 
@@ -884,8 +886,27 @@ def GetResume():
 		endDate = "2020/06"
 	)
 
+	pump = Project(
+		T(
+			"Disseny de firmware – Controlador de bombeig solar",
+			"Diseño de firmware – Controlador de bombeo solar",
+			"Firmware Design – Solar Pump Controller",
+			"Firmware-Design – Solarpumpen-Controller"
+		),
+		T(
+			"Partint d’una instal·lació de bombeig solar directe controlada per un variador de freqüència i un microcontrolador, era necessari reescriure el firmware per complert ja que la implementació del proveïdor no complia amb les expectatives del client. El projecte ha durat varis anys ja que durant la meva formació he anat adquirint nous coneixements útils per millorar el rendiment del firmware.",
+			"Partiendo de una instalación de bombeo solar directo controlada por un variador de frecuencia y un microcontrolador, era necesario reescribir el firmware por completo puesto que la implementación del proveedor no cumplía con las expectativas del cliente. El proyecto ha durado varios años, ya que durante mi formación he ido adquiriendo nuevos conocimientos útiles para mejorar el rendimiento del firmware.",
+			"Starting from a direct solar pumping installation controlled by a frequency inverter and a microcontroller, it was necessary to completely rewrite the firmware as the supplier's implementation did not meet the client's expectations. The project has lasted several years as during my training I have been acquiring new useful knowledge to improve the performance of the firmware.",
+			"Ausgehend von einer direkten Solarpumpanlage, die von einem Frequenzumrichter und einem Mikrocontroller gesteuert wird, war es notwendig, die Firmware komplett neu zu schreiben, da die Implementierung des Lieferanten nicht den Erwartungen des Kunden entsprach. Das Projekt hat mehrere Jahre gedauert, da ich während meiner Ausbildung neues nützliches Wissen erworben habe, um die Leistung der Firmware zu verbessern."
+		),
+		skills = SkillSet([analog, digital, git, firmware, cpp, sensors, field, feedback, solar]),
+		startDate = "2019/06",
+		endDate = "2021/10"
+	)
 
-	projects = [freelance, multiIsochrone, loom, youtube, rgb, newak, battery]
+	
+
+	projects = [freelance, multiIsochrone, loom, youtube, rgb, newak, battery, pump]
 
 	resume = Resume(name, headerData, jobs, trainings, projects)
 
