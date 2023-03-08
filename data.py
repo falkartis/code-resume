@@ -917,8 +917,18 @@ def GetResume():
 		endDate = "2015/11"
 	)
 
+	lanParty = Event(
+		T("Col·laborador – Lan Party Soses", "Colaborador - Lan Party Soses", "Collaborator – Lan Party Soses", "Mitarbeiter – Lan Party Soses"),
+		T(
+			"Com a col·laborador de la lan party he donat una classe practica d’introducció als microcontroladors i circuits de desenvolupament Arduino i Raspberry Pi.",
+			"Como colaborador de la lan party he dado una clase práctica de introducción a los microcontroladores y circuitos de desarrollo Arduino y Raspberry Pi.",
+			"As a collaborator of the lan party I gave a practical introduction class to Arduino and Raspberry Pi microcontrollers and development circuits.",
+			"Als Mitarbeiter der LAN-Party habe ich einen praktischen Einführungskurs zu Arduino- und Raspberry Pi-Mikrocontrollern und Entwicklungsschaltungen gegeben."
+		),
+		None, None, date = "2014/05/31", location = "Soses"
+	)
 
-	projects = [freelance, multiIsochrone, loom, youtube, rgb, newak, battery, pump, threeDprinter]
+	projects = [freelance, multiIsochrone, loom, youtube, rgb, newak, battery, pump, threeDprinter, lanParty]
 
 	resume = Resume(name, headerData, jobs, trainings, projects)
 
