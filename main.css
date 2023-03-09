@@ -20,3 +20,9 @@ blockquote {
 p > img {
 	height: 1.5em;
 }
+a {
+	color: #000;
+}
+img[alt="Drupal"], img[alt="NPM"] {
+	height: 1.2em;
+}

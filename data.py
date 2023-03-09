@@ -53,7 +53,7 @@ def GetResume():
 	litedb = Skill("LiteDB")
 	json = Skill("JSON")
 	blender = Skill("Blender")
-	unity = Skill("Unity 3D")
+	unity = Skill("unity","Unity 3D")
 	aspnet = Skill("ASP.NET")
 	html = Skill("HTML")
 	js = Skill("JavaScript")
@@ -71,7 +71,7 @@ def GetResume():
 	ts = Skill("TypeScript")
 	css = Skill("CSS")
 	responsive = Skill("Responsive")
-	cpp = Skill("C/C++")
+	cpp = Skill("cpp","C/C++")
 	repair = Skill(
 		"repair",
 		T("Diagnòstic i reparació d'avaries", "Diagnóstico y reparación de averías", "Diagnosis and repair of faults", "Diagnose und Behebung von Störungen")
@@ -87,21 +87,21 @@ def GetResume():
 	remoteaccess = Skill("remote-access", T("Accés remot", "Acceso remoto", "remote access", "Fernzugriff"))
 	dns = Skill("DNS")
 	python = Skill("Python")
-	plone = Skill("Plone CMS")
-	googlemaps = Skill("Google Maps API")
+	plone = Skill("Plone", "Plone CMS")
+	googlemaps = Skill("GMaps","Google Maps API")
 	xml = Skill("XML")
 	wordpress = Skill("WordPress")
 	cron = Skill("Cron")
 	pdf = Skill("PDF")
 	kml = Skill("KML")
-	snorby = Skill("Snorby")
+	snort = Skill("Snort")
 	networkmonitoring = Skill("network-monitoring", T("supervisió de la xarxa", "supervisión de la red", "network monitoring", "Netzwerküberwachung"))
 	computermaint = Skill("computer-maintenance", T("Manteniment d'ordenadors", "Mantenimiento de ordenadores", "Computer maintenance", "Computerwartung"))
 	access = Skill("Access")
 	analog = Skill("analog-electronics", T("Electrònica analògica", "Electrónica analógica", "Analog electronics", "Analoge Elektronik"))
 	digital = Skill("digital-electronics", T("Electrònica digital", "Electrónica digital", "Digital electronics", "Digitale Elektronik"))
 	component = Skill("component-selection", T("selecció de components", "selección de componentes", "component selection", "Komponentenauswahl"))
-	pcb = Skill("pcb", T("disseny de circuits impresos", "diseño de circuitos impresos", "printed circuit design", "Leiterplattenentwurf"))
+	pcb = Skill("pcb", T("Disseny de circuits impresos", "Diseño de circuitos impresos", "Printed circuit design", "Leiterplattenentwurf"))
 	proteus = Skill("Proteus")
 	firmware = Skill("Firmware")
 	tcpIp = Skill("TCP/IP")
@@ -168,7 +168,7 @@ def GetResume():
 			"Mi función era la de revisar la migración de la tienda online desde una plataforma obsoleta a una nueva plataforma. También revisar contenidos del blog e informes de SEO.",
 			"My role was to review the migration of the online store from an outdated platform to a new platform. Also to review blog content and SEO reports.",
 			"Meine Rolle bestand darin, die Migration des Online-Shops von einer veralteten Plattform auf eine neue Plattform zu überprüfen. Auch Blog-Inhalte und SEO-Berichte zu überprüfen."),
-		SkillSet([seo, presta, cletu, linux])
+		SkillSet([linux, seo, presta, cletu])
 	)
 	dsTesting = Project(
 		T("Banc de proves", "Banco de pruebas", "Test bank", "Prüfstand"),
@@ -179,7 +179,7 @@ def GetResume():
 			"Plan the installation of photovoltaic panels, design an electrical panel, test equipment, implement improvements.",
 			"Die Installation von Photovoltaikmodulen planen, entwurf eines elektrisches Panel, Geräte testen, Verbesserungen implementieren."
 		),
-		SkillSet([electr, schema, kicad, team, git, linux, solar, wind])
+		SkillSet([kicad, git, linux ,electr, schema, team, solar, wind])
 	)
 	dsSAT = Project(
 		T("Servei d'assistència tècnica", "Servicio de asistencia técnica", "Help Desk", "Help Desk"),
@@ -190,7 +190,7 @@ def GetResume():
 			"Resolve doubts and incidents that customers may encounter with the company's products. Give advice and instructions to company colleagues. Diagnose faults and repair equipment. Implement improvements.",
 			"Beheben von Zweifel und Vorfälle, die Kunden mit den Produkten des Unternehmens begegnen können. Kollegen im Unternehmen Ratschläge und Anweisungen Geben. Fehler diagnostizieren und Geräte reparieren. Verbesserungen implementieren."
 		),
-		SkillSet([customer, incident, logistic, diplomacy, document, team, warranty, en, de, linux, solar, wind, optim])
+		SkillSet([linux, customer, incident, logistic, diplomacy, document, team, warranty, en, de, solar, wind, optim])
 	)
 	damiaSolar = Job(dsPlace, "Damia Solar", "2020/08", "2022/07", "La Pobla de Segur", [dsWeb, dsTesting, dsSAT])
 
@@ -208,7 +208,7 @@ def GetResume():
 			"Implementation of an IFC (similar to step) file parser, an EXPRESS file parser, a 3D geometry library, a tessellator, a geometric processor/optimizer, a 3D web viewer, save and export functions, a licensing system. Functionality documentation.",
 			"Implementierung eines IFC-Dateiparsers (ähnlich zu step), eines EXPRESS-Dateiparser, einer 3D-Geometriebibliothek, eines Tessellators, eines geometrischen Prozessors/Optimierers, eines 3D-Web-Viewers, Speicher- und Exportfunktionen, eines Lizenzsystems. Dokumentation der Funktionalität."
 		),
-		SkillSet([oop, cs, dotnet, antlr, grammar, syntax, visualstudio, git, jenkins, linux, bash, sonarQube, ci, cd, ifc, geo3d, algebra, sqlite, litedb, json, blender, unity, aspnet, html, js, webservice, api, team, doxygen, entityFrame, en, optim])
+		SkillSet([cs, dotnet, visualstudio, git, jenkins, linux, bash, sqlite, blender, unity, html, oop, antlr, grammar, syntax, sonarQube, ci, cd, ifc, geo3d, algebra, litedb, json, aspnet, js, webservice, api, team, doxygen, entityFrame, en, optim])
 	)
 
 	ndbim = Project(
@@ -225,7 +225,7 @@ def GetResume():
 			"Design and implementation of the platform backend, database, security systems, user data encryption, a mathematical expression parser, cost calculator. Implementation of the front-end.",
 			"Design und Implementierung des Plattform-Backends, der Datenbank, der Sicherheitssysteme, der Benutzerdatenverschlüsselung, ein mathematischer Ausdrucksparser, des Kostenrechners. Implementierung des Frontends."
 		),
-		SkillSet([distributed, oop, cs, antlr, grammar, syntax, visualstudio, git, jenkins, sonarQube, ci, cd, sqlServer, entityFrCore, security, crypto, api, graphql, html, angular, ts, css, team, responsive, en])
+		SkillSet([cs, visualstudio, git, jenkins, graphql, html, angular, ts, css, distributed, oop, antlr, grammar, syntax, sonarQube, ci, cd, sqlServer, entityFrCore, security, crypto, api, team, responsive, en])
 	)
 
 	oda = Project(
@@ -242,7 +242,7 @@ def GetResume():
 			"Implement a set of wrapper functions to access the ODA's own functions.",
 			"Implementierung von eine Reihe von Wrapper-Funktionen, um auf die eigenen Funktionen des ODA zuzugreifen."
 		),
-		SkillSet([oop, cpp, visualstudio, git, jenkins, ci, cd, api, team])
+		SkillSet([cpp, visualstudio, git, jenkins, oop, ci, cd, api, team])
 	)
 
 	bim360 = Project(
@@ -259,7 +259,7 @@ def GetResume():
 			"Design and implement an API client.",
 			"Entwurf und implementierung von einen API-Client."
 		),
-		SkillSet([oop, cs, visualstudio, git, linux, bash, api, json])
+		SkillSet([cs, visualstudio, git, linux, bash, oop, api, json])
 	)
 
 	hscProjects = [iCore9, ndbim, oda, bim360]
@@ -317,7 +317,7 @@ def GetResume():
 			"Create a platform status report. Provide improvement proposals.",
 			"Erstellen Sie einen Plattformstatusbericht. Verbesserungsvorschläge einbringen."
 		),
-		SkillSet([html, css, php, mysql, js, youtubeApi, linux, optim])
+		SkillSet([html, css, php, youtubeApi, linux, mysql, js, optim])
 	)
 
 	webamida = T(
@@ -336,7 +336,7 @@ def GetResume():
 			"Emilio Ferrer ist ein renommierter Fotograf, der seine Werke über eine Website ausstellen möchte."
 		),
 		webamida,
-		SkillSet([html, css, php, mysql, js, codeigniter, grocerycrud, linux, bootstrap, responsive, en]),
+		SkillSet([html, css, php, linux, bootstrap, mysql, js, codeigniter, grocerycrud, responsive, en]),
 		"https://www.emilioferrerfotos.com/ca/"
 	)
 
@@ -349,12 +349,12 @@ def GetResume():
 			"Josep Ball i Papiol ist ein renommierter Psychologe, der seine Dienste über eine Website bewerben möchte."
 		),
 		webamida,
-		SkillSet([html, css, js, vuejs, php, mysql, linux, bootstrap, responsive])
+		SkillSet([html, css, vuejs, php, linux, bootstrap, js, mysql, responsive])
 	)
 
 	otherWebsites = T("Altres webs", "Otras webs", "Other websites", "Andere Webseiten")
 
-	gIother = Project(otherWebsites, None, webamida, SkillSet([html, css, php, mysql, js, codeigniter, grocerycrud, linux, bootstrap, responsive, en]))
+	gIother = Project(otherWebsites, None, webamida, SkillSet([html, css, php, linux, bootstrap, mysql, js, codeigniter, grocerycrud, responsive, en]))
 
 	grupindex = Job(webDeveloper, "grupIndex", "2017/02", "2018/02", "Balaguer", [tuteorica, emilio, josepBP, gIother])
 
@@ -372,7 +372,7 @@ def GetResume():
 			"Implement an API client.",
 			"Implementieren eines API-Client."
 		),
-		SkillSet([html, js, api, css])
+		SkillSet([html, css, js, api])
 	)
 
 	tmi = Project(
@@ -389,7 +389,7 @@ def GetResume():
 			"Perform website maintenance tasks. Resolve incidents in the client's network.",
 			"Durchführen von Webwartungsaufgaben. Störungsbeseitigung im Netzwerk des Kunden."
 		),
-		SkillSet([html, css, js, php, mysql, drupal, remoteaccess, dns])
+		SkillSet([html, css, php, drupal, mysql, js, remoteaccess, dns])
 	)
 
 	semicOther = Project(
@@ -406,7 +406,7 @@ def GetResume():
 			"Carry out maintenance tasks for web pages made with plone or drupal.",
 			"Durchführen von Webwartungsaufgaben für Webseiten, die mit Plone oder Drupal erstellt wurden."
 		),
-		SkillSet([html, css, js, python, plone, drupal, linux])
+		SkillSet([html, css, python, plone, drupal, linux, js])
 	)
 
 	semic = Job(webDeveloper, "SEMIC", "2015/09", "2016/06", "Lleida", [inaem, tmi, semicOther])
@@ -425,7 +425,7 @@ def GetResume():
 			"Carry out maintenance and expansion tasks of the platform. Optimize database queries.",
 			"Wartungs- und Erweiterungsaufgaben der Plattform durchführen. Datenbankabfragen optimieren."
 		),
-		SkillSet([html, css, php, mysql, optim, team, bootstrap, responsive]),
+		SkillSet([html, css, php, bootstrap, mysql, optim, team, responsive]),
 		"https://web.archive.org/web/20150221231551/http://okhabitat.com:80/"
 	)
 
@@ -438,7 +438,7 @@ def GetResume():
 			"Eix comercial ist ein Unternehmensverband aus Lleida. Das Projekt bestand darin, eine Online-Plattform zu schaffen, um die betreffenden Unternehmen sichtbar zu machen."
 		),
 		webamida,
-		SkillSet([html, css, php, mysql, js, codeigniter, grocerycrud, googlemaps, bootstrap, responsive]),
+		SkillSet([html, css, php, googlemaps, bootstrap, mysql, js, codeigniter, grocerycrud, responsive]),
 		"https://web.archive.org/web/20150815021539/http://www.eixcomerciallleida.com/ca"
 	)
 
@@ -451,7 +451,7 @@ def GetResume():
 			"JQueralt ist ein Immobilienunternehmen in Lleida, das eine Website brauchte."
 		),
 		webamida,
-		SkillSet([html, css, php, mysql, js, codeigniter, grocerycrud, api, xml, bootstrap, responsive, optim]),
+		SkillSet([html, css, php, xml, bootstrap, mysql, js, codeigniter, grocerycrud, api, responsive, optim]),
 		"https://web.archive.org/web/20160112013443/http://www.jqueralt.com/"
 	)
 
@@ -464,10 +464,10 @@ def GetResume():
 			"OceanAlmond ist ein landwirtschaftliches Unternehmen, das sich auf den Anbau von Mandeln spezialisiert hat und eine Website benötigte."
 		),
 		webamida,
-		SkillSet([html,css, php, mysql, js, codeigniter, grocerycrud, googlemaps, bootstrap, responsive])
+		SkillSet([html,css, php, googlemaps, bootstrap, mysql, js, codeigniter, grocerycrud, responsive])
 	)
 
-	lagraficaOthr = Project(otherWebsites,None,webamida,SkillSet([html,css,php,mysql,js,codeigniter,grocerycrud,bootstrap,responsive,wordpress,en,video]))
+	lagraficaOthr = Project(otherWebsites,None,webamida,SkillSet([html,css,php,bootstrap,wordpress,mysql,js,codeigniter,grocerycrud,responsive,en,video]))
 
 	lagrafica = Job(webDeveloper, "LaGrafica", "2014/06", "2015/07", "Lleida", [okhabitat, eixcomercial, jqueralt, oceanAlmond, lagraficaOthr])
 
@@ -502,7 +502,7 @@ def GetResume():
 			"Implement a script that runs regularly, creates a directory for each day and moves the images to their corresponding directory.",
 			"Implementierung eines regelmäßig ausgeführten Skripts, das für jeden Tag ein Verzeichnis erstellt und die Bilder in das entsprechende Verzeichnis verschiebt."
 		),
-		SkillSet([linux, bash, cron, php])
+		SkillSet([linux, bash, php, cron])
 	)
 
 	smssending = Project(
@@ -536,7 +536,7 @@ def GetResume():
 			"Implement a script that obtains the data from an API and generates the PDF files.",
 			"Implementierung eines Skripts, das die Daten von einer API bezieht und die PDF-Dateien generiert."
 		),
-		SkillSet([php, pdf, kml, api, xml])
+		SkillSet([php, pdf, xml, kml, api])
 	)
 
 	ids = Project(
@@ -553,7 +553,7 @@ def GetResume():
 			"Install and connect a dedicated server, installation of the operating system and the necessary software. Detect vulnerabilities in network equipment and resolve them.",
 			"Installation und Anschluss eines dedizierten Servers, Installation des Betriebssystems und der notwendigen Software. Erkennung von Schwachstellen in Netzwerkgeräten und deren Behebung."
 		),
-		SkillSet([snorby, linux, security, networkmonitoring, incident, computermaint])
+		SkillSet([linux, snort, security, networkmonitoring, incident, computermaint])
 	)
 
 	ajLaseu = Job(
@@ -604,7 +604,7 @@ def GetResume():
 			"Design and construction of a visual guide for warehouse employees of a logistics company connected to the company's network.",
 			"Design und Aufbau eines visuellen Leitfadens für Lagermitarbeiter eines Logistikunternehmens, das an das Netzwerk des Unternehmens angeschlossen ist."
 		),
-		SkillSet([analog, digital, component, schema, pcb, proteus, firmware, cpp, tcpIp, http, html, css, team]),
+		SkillSet([cpp, http, html, css, analog, digital, component, schema, pcb, proteus, firmware, tcpIp, team]),
 		None, "2014", "2015"
 	)
 
@@ -622,7 +622,7 @@ def GetResume():
 			"We contestants had to present a robot that was able to follow a line painted in the ring.",
 			"Wir Teilnehmer mussten einen Roboter präsentieren, der einer in den Ring gemalten Linie folgen konnte."
 		),
-		SkillSet([analog, digital, component, schema, pcb, proteus, firmware, cpp, sensors, team, batteries]),
+		SkillSet([cpp, analog, digital, component, schema, pcb, proteus, firmware, sensors, team, batteries]),
 		None, "2014/04/26", "Olot"
 	)
 
@@ -795,8 +795,8 @@ def GetResume():
 			"Since maintaining 4 different versions of this document seemed like a very tedious task I decided to generate this document with code. The data of my resume is exported to a markdown document and subsequently using pandoc it is transformed into a PDF.",
 			"Da die Pflege von 4 verschiedenen Versionen dieses Dokuments eine sehr mühsame Aufgabe zu sein schien, entschied ich mich, dieses Dokument mit Code zu generieren. Die Daten meines Lebenslaufs werden in ein Markdown-Dokument exportiert und anschließend mit pandoc in ein PDF umgewandelt."
 		),
-		skills = SkillSet([python, git, linux, bash, es, ca, en, de, translation]),
-		startDate = "2023/03/02", endDate = "2023/03/08"
+		skills = SkillSet([python, git, linux, bash, pdf, html, css, es, ca, en, de, translation]),
+		startDate = "2023/03/02", endDate = "2023/03/09"
 	)
 
 	multiIsochrone = Project(
@@ -837,7 +837,7 @@ def GetResume():
 			"Generative Kunst hat mich schon immer begeistert. Seit ich entdeckt habe, dass diese Art von Kunst für jeden erreichbar ist, der 4 Vorstellungen von Programmierung hat, bin ich immer tiefer in diese Welt eingedrungen."
 		),
 		None,
-		SkillSet([php, python, cpp, json, git, foto, simu, compNum, mandel, julia, algebra, algorithms, optim, bash, video, en]),
+		SkillSet([php, python, cpp, git, bash, youtubeApi, json, foto, simu, compNum, mandel, julia, algebra, algorithms, optim, video, en]),
 		"https://www.youtube.com/channel/UCNtWQJFXRJU-9qtVpBPASxQ", "2014", "2022"
 	)
 
@@ -873,7 +873,7 @@ def GetResume():
 			"Aufgrund der von mir unterzeichneten Vertraulichkeitsvereinbarung gibt es keine Details."
 		),
 		skills = SkillSet([
-			python, cpp, api, git, digital, analog, pcb, component, team, softwarePlan, database, kicad, arduino, raspberry, protocols, design3d, document, tcpIp, gsm, http, html, css, mysql, mongodb, firmware, js, linux, bash, ssh, en, blender
+			python, cpp, git, kicad, arduino, http, html, css, mongodb, linux, bash, blender, api, digital, analog, pcb, component, team, softwarePlan, database, raspberry, protocols, design3d, document, tcpIp, gsm, mysql, firmware, js, ssh, en
 		]),
 		startDate = "2016",
 		endDate = "2021"
@@ -892,7 +892,7 @@ def GetResume():
 			"The function of the prototype is to measure the voltage of multiple stationary batteries and display the respective voltages on an LCD screen. The mission of the project is to develop a tool that can early detect anomalies in individual batteries in the bank.",
 			"Die Funktion des Prototyps besteht darin, die Spannung mehrerer stationärer Batterien zu messen und die jeweiligen Spannungen auf einem LCD-Bildschirm anzuzeigen. Die Mission des Projekts ist die Entwicklung eines Werkzeugs, das Anomalien in einzelnen Batterien in der Bank frühzeitig erkennen kann."
 		),
-		skills = SkillSet([analog, digital, component, schema, pcb, kicad, git, firmware, cpp, batteries, solar]),
+		skills = SkillSet([kicad, git, cpp ,analog, digital, component, schema, pcb, firmware, batteries, solar]),
 		startDate = "2020/04",
 		endDate = "2020/06"
 	)
@@ -910,7 +910,7 @@ def GetResume():
 			"Starting from a direct solar pumping installation controlled by a frequency inverter and a microcontroller, it was necessary to completely rewrite the firmware as the supplier's implementation did not meet the client's expectations. The project has lasted several years as during my training I have been acquiring new useful knowledge to improve the performance of the firmware.",
 			"Ausgehend von einer direkten Solarpumpanlage, die von einem Frequenzumrichter und einem Mikrocontroller gesteuert wird, war es notwendig, die Firmware komplett neu zu schreiben, da die Implementierung des Lieferanten nicht den Erwartungen des Kunden entsprach. Das Projekt hat mehrere Jahre gedauert, da ich während meiner Ausbildung neues nützliches Wissen erworben habe, um die Leistung der Firmware zu verbessern."
 		),
-		skills = SkillSet([analog, digital, git, firmware, cpp, sensors, field, feedback, solar]),
+		skills = SkillSet([git, cpp, analog, digital, firmware, sensors, field, feedback, solar]),
 		startDate = "2019/06",
 		endDate = "2021/10"
 	)
