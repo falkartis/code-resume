@@ -1,3 +1,4 @@
+import os.path
 import collections.abc
 
 class Translation:
@@ -29,7 +30,12 @@ class Skill:
 			self.Name = name
 
 	def Render(self, ctx):
-		return ctx.Render(self.Name)
+
+		iconpath = F"img/skill_{self.Tag}.svg"
+		if os.path.exists(iconpath):
+			return ctx.Image(iconpath, self.Name)
+		else:
+			return ctx.Render(self.Name)
 
 class Language(Skill):
 	def __init__(self, tag, name):

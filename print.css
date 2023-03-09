@@ -6,7 +6,7 @@ body, .content {
 	height: 100%;
 	font-size: 14px;
 }
-p {
+p, ul, li {
 	page-break-before: avoid;
 	break-before: avoid;
 
@@ -29,7 +29,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @page {
     size: auto;
-    margin: 20mm;
+    margin: 10mm;
 }
 
 #falk-artis-bay {

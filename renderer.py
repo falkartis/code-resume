@@ -125,6 +125,12 @@ class RenderContext:
 		txt += "\n"
 		return txt
 
+	def Image(self, url, title = None):
+		if title is None:
+			title = " "
+		else:
+			title = self.Render(title)
+		return F"![{title}]({url} \"{title}\")"
 
 def main(argv):
 
