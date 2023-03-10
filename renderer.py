@@ -132,6 +132,32 @@ class RenderContext:
 			title = self.Render(title)
 		return F"![{title}]({url} \"{title}\")"
 
+	def TableHead(self, *args):
+		txt = ""
+		txt += "|"
+		count = 0
+		for arg in args:
+			txt += " "
+			txt += self.Render(arg)
+			txt += " |"
+			count += 1
+		txt += "\n"
+		txt += "|"
+		for i in range(count):
+			txt += " --- |"
+		txt += "\n"
+		return txt
+
+	def TableRow(self, *args):
+		txt = ""
+		txt += "|"
+		for arg in args:
+			txt += " "
+			txt += self.Render(arg)
+			txt += " |"
+		txt += "\n"
+		return txt
+
 def main(argv):
 
 	resume = GetResume()

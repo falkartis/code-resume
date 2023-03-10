@@ -17,7 +17,7 @@ blockquote {
 	font-weight: 200;
 	text-align: right;
 }
-p > img {
+img {
 	height: 1.5em;
 }
 a {
@@ -25,4 +25,15 @@ a {
 }
 img[alt="Drupal"], img[alt="NPM"] {
 	height: 1.2em;
+}
+td:nth-child(1) {
+	font-weight: bold;
+	text-align: right;
+	white-space: nowrap;
+}
+td:nth-child(1)::after {
+	content: ":";
+}
+col {
+	width: auto !important;
 }

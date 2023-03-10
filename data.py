@@ -7,7 +7,7 @@ def GetResume():
 
 	name = "Falk Artis Bay"
 	drivingLicense = T("Permís de conduir", "Permiso de conducir", "Driving license", "Führerschein")
-	myDLicense = T("B, vehicle propi.", "B, vehículo propio.", "B, own vehicle.", "B, eigenes fahzeug.")
+	myDLicense = T("B, vehicle propi.", "B, vehículo propio.", "B, own vehicle.", "B, eigenes Fahrzeug.")
 
 	languages = T("Idiomes","Idiomas","Languages","Sprachen")
 	ca = Language("ca", T("Català", "Catalán", "Catalan", "Katalanisch"))
@@ -132,12 +132,12 @@ def GetResume():
 
 
 
-	others = T("Altres dades", "Otros datos", "Other information", "Sonstige angaben")
+	others = T("Altres dades", "Otros datos", "Other information", "Sonstige Angaben")
 	myOthers = T(
 		"Disponibilitat per desplaçar-me, canviar de residencia, fer torns rotatius, etc. segons retribució.",
 		"Disponibilidad para desplazarme, cambiar de residencia, hacer turnos rotativos, etc. según retribución.",
 		"Availability to move, change residence, rotate shifts, etc. according to remuneration.",
-		"Bereitschaft für reisen, Wohnungswechsel, Schichtwechsel usw. nach Vergütung."
+		"Bereitschaft zum Reisen, Wohnungswechsel, Schichtwechsel usw. nach Vergütung."
 	)
 
 	headers = [
@@ -177,7 +177,7 @@ def GetResume():
 			"Planificar la instal·lació de panells fotovoltaics, dissenyar un quadre elèctric, posar a prova equips, implementar millores.",
 			"Planificar la instalación de paneles fotovoltaicos, diseñar un cuadro eléctrico, poner a prueba equipos, implementar mejoras.",
 			"Plan the installation of photovoltaic panels, design an electrical panel, test equipment, implement improvements.",
-			"Die Installation von Photovoltaikmodulen planen, entwurf eines elektrisches Panel, Geräte testen, Verbesserungen implementieren."
+			"Die Installation von Photovoltaikmodulen planen, Entwurf eines elektrisches Panel, Geräte testen, Verbesserungen einbringen."
 		),
 		SkillSet([kicad, git, linux ,electr, schema, team, solar, wind])
 	)
@@ -217,7 +217,7 @@ def GetResume():
 			"ndBim es una plataforma en línia de treball col·laboratiu especialitzat en totes les fases de una obra.",
 			"ndBim es una plataforma online de trabajo colaborativo especializado en todas las fases de una obra.",
 			"ndBim is an online platform for collaborative work specialized in all phases of construction.",
-			"ndBim ist eine kollaborative Online-Arbeitsplattform, die auf alle Bauphasen spezialisiert ist"
+			"ndBim ist eine kollaborative Online-Arbeitsplattform, die auf alle Bauphasen spezialisiert ist."
 		),
 		T(
 			"Disseny i implementació del backend de la plataforma, la base de dades, els sistemes de seguretat, el xifrat de les dades d'usuari, un parser d'expressions matemàtiques, calculadora de costos. Implementació del frontend.",
@@ -240,7 +240,7 @@ def GetResume():
 			"Implementar un conjunt de funcionalitats embolcall per a accedir a les funcions pròpies de la ODA.",
 			"Implementar un conjunto de funcionalidades envoltura para acceder a las funciones propias de la ODA.",
 			"Implement a set of wrapper functions to access the ODA's own functions.",
-			"Implementierung von eine Reihe von Wrapper-Funktionen, um auf die eigenen Funktionen des ODA zuzugreifen."
+			"Implementierung von einer Reihe von Wrapper-Funktionen, um auf die eigenen Funktionen des ODA zuzugreifen."
 		),
 		SkillSet([cpp, visualstudio, git, jenkins, oop, ci, cd, api, team])
 	)
@@ -257,7 +257,7 @@ def GetResume():
 			"Dissenyar i implementar un client de la API.",
 			"Diseñar e implementar un cliente de la API.",
 			"Design and implement an API client.",
-			"Entwurf und implementierung von einen API-Client."
+			"Entwurf und Implementierung von einem API-Client."
 		),
 		SkillSet([cs, visualstudio, git, linux, bash, oop, api, json])
 	)
@@ -273,7 +273,7 @@ def GetResume():
 				"Diagnosticar i reparar tota mena de components electrònics, des de radiadors elèctrics fins a centraletes de maquines industrials.",
 				"Diagnosticar y reparar todo tipo de componentes electrónicos, desde radiadores eléctricos hasta centralitas de máquinas industriales.",
 				"Diagnose and repair all kinds of electronic components, from electric radiators to industrial machine control units.",
-				"Diagnose und reparatur alle Arten von elektronischen Komponenten, von elektrischen Heizkörpern bis hin zu Steuereinheiten für industrielle Maschinen."
+				"Diagnose und Reparatur von allen Arten von elektronischen Komponenten, von elektrischen Heizkörpern bis hin zu Steuerungseinheiten für industrielle Maschinen."
 			),
 			SkillSet([repair])
 		),
@@ -315,7 +315,7 @@ def GetResume():
 			"Realitzar un informe de l'estat de la plataforma. Aportar propostes de millora.",
 			"Realizar un informe del estado de la plataforma. Aportar propuestas de mejora.",
 			"Create a platform status report. Provide improvement proposals.",
-			"Erstellen Sie einen Plattformstatusbericht. Verbesserungsvorschläge einbringen."
+			"Erstellung eines Plattformstatusberichts. Verbesserungsvorschläge einbringen."
 		),
 		SkillSet([html, css, php, youtubeApi, linux, mysql, js, optim])
 	)
@@ -324,7 +324,7 @@ def GetResume():
 		"Crear la pagina web des de zero, completament a mida de les seves necessitats.",
 		"Crear la pagina web desde cero, completamente a medida de sus necesidades.",
 		"Create the website from scratch, completely tailored to his needs.",
-		"Erstellung der Website von Grund auf neu, vollständig an seine Bedürfnisse angepasst."
+		"Erstellung der Website von Grund auf neu, vollständig an die Bedürfnisse angepasst."
 	)
 
 	emilio = Project(

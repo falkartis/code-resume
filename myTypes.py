@@ -74,16 +74,17 @@ class Project(Activity):
 
 		txt = ""
 		txt += ctx.Header(self.Name)
+		txt += ctx.TableHead(" ", " ")
 
 		if self.StartDate is not None and self.Date is not None:
-			txt += ctx.KeyAndValueNl(ctx.Translations["interval"], ctx.Render(self.StartDate, " – ", self.Date))
+			txt += ctx.TableRow(ctx.Translations["interval"], ctx.Render(self.StartDate, " – ", self.Date))
 		elif self.StartDate is not None:
-			txt += ctx.KeyAndValueNl(ctx.Translations["date"], ctx.Render(self.StartDate))
+			txt += ctx.TableRow(ctx.Translations["date"], self.StartDate)
 		elif self.Date is not None:
-			txt += ctx.KeyAndValueNl(ctx.Translations["date"], ctx.Render(self.Date))
+			txt += ctx.TableRow(ctx.Translations["date"], self.Date)
 
 		if self.Description is not None:
-			txt += ctx.KeyAndValueP(ctx.Translations["description"], self.Description)
+			txt += ctx.TableRow(ctx.Translations["description"], self.Description)
 
 		if self.Tasks is not None:
 			if isinstance(self.Tasks, collections.abc.Sequence):
@@ -94,13 +95,13 @@ class Project(Activity):
 				txt += ctx.EndList()
 
 			else:
-				txt += ctx.KeyAndValueP(ctx.Translations["tasks"], self.Tasks)
+				txt += ctx.TableRow(ctx.Translations["tasks"], self.Tasks)
 
 		if self.Skills is not None:
-			txt += ctx.KeyAndValueP(ctx.Translations["skills"], self.Skills)
+			txt += ctx.TableRow(ctx.Translations["skills"], self.Skills)
 
 		if self.Url is not None:
-			txt += ctx.KeyAndValueP(ctx.Translations["link"], ctx.Link(self.Url, self.Url))
+			txt += ctx.TableRow(ctx.Translations["link"], ctx.Link(self.Url, self.Url))
 
 		return txt
 
@@ -149,11 +150,12 @@ class Job:
 		txt = ""
 
 		txt += ctx.Header(self.Place, " – ", self.Company)
-		txt += ctx.KeyAndValueNl(ctx.Translations["interval"], ctx.Render(self.StartDate, " – ", self.EndDate))
-		txt += ctx.KeyAndValueNl(ctx.Translations["location"], self.Location)
+		txt += ctx.TableHead(" ", " ")
+		txt += ctx.TableRow(ctx.Translations["interval"], ctx.Render(self.StartDate, " – ", self.EndDate))
+		txt += ctx.TableRow(ctx.Translations["location"], self.Location)
 
 		if self.Skills is not None:
-			txt += ctx.KeyAndValueP(ctx.Translations["skills"], self.Skills)
+			txt += ctx.TableRow(ctx.Translations["skills"], self.Skills)
 
 		if self.Projects is not None:
 			ctx.IncHeadLevel()
