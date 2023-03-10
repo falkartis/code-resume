@@ -674,12 +674,22 @@ def GetResume():
 		"Contestants had to solve math problems with the help of logic and code.",
 		"Die Teilnehmer mussten mathematische Probleme mit Hilfe von Logik und Code lösen."
 	)
+	programame2ndPrize = T(
+		"IES Baix Camp, Reus. Varem obtenir el 2n premi.",
+		"IES Baix Camp, Reus. Obtuvimos el 2º premio.",
+		"IES Baix Camp, Reus. We won the 2nd prize.",
+		"IES Baix Camp, Reus. Wir hatten den 2en Preis gewonnen."
+	)
 
-	programame3 = Event(programameName, programameDesc, SkillSet([cpp, team]), None, "2013/03/14", "IES Baix Camp, Reus")
-	programame2 = Event(programameName, programameDesc, SkillSet([cpp, team]), None, "2012/06/05", "IES Antonio de Nebrija, Móstoles")
-	programame1 = Event(
-		programameName, programameDesc, SkillSet([cpp, team]), None, "2012/03/27", "IES Baix Camp, Reus",
-		T("Varem obtenir el 2n premi.", "Obtuvimos el 2º premio.", "We won the 2nd prize.", "Wir hatten den 2en Preis gewonnen.")
+	programames = Event(
+		programameName,
+		programameDesc,
+		SkillSet([cpp, team]),
+		extraData = [
+			Header("2012/03/27", programame2ndPrize),
+			Header("2012/06/05", "IES Antonio de Nebrija, Móstoles"),
+			Header("2013/03/14", "IES Baix Camp, Reus")
+		]
 	)
 
 	linuxClassroom = Project(
@@ -707,7 +717,7 @@ def GetResume():
 			"Higher Level Training Curse – Computer Network Systems Administration",
 			"Fachabitur – Verwaltung von Netzwerkcomputersystemen"
 		),
-		"2011", "2013", "IES Joan Brudieu", "La Seu d'Urgell", [programame3, linuxClassroom, programame2, aversicuela, programame1]
+		"2011", "2013", "IES Joan Brudieu", "La Seu d'Urgell", [programames, linuxClassroom, aversicuela]
 	)
 
 	catskills = Event(
@@ -787,6 +797,8 @@ def GetResume():
 		None, None, "2007", "2023"
 	)
 
+	svg = Skill("SVG")
+	inkscape = Skill("Inkscape")
 	thisresume = Project(
 		T("Aquest currículum", "Este currículum", "This resume", "Dieser Lebenslauf"),
 		T(
@@ -795,7 +807,7 @@ def GetResume():
 			"Since maintaining 4 different versions of this document seemed like a very tedious task I decided to generate this document with code. The data of my resume is exported to a markdown document and subsequently using pandoc it is transformed into a PDF.",
 			"Da die Pflege von 4 verschiedenen Versionen dieses Dokuments eine sehr mühsame Aufgabe zu sein schien, entschied ich mich, dieses Dokument mit Code zu generieren. Die Daten meines Lebenslaufs werden in ein Markdown-Dokument exportiert und anschließend mit pandoc in ein PDF umgewandelt."
 		),
-		skills = SkillSet([python, git, linux, bash, pdf, html, css, translation, es, ca, en, de]),
+		skills = SkillSet([python, git, linux, bash, pdf, html, css, translation, svg, inkscape, es, ca, en, de]),
 		startDate = "2023/03/02", endDate = "2023/03/09"
 	)
 

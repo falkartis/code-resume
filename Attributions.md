@@ -105,3 +105,9 @@ MongoDB, Inc., Attribution, via Wikimedia Commons
 Other icons:
 Solar panel, team work, logistic, database, JavaScript, SSH, translation, Firmware, security, network-monitoring, computer-maintenance, digital-electronics
 Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc.
+
+SVG logo:
+W3C SVG Logo, CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0>, via Wikimedia Commons
+
+Inkscape logo:
+Andrew Michael Fitzsimon, CC BY-SA 3.0 <https://creativecommons.org/licenses/by-sa/3.0>, via Wikimedia Commons

@@ -106,7 +106,7 @@ class Project(Activity):
 		return txt
 
 class Event(Activity):
-	def __init__(self, name, description, skills, url, date, location, extraData = None):
+	def __init__(self, name, description, skills, url = None, date = None, location = None, extraData = None):
 		Activity.__init__(self, name, description, skills, url, date)
 		self.Location = location
 		self.ExtraData = extraData

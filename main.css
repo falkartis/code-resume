@@ -30,12 +30,6 @@ table, th, td {
 	border: 0 none;
 	border-collapse: collapse;
 }
-tr.odd {
-	background-color: #ECECEC;
-}
-tr.even {
-	background-color: #F5F5F5;
-}
 td {
 	vertical-align: top;
 	padding: 0.1em 0.3em;
