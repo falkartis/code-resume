@@ -101,3 +101,7 @@ Arduino, Public domain, via Wikimedia Commons
 
 MongoDB logo:
 MongoDB, Inc., Attribution, via Wikimedia Commons
+
+Other icons:
+Solar panel, team work, logistic, database, JavaScript, SSH, translation, Firmware, security, network-monitoring, computer-maintenance, digital-electronics
+Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc.

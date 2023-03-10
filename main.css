@@ -26,14 +26,34 @@ a {
 img[alt="Drupal"], img[alt="NPM"] {
 	height: 1.2em;
 }
+table, th, td {
+	border: 0 none;
+	border-collapse: collapse;
+}
+tr.odd {
+	background-color: #ECECEC;
+}
+tr.even {
+	background-color: #F5F5F5;
+}
+td {
+	vertical-align: top;
+	padding: 0.1em 0.3em;
+}
 td:nth-child(1) {
 	font-weight: bold;
 	text-align: right;
 	white-space: nowrap;
+	padding-right: 0.5em;
 }
 td:nth-child(1)::after {
 	content: ":";
 }
 col {
 	width: auto !important;
+}
+#ProfilePicture {
+	float: right;
+	height: 13em;
+	margin-left: 1em;
 }

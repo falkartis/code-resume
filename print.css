@@ -6,7 +6,7 @@ body, .content {
 	height: 100%;
 	font-size: 14px;
 }
-p, ul, li {
+p, ul, li, table {
 	page-break-before: avoid;
 	break-before: avoid;
 
