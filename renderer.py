@@ -21,6 +21,8 @@ class RenderContext:
 		else:
 			if type(arg) is tuple:
 				txt += self.RenderThem(arg)
+			elif type(arg) is list:
+				txt += self.RenderThem(arg)
 			else:
 				txt += arg
 		return txt

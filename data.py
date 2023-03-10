@@ -855,13 +855,10 @@ def GetResume():
 			"Wettbewerb der Kampfroboter RGB Zaragoza."
 		),
 		None, "https://rgb.codelearn.es", None, "Zaragoza",
-		HeaderData(
-			[
+		[
 			Header(T("Primera edició", "Primera edición", "First edition", "Erstausgabe"), "2021/07/31"),
 			Header(T("Segona edició","Segunda edición","Second edition","Zweite Auflage"), "2022/07/30")
-			],
-			[]
-		)
+		]
 	)
 
 	newak = Project(

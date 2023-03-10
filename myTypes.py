@@ -114,24 +114,25 @@ class Event(Activity):
 	def Render(self, ctx):
 		txt = ""
 		txt += ctx.Header(self.Name)
+		txt += ctx.TableHead(" ", " ")
 
 		if self.Date is not None:
-			txt += ctx.KeyAndValueNl(ctx.Translations["date"], ctx.Render(self.Date))
+			txt += ctx.TableRow(ctx.Translations["date"], ctx.Render(self.Date))
 
 		if self.Location is not None:
-			txt += ctx.KeyAndValueNl(ctx.Translations["location"], self.Location)
+			txt += ctx.TableRow(ctx.Translations["location"], self.Location)
 
 		if self.Description is not None:
-			txt += ctx.KeyAndValueP(ctx.Translations["event-description"], self.Description)
-
-		if self.ExtraData is not None:
-			txt += ctx.Paragraph(self.ExtraData)
+			txt += ctx.TableRow(ctx.Translations["event-description"], self.Description)
 
 		if self.Skills is not None:
-			txt += ctx.KeyAndValueP(ctx.Translations["skills"], self.Skills)
+			txt += ctx.TableRow(ctx.Translations["skills"], self.Skills)
 
 		if self.Url is not None:
-			txt += ctx.KeyAndValueP(ctx.Translations["link"], ctx.Link(self.Url, self.Url))
+			txt += ctx.TableRow(ctx.Translations["link"], ctx.Link(self.Url, self.Url))
+
+		if self.ExtraData is not None:
+			txt += ctx.Render(self.ExtraData)
 
 		return txt
 
@@ -178,12 +179,13 @@ class Training:
 	def Render(self, ctx):
 		txt = ""
 		txt += ctx.Header(self.Name)
-		txt += ctx.KeyAndValueNl(ctx.Translations["interval"], ctx.Render(self.StartDate, " – ", self.EndDate))
-		txt += ctx.KeyAndValueNl(ctx.Translations["school"], self.School)
-		txt += ctx.KeyAndValueNl(ctx.Translations["location"], self.Location)
+		txt += ctx.TableHead(" "," ")
+		txt += ctx.TableRow(ctx.Translations["interval"], ctx.Render(self.StartDate, " – ", self.EndDate))
+		txt += ctx.TableRow(ctx.Translations["school"], self.School)
+		txt += ctx.TableRow(ctx.Translations["location"], self.Location)
 
 		if self.Skills is not None:
-			txt += ctx.KeyAndValueP(ctx.Translations["skills"], self.Skills)
+			txt += ctx.TableRow(ctx.Translations["skills"], self.Skills)
 
 		if self.Projects is not None:
 			ctx.IncHeadLevel()
@@ -199,7 +201,7 @@ class Header:
 		self.Value = value
 
 	def Render(self, ctx):
-		return ctx.KeyAndValueNl(self.Key, self.Value)
+		return ctx.TableRow(self.Key, self.Value)
 
 class HeaderData:
 	def __init__(self, headers, quotes):
@@ -208,6 +210,7 @@ class HeaderData:
 
 	def Render(self, ctx):
 		txt = ""
+		txt += ctx.TableHead(" "," ")
 		for header in self.Headers:
 			txt += ctx.Render(header)
 		for quote in self.Quotes:
