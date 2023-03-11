@@ -111,3 +111,6 @@ W3C SVG Logo, CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0>, via
 
 Inkscape logo:
 Andrew Michael Fitzsimon, CC BY-SA 3.0 <https://creativecommons.org/licenses/by-sa/3.0>, via Wikimedia Commons
+
+wind icon:
+https://www.iconfinder.com/search?q=wind+turbine&price=free

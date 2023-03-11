@@ -971,6 +971,7 @@ def GetExtraTranslations():
 	translations["school"] = T("Centre", "Centro", "School", "Schule")
 	translations["date"] = T("Data", "Fecha", "Date", "Datum")
 	translations["event-description"] = T("Descripció de l'esdeveniment", "Descripción del evento", "Event description", "Beschreibung der Veranstaltung")
+	translations["icons"] = T("Icones", "Iconos", "Icons", "Ikonen")
 	return translations
 
 def main(argv):

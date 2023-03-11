@@ -8,7 +8,7 @@ class RenderContext:
 		self.Translations = translations
 		self.Text = ""
 		self.HeadLevel = 1
-
+		self.Skills = {}
 
 	def RenderArg(self, arg):
 		txt = ""
@@ -33,10 +33,8 @@ class RenderContext:
 			txt += self.RenderArg(arg)
 		return txt
 
-
 	def Render(self, *args):
 		return self.RenderThem(args)
-
 
 	def IncHeadLevel(self):
 		self.HeadLevel += 1
@@ -158,6 +156,23 @@ class RenderContext:
 			txt += self.Render(arg)
 			txt += " |"
 		txt += "\n"
+		return txt
+
+	def AddSkill(self, tag, skill):
+		self.Skills[tag] = skill
+
+	def RenderSkills(self):
+		txt = ""
+		first = True
+		for tag in self.Skills:
+			if first:
+				first = False
+			else:
+				txt += ", "
+			skill = self.Skills[tag]
+			txt += self.Render(skill)
+			txt += ": "
+			txt += self.Render(skill.Name)
 		return txt
 
 def main(argv):

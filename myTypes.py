@@ -33,6 +33,7 @@ class Skill:
 
 		iconpath = F"img/skill_{self.Tag}.svg"
 		if os.path.exists(iconpath):
+			ctx.AddSkill(self.Tag, self)
 			return ctx.Image(iconpath, self.Name)
 		else:
 			return ctx.Render(self.Name)
@@ -250,6 +251,10 @@ class Resume:
 		for project in self.Projects:
 			txt += ctx.Render(project)
 		ctx.DecHeadLevel()
+
+		txt += ctx.Header(ctx.Translations["icons"])
+
+		txt += ctx.RenderSkills()
 		return txt
 
 
