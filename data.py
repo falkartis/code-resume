@@ -604,7 +604,7 @@ def GetResume():
 			"Design and construction of a visual guide for warehouse employees of a logistics company connected to the company's network.",
 			"Design und Aufbau eines visuellen Leitfadens für Lagermitarbeiter eines Logistikunternehmens, das an das Netzwerk des Unternehmens angeschlossen ist."
 		),
-		SkillSet([cpp, http, html, css, firmware, team, digital, analog, component, schema, pcb, proteus, tcpIp]),
+		SkillSet([cpp, http, html, css, firmware, team, digital, analog, pcb, component, schema, proteus, tcpIp]),
 		None, "2014", "2015"
 	)
 
@@ -622,7 +622,7 @@ def GetResume():
 			"We contestants had to present a robot that was able to follow a line painted in the ring.",
 			"Wir Teilnehmer mussten einen Roboter präsentieren, der einer in den Ring gemalten Linie folgen konnte."
 		),
-		SkillSet([cpp, firmware, team, digital, batteries, analog, component, schema, pcb, proteus, sensors]),
+		SkillSet([cpp, firmware, team, digital, batteries, analog, pcb, component, schema, proteus, sensors]),
 		None, "2014/04/26", "Olot"
 	)
 
@@ -808,7 +808,7 @@ def GetResume():
 			"Da die Pflege von 4 verschiedenen Versionen dieses Dokuments eine sehr mühsame Aufgabe zu sein schien, entschied ich mich, dieses Dokument mit Code zu generieren. Die Daten meines Lebenslaufs werden in ein Markdown-Dokument exportiert und anschließend mit pandoc in ein PDF umgewandelt."
 		),
 		skills = SkillSet([python, git, linux, bash, pdf, html, css, translation, svg, inkscape, es, ca, en, de]),
-		startDate = "2023/03/02", endDate = "2023/03/09"
+		startDate = "2023/03/02", endDate = "2023/03/12"
 	)
 
 	multiIsochrone = Project(
@@ -901,7 +901,7 @@ def GetResume():
 			"The function of the prototype is to measure the voltage of multiple stationary batteries and display the respective voltages on an LCD screen. The mission of the project is to develop a tool that can early detect anomalies in individual batteries in the bank.",
 			"Die Funktion des Prototyps besteht darin, die Spannung mehrerer stationärer Batterien zu messen und die jeweiligen Spannungen auf einem LCD-Bildschirm anzuzeigen. Die Mission des Projekts ist die Entwicklung eines Werkzeugs, das Anomalien in einzelnen Batterien in der Bank frühzeitig erkennen kann."
 		),
-		skills = SkillSet([kicad, git, cpp, firmware, solar, digital, batteries, analog, component, schema, pcb]),
+		skills = SkillSet([kicad, git, cpp, firmware, solar, digital, batteries, analog, pcb, component, schema]),
 		startDate = "2020/04",
 		endDate = "2020/06"
 	)
