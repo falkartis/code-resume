@@ -1,26 +1,34 @@
-path {
-	animation-duration: 60s;
-	animation-name: draw;
-}
-@keyframes draw {
-	from {
-		stroke-dasharray: 0 100;
+@media screen {
+
+	body {
+		background: #888;
 	}
 
-	to {
-		stroke-dasharray: 100 0;
+	path {
+		animation-duration: 60s;
+		animation-name: draw;
 	}
-}
+	@keyframes draw {
+		from {
+			stroke-dasharray: 0 100;
+		}
 
-tr.odd {
-	background-color: #ECECEC;
-}
-tr.even {
-	background-color: #F5F5F5;
-}
-tr.odd td:nth-child(1) {
-	background-color: #E3E3E3;
-}
-tr.even td:nth-child(1) {
-	background-color: #ECECEC;
+		to {
+			stroke-dasharray: 100 0;
+		}
+	}
+
+	tr.odd {
+		background-color: #ECECEC;
+	}
+	tr.even {
+		background-color: #F5F5F5;
+	}
+	tr.odd td:nth-child(1) {
+		background-color: #E3E3E3;
+	}
+	tr.even td:nth-child(1) {
+		background-color: #ECECEC;
+	}
+
 }

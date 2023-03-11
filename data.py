@@ -179,7 +179,7 @@ def GetResume():
 			"Plan the installation of photovoltaic panels, design an electrical panel, test equipment, implement improvements.",
 			"Die Installation von Photovoltaikmodulen planen, Entwurf eines elektrisches Panel, Geräte testen, Verbesserungen einbringen."
 		),
-		SkillSet([kicad, git, linux ,electr, team, solar, wind, schema])
+		SkillSet([kicad, git, linux ,electr, team, solar, wind, batteries, schema])
 	)
 	dsSAT = Project(
 		T("Servei d'assistència tècnica", "Servicio de asistencia técnica", "Help Desk", "Help Desk"),
@@ -190,7 +190,7 @@ def GetResume():
 			"Resolve doubts and incidents that customers may encounter with the company's products. Give advice and instructions to company colleagues. Diagnose faults and repair equipment. Implement improvements.",
 			"Beheben von Zweifel und Vorfälle, die Kunden mit den Produkten des Unternehmens begegnen können. Kollegen im Unternehmen Ratschläge und Anweisungen Geben. Fehler diagnostizieren und Geräte reparieren. Verbesserungen implementieren."
 		),
-		SkillSet([linux, logistic, team, solar, customer, incident, diplomacy, document, warranty, en, de, wind, optim])
+		SkillSet([linux, logistic, team, solar, wind, batteries, customer, incident, diplomacy, document, warranty, en, de, optim])
 	)
 	damiaSolar = Job(dsPlace, "Damia Solar", "2020/08", "2022/07", "La Pobla de Segur", [dsWeb, dsTesting, dsSAT])
 
@@ -622,7 +622,7 @@ def GetResume():
 			"We contestants had to present a robot that was able to follow a line painted in the ring.",
 			"Wir Teilnehmer mussten einen Roboter präsentieren, der einer in den Ring gemalten Linie folgen konnte."
 		),
-		SkillSet([cpp, firmware, team, digital, analog, component, schema, pcb, proteus, sensors, batteries]),
+		SkillSet([cpp, firmware, team, digital, batteries, analog, component, schema, pcb, proteus, sensors]),
 		None, "2014/04/26", "Olot"
 	)
 
@@ -882,7 +882,7 @@ def GetResume():
 			"Aufgrund der von mir unterzeichneten Vertraulichkeitsvereinbarung gibt es keine Details."
 		),
 		skills = SkillSet([
-			python, cpp, git, kicad, arduino, http, html, css, mongodb, linux, bash, blender, team, database, firmware, js, ssh, digital, api, analog, pcb, component, softwarePlan, raspberry, protocols, design3d, document, tcpIp, gsm, mysql, en
+			python, cpp, git, kicad, arduino, http, html, css, mongodb, linux, bash, blender, team, database, firmware, js, ssh, digital, mysql, api, analog, pcb, component, softwarePlan, raspberry, protocols, design3d, document, tcpIp, gsm, en
 		]),
 		startDate = "2016",
 		endDate = "2021"
@@ -901,7 +901,7 @@ def GetResume():
 			"The function of the prototype is to measure the voltage of multiple stationary batteries and display the respective voltages on an LCD screen. The mission of the project is to develop a tool that can early detect anomalies in individual batteries in the bank.",
 			"Die Funktion des Prototyps besteht darin, die Spannung mehrerer stationärer Batterien zu messen und die jeweiligen Spannungen auf einem LCD-Bildschirm anzuzeigen. Die Mission des Projekts ist die Entwicklung eines Werkzeugs, das Anomalien in einzelnen Batterien in der Bank frühzeitig erkennen kann."
 		),
-		skills = SkillSet([kicad, git, cpp, firmware, solar, digital, analog, component, schema, pcb, batteries]),
+		skills = SkillSet([kicad, git, cpp, firmware, solar, digital, batteries, analog, component, schema, pcb]),
 		startDate = "2020/04",
 		endDate = "2020/06"
 	)
