@@ -14,7 +14,8 @@ def GetResume():
 	es = Language("es", T("Castellà", "Castellano", "Spanish", "Spanisch"))
 	en = Language("en", T("Anglès", "Inglés", "English", "Englisch"))
 	de = Language("de", T("Alemany", "Alemán", "German", "Deutsch"))
-	myLangs = SkillSet([ca, es, en, de])
+	de_B2 = Language("de", T("Alemany (B2)", "Alemán (B2)", "German (B2)", "Deutsch (B2)"))
+	myLangs = SkillSet([ca, es, en, de_B2])
 	seo = Skill("SEO")
 	presta = Skill("Prestashop")
 	cletu = Skill("Cletu")
@@ -828,7 +829,7 @@ def GetResume():
 		T(
 			"Creació d'un teler artesanal de 4 lliços, mida sobretaula",
 			"Creación de un telar artesanal de 4 lizos, tamaño sobremesa",
-			"Creation of an artisan loom of 4 looms, tabletop size",
+			"Creation of an artisan loom with 4 shafts, tabletop size",
 			"Herstellung eines handwerklichen Webrahmen mit 4 schäfte"
 		),
 		url = "https://youtu.be/rWfuz8Ocmzg", startDate = "2022/09", endDate = "2022/11"
