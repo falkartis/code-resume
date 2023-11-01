@@ -112,5 +112,8 @@ W3C SVG Logo, CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0>, via
 Inkscape logo:
 Andrew Michael Fitzsimon, CC BY-SA 3.0 <https://creativecommons.org/licenses/by-sa/3.0>, via Wikimedia Commons
 
+PostgreSQL logo:
+Daniel Lundin - https://wiki.postgresql.org/images/a/a4/PostgreSQL_logo.3colors.svg
+
 wind, mysql, batteries, pcb, analog-electronics:
 https://www.iconfinder.com/

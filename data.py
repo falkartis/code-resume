@@ -131,6 +131,9 @@ def GetResume(privateData):
 	field = Skill("field-work", T("Treball de camp", "Trabajo de campo", "Field work", "Feldarbeit"))
 	feedback = Skill("feedback", T("Bucle de realimentació", "Bucle de retroalimentación", "Feedback loop", "Rückkopplungsschleife"))
 	translation = Skill("translation", T("Traducció", "Traducción", "Translation", "Übersetzung"))
+	svg = Skill("SVG")
+	inkscape = Skill("Inkscape")
+	postgresql = Skill("PostgreSQL")
 
 
 	others = T("Altres dades", "Otros datos", "Other information", "Sonstige Angaben")
@@ -166,6 +169,31 @@ def GetResume(privateData):
 	)
 	headerData = HeaderData(headers, [doctors, tractor])
 
+	programmer = T("Programador", "Programador", "Programmer", "Programmierer")
+
+	trekformProject = Project(
+		T(
+			"Migració del programari de gestió intern",
+			"Migración del software de gestión interno",
+			"Internal management software migration",
+			"Migration der internen Verwaltungssoftware"
+		),
+		T(
+			"",
+			"",
+			"",
+			""
+		),
+		T(
+			"",
+			"",
+			"",
+			""
+		),
+		SkillSet([postgresql, cs, dotnet, visualstudio, git, linux, bash, html, css, js, svg, inkscape, team, oop, json, aspnet, webservice, api, entityFrame])
+	)
+	trekform = Job(programmer, "Trekform", "2023/04", "2023/06", "Cornellà de Llobregat", [trekformProject])
+
 	dsPlace = T("Tècnic Servei d'assistència tècnica", "Técnico Servicio de asistencia técnica", "Help Desk Technician", "Help Desk Techniker")
 	dsWeb = Project(
 		T("Revisió i migració web", "Revisión y migración web" , "Web review and migration", "Web-Überprüfung und -Migration"),
@@ -174,7 +202,8 @@ def GetResume(privateData):
 			"La meva funció era la de revisar la migració de la botiga en línia des d'una plataforma obsoleta a una nova plataforma. També revisar continguts del blog i informes de SEO.",
 			"Mi función era la de revisar la migración de la tienda online desde una plataforma obsoleta a una nueva plataforma. También revisar contenidos del blog e informes de SEO.",
 			"My role was to review the migration of the online store from an outdated platform to a new platform. Also to review blog content and SEO reports.",
-			"Meine Rolle bestand darin, die Migration des Online-Shops von einer veralteten Plattform auf eine neue Plattform zu überprüfen. Auch Blog-Inhalte und SEO-Berichte zu überprüfen."),
+			"Meine Rolle bestand darin, die Migration des Online-Shops von einer veralteten Plattform auf eine neue Plattform zu überprüfen. Auch Blog-Inhalte und SEO-Berichte zu überprüfen."
+		),
 		SkillSet([linux, seo, presta, cletu])
 	)
 	dsTesting = Project(
@@ -270,7 +299,7 @@ def GetResume(privateData):
 	)
 
 	hscProjects = [iCore9, ndbim, oda, bim360]
-	handle = Job(T("Programador", "Programador", "Programmer", "Programmierer"),"Handle Software Company", "2018/06", "2020/03", "Lleida", hscProjects)
+	handle = Job(programmer,"Handle Software Company", "2018/06", "2020/03", "Lleida", hscProjects)
 
 	alcoletgeProjects = [
 		Project(
@@ -577,7 +606,7 @@ def GetResume(privateData):
 		SkillSet([html, css, drupal, access, computermaint])
 	)
 
-	jobs = [damiaSolar, handle, becariAlcoletge, grupindex, semic, lagrafica, ajLaseu, telecentrePallars]
+	jobs = [trekform, damiaSolar, handle, becariAlcoletge, grupindex, semic, lagrafica, ajLaseu, telecentrePallars]
 
 	udl = Training(
 		T(
@@ -804,8 +833,6 @@ def GetResume(privateData):
 		None, None, "2007", "2023"
 	)
 
-	svg = Skill("SVG")
-	inkscape = Skill("Inkscape")
 	thisresume = Project(
 		T("Aquest currículum", "Este currículum", "This resume", "Dieser Lebenslauf"),
 		T(
