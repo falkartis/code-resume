@@ -304,7 +304,7 @@ def GetResume(privateData):
 	becari = T("Becari", "Becario", "Intern", "Praktikant")
 	becariAlcoletge = Job(
 		becari,
-		T("Taller de electrònica", "Taller de electrónica", "Electronics workshop", "Elektronik Werkstatt"),
+		T("Taller d'electrònica", "Taller de electrónica", "Electronics workshop", "Elektronik Werkstatt"),
 		"2018/02", "2018/06", "Alcoletge", alcoletgeProjects
 	)
 
@@ -755,7 +755,7 @@ def GetResume(privateData):
 
 	eso = Training(
 		T("Educació Secundària Obligatòria", "Educación Secundaria Obligatoria", "High school", "Weiterführende Schule"),
-		"2003", "2007", "IES de Tremp", "Tremp", []
+		"2003", "2007", "IES de Tremp", "Tremp"
 	)
 
 	trainings = [udl, caparrella, joanBrudieu, hugRoger, eso]
@@ -967,7 +967,11 @@ def GetExtraTranslations():
 	translations = {}
 	translations["jobsTitle"] = T("EXPERIÈNCIA PROFESSIONAL", "EXPERIENCIA PROFESIONAL", "PROFESSIONAL EXPERIENCE", "BERUFLICHE ERFAHRUNGEN")
 	translations["trainTitle"] = T("FORMACIÓ ACADÈMICA", "FORMACIÓN ACADÉMICA", "ACADEMIC TRAINING", "AUSBILDUNG")
-	translations["projectsTitle"] = T("PROJECTES PERSONALS", "PROYECTOS PERSONALES", "PERSONAL PROJECTS", "PERSÖNLICHE PROJEKTE")
+
+	translations["workProjects"] = T("PROJECTES LABORALS", "PROYECTOS LABORALES", "WORK PROJECTS", "ARBEITSPROJEKTE")
+	translations["academicProjects"] = T("PROJECTES ACADÈMICS", "PROYECTOS ACADÉMICOS", "ACADEMIC PROJECTS", "AKADEMISCHE PROJEKTE")
+	translations["personalProjects"] = T("PROJECTES PERSONALS", "PROYECTOS PERSONALES", "PERSONAL PROJECTS", "PERSÖNLICHE PROJEKTE")
+
 	#translations["interval"] = T("Interval", "Intervalo", "Interval", "Intervall")
 	translations["interval"] = T("Període", "Periodo", "Period", "Zeitraum")
 	translations["location"] = T("Localitat", "Localidad", "Location", "Ortschaft")

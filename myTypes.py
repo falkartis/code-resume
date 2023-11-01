@@ -157,8 +157,16 @@ class Job:
 
 		if self.Skills is not None:
 			txt += ctx.TableRow(ctx.Translations["skills"], self.Skills)
+		
+		return txt
+
+	def RenderProjects(self, ctx):
+		txt = ""
 
 		if self.Projects is not None:
+
+			txt += ctx.Header(self.Company)
+
 			ctx.IncHeadLevel()
 			for project in self.Projects:
 				txt += ctx.Render(project)
@@ -186,8 +194,14 @@ class Training:
 
 		if self.Skills is not None:
 			txt += ctx.TableRow(ctx.Translations["skills"], self.Skills)
+		
+		return txt
+
+	def RenderProjects(self, ctx):
+		txt = ""
 
 		if self.Projects is not None:
+			txt += ctx.Header(self.Name)
 			ctx.IncHeadLevel()
 			for project in self.Projects:
 				txt += ctx.Render(project)
@@ -244,7 +258,21 @@ class Resume:
 			txt += ctx.Render(training)
 		ctx.DecHeadLevel()
 
-		txt += ctx.Header(ctx.Translations["projectsTitle"])
+		txt += ctx.Header(ctx.Translations["workProjects"])
+
+		ctx.IncHeadLevel()
+		for job in self.Jobs:
+			txt += job.RenderProjects(ctx)
+		ctx.DecHeadLevel()
+
+		txt += ctx.Header(ctx.Translations["academicProjects"])
+
+		ctx.IncHeadLevel()
+		for training in self.Trainings:
+			txt += training.RenderProjects(ctx)
+		ctx.DecHeadLevel()
+
+		txt += ctx.Header(ctx.Translations["personalProjects"])
 
 		ctx.IncHeadLevel()
 		for project in self.Projects:
