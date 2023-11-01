@@ -1,13 +1,14 @@
 from myTypes import *
 
 
-def GetResume():
+def GetResume(privateData):
 
 	T = Translation
 
 	name = "Falk Artis Bay"
 	drivingLicense = T("Permís de conduir", "Permiso de conducir", "Driving license", "Führerschein")
-	myDLicense = T("B, vehicle propi.", "B, vehículo propio.", "B, own vehicle.", "B, eigenes Fahrzeug.")
+	#myDLicense = T("B, vehicle propi.", "B, vehículo propio.", "B, own vehicle.", "B, eigenes Fahrzeug.")
+	myDLicense = "B"
 
 	languages = T("Idiomes","Idiomas","Languages","Sprachen")
 	ca = Language("ca", T("Català", "Catalán", "Catalan", "Katalanisch"))
@@ -132,16 +133,21 @@ def GetResume():
 	translation = Skill("translation", T("Traducció", "Traducción", "Translation", "Übersetzung"))
 
 
-
 	others = T("Altres dades", "Otros datos", "Other information", "Sonstige Angaben")
+	# myOthers = T(
+	# 	"Disponibilitat per desplaçar-me, canviar de residència, fer torns rotatius, etc. segons retribució.",
+	# 	"Disponibilidad para desplazarme, cambiar de residencia, hacer turnos rotativos, etc. según retribución.",
+	# 	"Availability to move, change residence, rotate shifts, etc. according to remuneration.",
+	# 	"Bereitschaft zum Reisen, Wohnungswechsel, Schichtwechsel usw. nach Vergütung."
+	# )
 	myOthers = T(
-		"Disponibilitat per desplaçar-me, canviar de residencia, fer torns rotatius, etc. segons retribució.",
-		"Disponibilidad para desplazarme, cambiar de residencia, hacer turnos rotativos, etc. según retribución.",
-		"Availability to move, change residence, rotate shifts, etc. according to remuneration.",
-		"Bereitschaft zum Reisen, Wohnungswechsel, Schichtwechsel usw. nach Vergütung."
+		"Disponibilitat per desplaçar-me, fer torns rotatius, etc. segons retribució.",
+		"Disponibilidad para desplazarme, hacer turnos rotativos, etc. según retribución.",
+		"Availability to move, rotate shifts, etc. according to remuneration.",
+		"Bereitschaft zum Reisen, Schichtwechsel usw. nach Vergütung."
 	)
 
-	headers = [
+	headers = privateData + [
 		Header(drivingLicense, myDLicense),
 		Header(languages, myLangs),
 		Header(others, myOthers)
@@ -153,7 +159,7 @@ def GetResume():
 		"Wenn sich der menschliche Körper so schnell verändern würde wie die Technologie, würden Ärzte auch den ganzen Tag mit Internet verbringen."
 	)
 	tractor = T(
-		"Amb un cotxe de carreres no pots llaurar el camp, amb un tractor si.",
+		"Amb un cotxe de carreres no pots llaurar el camp, amb un tractor sí.",
 		"Con un coche de carreras no puedes labrar el campo, con un tractor sí.",
 		"With a racing car you can't plow the field, with a tractor you can.",
 		"Mit einem Rennwagen kann man das Feld nicht pflügen, mit einem Traktor schon."
@@ -655,7 +661,7 @@ def GetResume():
 		Header(
 			T("Projecte presentat", "Proyecto presentado", "Project presented", "Vorgestelltes Projekt"),
 			T(
-				"A ver si cuela (aversicuela.com) es el projecte que varem presentar en el nostre equip. Es tracta d'una plataforma social en línia per compartir contingut d'humor. La plataforma va estar en producció, funcionant i amb usuaris reals entre el 2012/04/01 i el 2013/02/21.",
+				"A ver si cuela (aversicuela.com) es el projecte que vam presentar en el nostre equip. Es tracta d'una plataforma social en línia per compartir contingut d'humor. La plataforma va estar en producció, funcionant i amb usuaris reals entre el 2012/04/01 i el 2013/02/21.",
 				"A ver si cuela (aversicuela.com) es el proyecto que presentamos en nuestro equipo. Se trata de una plataforma social online para compartir contenido de humor. La plataforma estuvo en producción, funcionando y con usuarios reales entre el 2012/04/01 y el 2013/02/21.",
 				"A ver si cuela (aversicuela.com) is the project that we presented in our team. It is an online social platform for sharing humorous content. The platform was in production, working and with real users between 2012/04/01 and 2013/02/21.",
 				"A ver si cuela (aversicuela.com) ist das Projekt, das wir in unserem Team vorgestellt haben. Es ist eine soziale Online-Plattform zum Teilen von humorvollen Inhalten. Die Plattform war zwischen dem 2012/04/01 und dem 2013/02/21 in Betrieb und mit echten Benutzern."
@@ -676,7 +682,7 @@ def GetResume():
 		"Die Teilnehmer mussten mathematische Probleme mit Hilfe von Logik und Code lösen."
 	)
 	programame2ndPrize = T(
-		"IES Baix Camp, Reus. Varem obtenir el 2n premi.",
+		"IES Baix Camp, Reus. vam obtenir el 2n premi.",
 		"IES Baix Camp, Reus. Obtuvimos el 2º premio.",
 		"IES Baix Camp, Reus. We won the 2nd prize.",
 		"IES Baix Camp, Reus. Wir hatten den 2en Preis gewonnen."
@@ -928,7 +934,7 @@ def GetResume():
 	threeDprinter = Project(
 		T("Curs d'impressores 3D", "Curso de impresoras 3D", "3D printer course", "3D-Drucker Kurs"),
 		T(
-			"Juntament amb 2 altres professors varem impartir un curs pràctic per crear, configurar i fer servir una impressora 3D.",
+			"Juntament amb 2 altres professors vam impartir un curs pràctic per crear, configurar i fer servir una impressora 3D.",
 			"Junto con otros 2 profesores impartimos un curso práctico para crear, configurar y utilizar una impresora 3D.",
 			"Together with 2 other teachers we taught a practical course to create, configure and use a 3D printer.",
 			"Zusammen mit 2 anderen Lehrern haben wir einen praktischen Kurs zum Erstellen, Konfigurieren und Verwenden eines 3D-Druckers durchgeführt."

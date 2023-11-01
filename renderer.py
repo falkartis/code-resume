@@ -1,6 +1,7 @@
 import sys
 
 from data import GetResume, GetExtraTranslations
+from private_data import GetPrivateData
 
 class RenderContext:
 	def __init__(self, lang, translations):
@@ -177,7 +178,8 @@ class RenderContext:
 
 def main(argv):
 
-	resume = GetResume()
+	privateData = GetPrivateData()
+	resume = GetResume(privateData)
 	extraTranslations = GetExtraTranslations()
 
 	ctx = RenderContext(argv[0], extraTranslations)

@@ -137,7 +137,6 @@ class Event(Activity):
 
 		return txt
 
-
 class Job:
 	def __init__(self, place, company, startDate, endDate, location, projects, skills = None):
 		self.Place = place
@@ -256,6 +255,7 @@ class Resume:
 
 		txt += ctx.RenderSkills()
 		return txt
+
 
 
 def main(argv):
