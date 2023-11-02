@@ -134,6 +134,7 @@ def GetResume(privateData):
 	svg = Skill("SVG")
 	inkscape = Skill("Inkscape")
 	postgresql = Skill("PostgreSQL")
+	sqlexpress = Skill("SQLExpress")
 
 
 	others = T("Altres dades", "Otros datos", "Other information", "Sonstige Angaben")
@@ -179,18 +180,19 @@ def GetResume(privateData):
 			"Migration der internen Verwaltungssoftware"
 		),
 		T(
-			"",
-			"",
-			"",
-			""
+			"El proposit del projecte era implementar un programa de gestió intern de l'empresa per reemplaçar l'anterior.",
+			"El propósito del proyecto era implementar un programa de gestión interno de la empresa para reemplazar al anterior.",
+			"The purpose of the project was to implement an internal company management program to replace the previous one.",
+			"Ziel des Projekts war die Implementierung eines unternehmensinternen Managementprogramms als Ersatz für das bisherige."
 		),
 		T(
-			"",
-			"",
-			"",
-			""
+			"Analitzar el funcionament dels processos interns de l'empresa.\nProposar possibles millores per simplificar els processos.\nAcordar un pla d'actuació.\nImplementar les millores acordades.",
+			"Analizar el funcionamiento de los procesos internos de la empresa.\nProponer posibles mejoras para simplificar los procesos.\nAcordar un plan de actuación.\nImplementar las mejoras acordadas.",
+			"Analyze the operation of the company's internal processes.\nPropose possible improvements to simplify the processes.\nAgree on an action plan.\nImplement the agreed improvements.",
+			"Analyse von die Funktionsweise der internen Prozesse des Unternehmens.\nMögliche Verbesserungen um die Prozesse zu vereinfachen vorschlagen.\nEinen Aktionsplan vereibaren.\nDie vereinbarten Verbesserungen umsetzen."
 		),
-		SkillSet([postgresql, cs, dotnet, visualstudio, git, linux, bash, html, css, js, svg, inkscape, team, oop, json, aspnet, webservice, api, entityFrame])
+
+		SkillSet([postgresql, cs, dotnet, visualstudio, git, linux, bash, html, css, js, svg, inkscape, team, oop, json, aspnet, webservice, api, entityFrame, sqlexpress])
 	)
 	trekform = Job(programmer, "Trekform", "2023/04", "2023/06", "Cornellà de Llobregat", [trekformProject])
 
