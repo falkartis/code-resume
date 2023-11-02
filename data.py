@@ -186,10 +186,10 @@ def GetResume(privateData):
 			"Ziel des Projekts war die Implementierung eines unternehmensinternen Managementprogramms als Ersatz für das bisherige."
 		),
 		T(
-			"Analitzar el funcionament dels processos interns de l'empresa.\nProposar possibles millores per simplificar els processos.\nAcordar un pla d'actuació.\nImplementar les millores acordades.",
-			"Analizar el funcionamiento de los procesos internos de la empresa.\nProponer posibles mejoras para simplificar los procesos.\nAcordar un plan de actuación.\nImplementar las mejoras acordadas.",
-			"Analyze the operation of the company's internal processes.\nPropose possible improvements to simplify the processes.\nAgree on an action plan.\nImplement the agreed improvements.",
-			"Analyse von die Funktionsweise der internen Prozesse des Unternehmens.\nMögliche Verbesserungen um die Prozesse zu vereinfachen vorschlagen.\nEinen Aktionsplan vereibaren.\nDie vereinbarten Verbesserungen umsetzen."
+			"Analitzar el funcionament dels processos interns de l'empresa.<br>Proposar possibles millores per simplificar els processos.<br>Acordar un pla d'actuació.<br>Implementar les millores acordades.",
+			"Analizar el funcionamiento de los procesos internos de la empresa.<br>Proponer posibles mejoras para simplificar los procesos.<br>Acordar un plan de actuación.<br>Implementar las mejoras acordadas.",
+			"Analyze the operation of the company's internal processes.<br>Propose possible improvements to simplify the processes.<br>Agree on an action plan.<br>Implement the agreed improvements.",
+			"Analyse von die Funktionsweise der internen Prozesse des Unternehmens.<br>Mögliche Verbesserungen um die Prozesse zu vereinfachen vorschlagen.<br>Einen Aktionsplan vereibaren.<br>Die vereinbarten Verbesserungen umsetzen."
 		),
 
 		SkillSet([postgresql, cs, dotnet, visualstudio, git, linux, bash, html, css, js, svg, inkscape, team, oop, json, aspnet, webservice, api, entityFrame, sqlexpress])
