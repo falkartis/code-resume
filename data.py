@@ -214,7 +214,7 @@ def GetResume(privateData):
 		T(
 			"Planificar la instal·lació de panells fotovoltaics, dissenyar un quadre elèctric, posar a prova equips, implementar millores.",
 			"Planificar la instalación de paneles fotovoltaicos, diseñar un cuadro eléctrico, poner a prueba equipos, implementar mejoras.",
-			"Plan the installation of photovoltaic panels, design an electrical panel, test equipment, implement improvements.",
+			"Plan the installation of photovoltaic panels, design electrical panels, test equipment, implement improvements.",
 			"Die Installation von Photovoltaikmodulen planen, Entwurf eines elektrisches Panel, Geräte testen, Verbesserungen einbringen."
 		),
 		SkillSet([kicad, git, linux ,electr, team, solar, wind, batteries, schema])
@@ -361,7 +361,7 @@ def GetResume(privateData):
 	webamida = T(
 		"Crear la pagina web des de zero, completament a mida de les seves necessitats.",
 		"Crear la pagina web desde cero, completamente a medida de sus necesidades.",
-		"Create the website from scratch, completely tailored to his needs.",
+		"Create the website from scratch, completely tailored to their needs.",
 		"Erstellung der Website von Grund auf neu, vollständig an die Bedürfnisse angepasst."
 	)
 
@@ -548,7 +548,7 @@ def GetResume(privateData):
 		T(
 			"El poliesportiu de la ciutat demana que se li faci arribar als membres subscrits informació de forma diària per SMS.",
 			"El polideportivo de la ciudad pide que se le haga llegar a los miembros suscritos información de forma diaria por SMS.",
-			"The city's sports center requests that subscribed members receive information on a daily basis by SMS.",
+			"The city' sports center requests that subscribed members receive information on a daily basis by SMS.",
 			"Das Sportzentrum der Stadt fordert, dass abonnierte Mitglieder täglich Informationen per SMS erhalten."
 		),
 		T(
@@ -912,7 +912,7 @@ def GetResume(privateData):
 	newak = Project(
 		T("Soci i desenvolupador – Newak", "Socio y desarrollador – Newak", "Partner and developer – Newak", "Partner und Entwickler – Newak"),
 		T(
-			"Degut al contracte de confidencialitat que vaig signar no hi han detalls.",
+			"Degut al contracte de confidencialitat que vaig signar no hi ha detalls.",
 			"Debido al contrato de confidencialidad que firmé no hay detalles.",
 			"Due to the confidentiality agreement I signed there are no details.",
 			"Aufgrund der von mir unterzeichneten Vertraulichkeitsvereinbarung gibt es keine Details."
@@ -965,7 +965,7 @@ def GetResume(privateData):
 		T(
 			"Juntament amb 2 altres professors vam impartir un curs pràctic per crear, configurar i fer servir una impressora 3D.",
 			"Junto con otros 2 profesores impartimos un curso práctico para crear, configurar y utilizar una impresora 3D.",
-			"Together with 2 other teachers we taught a practical course to create, configure and use a 3D printer.",
+			"Along with 2 other teachers we taught a practical course to create, configure and use a 3D printer.",
 			"Zusammen mit 2 anderen Lehrern haben wir einen praktischen Kurs zum Erstellen, Konfigurieren und Verwenden eines 3D-Druckers durchgeführt."
 		),
 		skills = SkillSet([firmware, team, digital, analog, design3d]),
