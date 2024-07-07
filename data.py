@@ -135,7 +135,16 @@ def GetResume(privateData):
 	inkscape = Skill("Inkscape")
 	postgresql = Skill("PostgreSQL")
 	sqlexpress = Skill("SQLExpress")
-
+	cassandra = Skill("Cassandra")
+	openldap = Skill("OpenLDAP")
+	qpid = Skill("Qpid")
+	zookeeper = Skill("Zookeeper")
+	bigquery = Skill("BigQuery")
+	kubernetes = Skill("Kubernetes")
+	java = Skill("Java")
+	docker = Skill("Docker")
+	terraform = Skill("Terraform")
+	infra = Skill("infra", T("Infraestructura", "Infraestructura", "Infrastructure", "Infrastruktur"))
 
 	others = T("Altres dades", "Otros datos", "Other information", "Sonstige Angaben")
 	# myOthers = T(
@@ -171,6 +180,49 @@ def GetResume(privateData):
 	headerData = HeaderData(headers, [doctors, tractor])
 
 	programmer = T("Programador", "Programador", "Programmer", "Programmierer")
+
+	TSR = T(
+		"Google Cloud Platform - Representat de suport tècnic",
+		"Google Cloud Platform - Representate de soporte técnico",
+		"Google Cloud Platform - Technical support Representative",
+		"Google Cloud Platform - Vertreter des technischen Supports"
+	)
+
+	webhelpTasks = T(
+		"Gestió d'incidències del client, proporcionar una comunicació directa i continuada amb el client.<br>Investigar la causa principal del problema.<br>Resoldre el problema del client.<br>Realitzar els passos de reproducció del problema.<br>Comunicar-se amb altres membres de l'equip, especialistes i altres enginyers.<br>Oferir solucions, solucions alternatives i mitigacions.",
+		"Gestión de Incidencias de Clientes, proporcionar comunicación directa y continua con el cliente.<br>Investigue la causa raíz del problema.<br>Solucionar el problema del cliente.<br>Realice los pasos de reproducción del problema.<br>Comunicarse con otros miembros del equipo, especialistas y otros ingenieros.<br>Ofrecer soluciones, soluciones alternativas y mitigaciones.",
+		"Customer Incident management, provide direct and continuous communication with the customer.<br>Investigate the root cause of the issue.<br>Troubleshoot the customer's issue.<br>Perform issue reproduction steps.<br>Communicate with other team members, specialists and other engineers.<br>Offer solutions, workarounds and mitigations",
+		"Kundenvorfallmanagement, direkte und kontinuierliche Kommunikation mit dem Kunden.<br>Untersuchen Sie die Grundursache des Problems.<br>Beheben Sie das Problem des Kunden.<br>Führen Sie Schritte zur Reproduktion des Problems durch.<br>Kommunizieren Sie mit anderen Teammitgliedern, Spezialisten und anderen Ingenieuren.<br>Bieten Sie Lösungen, Workarounds und Abhilfemaßnahmen an."
+	)
+
+	# APIGEE: Cassandra, Edge UI, Management Server, Message Processor, OpenLDAP, Postgres Server, Qpid Server, Router, Zookeeper
+
+	apigee = Project(
+		"Apigee",
+		T(
+			"Apigee és la plataforma de gestió d'APIs nativa de Google Cloud que es pot utilitzar per crear, gestionar i protegir APIs.",
+			"Apigee es la plataforma de administración de APIs nativa de Google Cloud que se puede utilizar para crear, administrar y proteger APIs.",
+			"Apigee is Google Cloud's native API management platform that can be used to build, manage, and secure APIs",
+			"Apigee ist die native API-Verwaltungsplattform von Google Cloud, mit der APIs erstellt, verwaltet und gesichert werden können."
+		),
+		webhelpTasks,
+		SkillSet([postgresql, database, xml, security, team, linux, git, bash, html, cassandra, openldap, qpid, zookeeper, json, webservice, api, docker, terraform, infra, document, customer, en]),
+		None, "2023/11", "2024/04"
+	)
+	bigData = Project(
+		T("Big data & IA", "Big data & IA", "Big data & AI", "Big Data & KI"),
+		T(
+			"Al departament de Big data i IA gestionem les incidències dels clients relacionats amb tots els productes de big data i intel·ligència artificial de Google Cloud Platform.",
+			"En el departamento de Big data & AI gestionamos las incidencias de los clientes relacionados con todos los productos de big data e inteligencia artificial en Google Cloud Platform.",
+			"In the Big data & AI shard we manage customer issues related to all the big data and artificial intelligence products on Google Cloud Platform.",
+			"Im Big Data & AI-Shard verwalten wir Kundenprobleme im Zusammenhang mit allen Big Data- und künstlichen Intelligenzprodukten auf der Google Cloud Platform."
+		),
+		webhelpTasks,
+		SkillSet([database, linux, security, postgresql, xml, team, git, bash, html, python, json, webservice, api, bigquery, kubernetes, java, docker, terraform, infra, document, customer, en]),
+		None, "2024/04", "2024/07"
+	)
+
+	webhelp = Job(TSR, "Webhelp", "2023/11", "2024/07", "Barcelona", [apigee, bigData])
 
 	trekformProject = Project(
 		T(
@@ -608,7 +660,7 @@ def GetResume(privateData):
 		SkillSet([html, css, drupal, access, computermaint])
 	)
 
-	jobs = [trekform, damiaSolar, handle, becariAlcoletge, grupindex, semic, lagrafica, ajLaseu, telecentrePallars]
+	jobs = [webhelp, trekform, damiaSolar, handle, becariAlcoletge, grupindex, semic, lagrafica, ajLaseu, telecentrePallars]
 
 	udl = Training(
 		T(
@@ -841,10 +893,10 @@ def GetResume(privateData):
 			"Com que mantenir 4 versions diferents d'aquest document em semblava un treball molt tediós he decidit generar aquest document amb codi. Les dades del meu currículum son exportades a un document markdown i posteriorment mitjançant pandoc aquest es transforma a PDF.",
 			"Puesto que mantener 4 versiones distintas de este documento me parecía un trabajo muy tedioso he decidido generar este documento con código. Los datos de mi currículum son exportados a un documento markdown y posteriormente mediante pandoc éste se transforma a PDF.",
 			"Since maintaining 4 different versions of this document seemed like a very tedious task I decided to generate this document with code. The data of my resume is exported to a markdown document and subsequently using pandoc it is transformed into a PDF.",
-			"Da die Pflege von 4 verschiedenen Versionen dieses Dokuments eine sehr mühsame Aufgabe zu sein schien, entschied ich mich, dieses Dokument mit Code zu generieren. Die Daten meines Lebenslaufs werden in ein Markdown-Dokument exportiert und anschließend mit pandoc in ein PDF umgewandelt."
+			"Da die Wartung von 4 verschiedenen Versionen dieses Dokuments eine sehr mühsame Aufgabe zu sein schien, entschied ich mich, dieses Dokument mit Code zu generieren. Die Daten meines Lebenslaufs werden in ein Markdown-Dokument exportiert und anschließend mit pandoc in ein PDF umgewandelt."
 		),
 		skills = SkillSet([python, git, linux, bash, pdf, html, css, translation, svg, inkscape, es, ca, en, de]),
-		startDate = "2023/03/02", endDate = "2023/03/12"
+		startDate = "2023/03", endDate = "2024/07"
 	)
 
 	multiIsochrone = Project(
