@@ -28,14 +28,23 @@ def GetResume(privateData):
 	git = Skill("Git")
 	solar = Skill("solar", T("energia solar", "energía solar", "solar energy", "Solarenergie"))
 	wind = Skill("wind", T("energia eòlica", "energía eólica", "wind energy", "Windenergie"))
-	customer = Skill("customer", T("Comunicació amb clients", "Comunicación con clientes", "Customer Communication", "Kundenkommunikation"))
+	customer = Skill(
+		"customer",
+		T("Comunicació amb clients", "Comunicación con clientes", "Customer Communication", "Kundenkommunikation")
+	)
 	incident = Skill("incident", T("Gestió d'incidències", "Gestión de incidencias", "Incident Management", "Incident Management"))
 	logistic = Skill("logistic", T("Logística", "Logística", "Logistics", "Logistik"))
 	diplomacy = Skill("diplomacy", T("Diplomàcia", "Diplomacia", "Diplomacy", "Diplomatie"))
 	document = Skill("document", T("Documentació", "Documentación", "Documentation", "Dokumentation"))
 	warranty = Skill("warranty", T("Gestió de garanties", "Gestión de garantías", "Warranty Management", "Garantiemanagement"))
 	optim = Skill("optim", T("Optimització de processos", "Optimización de procesos", "Process Optimization", "Prozessoptimierung"))
-	oop = Skill("oop",T("Programació orientada a objectes","Programación orientada a objetos","Object Oriented Programming","Objektorientierte Programmierung"))
+	oop = Skill(
+		"oop",
+		T(
+			"Programació orientada a objectes","Programación orientada a objetos",
+			"Object Oriented Programming","Objektorientierte Programmierung"
+		)
+	)
 	cs = Skill("cs","C#")
 	dotnet = Skill("dotnet", ".Net (Framework, Core, Standard)")
 	antlr = Skill("ANTLR")
@@ -63,7 +72,10 @@ def GetResume(privateData):
 	api = Skill("API")
 	doxygen = Skill("Doxygen")
 	entityFrame = Skill("Entity Framework")
-	distributed = Skill("distributed-systems", T("Sistemes distribuïts", "Sistemas distribuidos", "Distributed Systems", "Verteilte Systeme"))
+	distributed = Skill(
+		"distributed-systems",
+		T("Sistemes distribuïts", "Sistemas distribuidos", "Distributed Systems", "Verteilte Systeme")
+	)
 	sqlServer = Skill("SQL Server")
 	entityFrCore = Skill("Entity Framework Core")
 	security = Skill("security", T("Seguretat", "Seguridad", "Security", "Sicherheit"))
@@ -206,7 +218,7 @@ def GetResume(privateData):
 			"Apigee ist die native API-Verwaltungsplattform von Google Cloud, mit der APIs erstellt, verwaltet und gesichert werden können."
 		),
 		webhelpTasks,
-		SkillSet([postgresql, database, xml, security, team, linux, git, bash, html, cassandra, openldap, qpid, zookeeper, json, webservice, api, docker, terraform, infra, document, customer, en]),
+		SkillSet([postgresql, database, xml, security, team, linux, git, bash, html, http, tcpIp, cassandra, openldap, qpid, zookeeper, distributed, json, webservice, api, docker, terraform, infra, document, customer, en]),
 		None, "2023/11", "2024/04"
 	)
 	bigData = Project(
@@ -218,7 +230,7 @@ def GetResume(privateData):
 			"Im Big Data & AI-Shard verwalten wir Kundenprobleme im Zusammenhang mit allen Big Data- und künstlichen Intelligenzprodukten auf der Google Cloud Platform."
 		),
 		webhelpTasks,
-		SkillSet([database, linux, security, postgresql, xml, team, git, bash, html, python, json, webservice, api, bigquery, kubernetes, java, docker, terraform, infra, document, customer, en]),
+		SkillSet([database, linux, security, postgresql, xml, team, git, bash, html, python, http, tcpIp, distributed, json, webservice, api, bigquery, kubernetes, java, docker, terraform, infra, document, customer, en]),
 		None, "2024/04", "2024/07"
 	)
 
