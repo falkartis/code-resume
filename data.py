@@ -160,7 +160,7 @@ def GetResume(privateData):
 	others = T("Altres dades", "Otros datos", "Other information", "Sonstige Angaben")
 
 	headers = privateData + [
-#		Header(drivingLicense, myDLicense),
+		#Header(drivingLicense, myDLicense),
 		Header(languages, myLangs)
 	]
 	doctors = T(
@@ -659,6 +659,7 @@ def GetResume(privateData):
 	)
 
 	jobs = [webhelp, trekform, damiaSolar, handle, becariAlcoletge, grupindex, semic, lagrafica, ajLaseu, telecentrePallars]
+	otherJobs = [webhelp, trekform, damiaSolar, handle, becariAlcoletge, grupindex, semic, lagrafica, ajLaseu, telecentrePallars]
 
 	udl = Training(
 		T(
@@ -840,6 +841,7 @@ def GetResume(privateData):
 	)
 
 	trainings = [udl, caparrella, joanBrudieu, hugRoger, eso]
+	otherTrainings = [udl, caparrella, joanBrudieu, hugRoger, eso]
 
 	freelance = Project(
 		T("Consultor tecnològic freelance", "Consultor tecnológico freelance", "Freelance technology consultant", "Freiberuflicher Technologieberater"),
@@ -1036,7 +1038,7 @@ def GetResume(privateData):
 
 	projects = [thisresume, multiIsochrone, loom, youtube, rgb, newak, battery, pump, threeDprinter, lanParty]
 
-	resume = Resume(name, headerData, jobs, trainings, projects)
+	resume = Resume(name, headerData, jobs, trainings, projects, otherJobs, otherTrainings)
 
 	return resume
 
@@ -1045,7 +1047,9 @@ def GetExtraTranslations():
 
 	translations = {}
 	translations["jobsTitle"] = T("EXPERIÈNCIA PROFESSIONAL", "EXPERIENCIA PROFESIONAL", "PROFESSIONAL EXPERIENCE", "BERUFLICHE ERFAHRUNGEN")
+	translations["otherJobsTitle"] = T("ALTRES EXPERIÈNCIES PROFESSIONALS", "OTRAS EXPERIENCIAS PROFESIONALES", "OTHER PROFESSIONAL EXPERIENCES", "WEITERE BERUFLICHE ERFAHRUNGEN")
 	translations["trainTitle"] = T("FORMACIÓ ACADÈMICA", "FORMACIÓN ACADÉMICA", "ACADEMIC TRAINING", "AUSBILDUNG")
+	translations["otherTrainTitle"] = T("ALTRA FORMACIÓ ACADÈMICA", "OTRA FORMACIÓN ACADÉMICA", "OTHER ACADEMIC TRAINING", "WEITERE AUSBILDUNG")
 
 	translations["workProjects"] = T("PROJECTES LABORALS", "PROYECTOS LABORALES", "WORK PROJECTS", "ARBEITSPROJEKTE")
 	translations["academicProjects"] = T("PROJECTES ACADÈMICS", "PROYECTOS ACADÉMICOS", "ACADEMIC PROJECTS", "AKADEMISCHE PROJEKTE")
