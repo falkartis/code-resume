@@ -7,7 +7,6 @@ def GetResume(privateData):
 
 	name = "Falk Artis Bay"
 	drivingLicense = T("Permís de conduir", "Permiso de conducir", "Driving license", "Führerschein")
-	#myDLicense = T("B, vehicle propi.", "B, vehículo propio.", "B, own vehicle.", "B, eigenes Fahrzeug.")
 	myDLicense = "B"
 
 	languages = T("Idiomes","Idiomas","Languages","Sprachen")
@@ -159,23 +158,10 @@ def GetResume(privateData):
 	infra = Skill("infra", T("Infraestructura", "Infraestructura", "Infrastructure", "Infrastruktur"))
 
 	others = T("Altres dades", "Otros datos", "Other information", "Sonstige Angaben")
-	# myOthers = T(
-	# 	"Disponibilitat per desplaçar-me, canviar de residència, fer torns rotatius, etc. segons retribució.",
-	# 	"Disponibilidad para desplazarme, cambiar de residencia, hacer turnos rotativos, etc. según retribución.",
-	# 	"Availability to move, change residence, rotate shifts, etc. according to remuneration.",
-	# 	"Bereitschaft zum Reisen, Wohnungswechsel, Schichtwechsel usw. nach Vergütung."
-	# )
-	myOthers = T(
-		"Disponibilitat per desplaçar-me, fer torns rotatius, etc. segons retribució.",
-		"Disponibilidad para desplazarme, hacer turnos rotativos, etc. según retribución.",
-		"Availability to move, rotate shifts, etc. according to remuneration.",
-		"Bereitschaft zum Reisen, Schichtwechsel usw. nach Vergütung."
-	)
 
 	headers = privateData + [
-		Header(drivingLicense, myDLicense),
-		Header(languages, myLangs),
-		Header(others, myOthers)
+#		Header(drivingLicense, myDLicense),
+		Header(languages, myLangs)
 	]
 	doctors = T(
 		"Si el cos humà canvies al ritme que ho fa la tecnologia, els metges també es passarien el dia fent consultes a internet.",
@@ -194,8 +180,8 @@ def GetResume(privateData):
 	programmer = T("Programador", "Programador", "Programmer", "Programmierer")
 
 	TSR = T(
-		"Google Cloud Platform - Representat de suport tècnic",
-		"Google Cloud Platform - Representate de soporte técnico",
+		"Google Cloud Platform - Representant de suport tècnic",
+		"Google Cloud Platform - Representante de soporte técnico",
 		"Google Cloud Platform - Technical support Representative",
 		"Google Cloud Platform - Vertreter des technischen Supports"
 	)
@@ -234,7 +220,7 @@ def GetResume(privateData):
 		None, "2024/04", "2024/07"
 	)
 
-	webhelp = Job(TSR, "Webhelp", "2023/11", "2024/07", "Barcelona", [apigee, bigData])
+	webhelp = Job(TSR, "Webhelp/Concentrix", "2023/11", "2024/08", "Barcelona", [apigee, bigData])
 
 	trekformProject = Project(
 		T(
