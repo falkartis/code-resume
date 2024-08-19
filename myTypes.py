@@ -232,18 +232,21 @@ class HeaderData:
 		return txt
 
 class Resume:
-	def __init__(self, name, headerData, jobs, trainings, projects):
+	def __init__(self, name, headerData, jobs, trainings, projects, otherJobs, otherTrainings):
 		self.Name = name
 		self.HeaderData = headerData
 		self.Jobs = jobs
 		self.Trainings = trainings
 		self.Projects = projects
+		self.OtherJobs = otherJobs
+		self.OtherTrainings = otherTrainings
 	
 	def Render(self, ctx):
 
 		txt = ""
 		txt += ctx.Header(self.Name)
 		txt += ctx.Render(self.HeaderData)
+
 		txt += ctx.Header(ctx.Translations["jobsTitle"])
 
 		ctx.IncHeadLevel()
@@ -257,6 +260,24 @@ class Resume:
 		for training in self.Trainings:
 			txt += ctx.Render(training)
 		ctx.DecHeadLevel()
+
+		# TODO: add here list of personal projects
+
+		txt += ctx.Header(ctx.Translations["otherJobsTitle"])
+
+		ctx.IncHeadLevel()
+		for job in self.OtherJobs:
+			txt += ctx.Render(job)
+		ctx.DecHeadLevel()
+
+		txt += ctx.Header(ctx.Translations["otherTrainTitle"])
+
+		ctx.IncHeadLevel()
+		for training in self.OtherTrainings:
+			txt += ctx.Render(training)
+		ctx.DecHeadLevel()
+
+		# From here on "annex"
 
 		txt += ctx.Header(ctx.Translations["workProjects"])
 
