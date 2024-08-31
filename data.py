@@ -157,6 +157,19 @@ def GetResume(privateData):
 	terraform = Skill("Terraform")
 	infra = Skill("infra", T("Infraestructura", "Infraestructura", "Infrastructure", "Infrastruktur"))
 
+	cloudArch = Skill("Cloud Architecture")
+	cloudComp = Skill("Cloud Computing")
+	cloudSec = Skill("Cloud Security")
+	cloudStore = Skill("Cloud Storage")
+	compEngine = Skill("Compute Engine")
+	GKE = Skill("Google Kubernetes Engine")
+	GCP = Skill("Google Cloud Platform")
+	IAM = Skill("Identity And Access Management")
+	IaC = Skill("Infrastructure as Code")
+	net = Skill("Networking")
+	pubSub = Skill("Pub/Sub")
+	sql = Skill("SQL")
+
 	others = T("Altres dades", "Otros datos", "Other information", "Sonstige Angaben")
 
 	headers = privateData + [
@@ -658,8 +671,17 @@ def GetResume(privateData):
 		SkillSet([html, css, drupal, access, computermaint])
 	)
 
-	jobs = [webhelp, trekform, damiaSolar, handle, becariAlcoletge, grupindex, semic, lagrafica, ajLaseu, telecentrePallars]
-	otherJobs = [webhelp, trekform, damiaSolar, handle, becariAlcoletge, grupindex, semic, lagrafica, ajLaseu, telecentrePallars]
+	jobs = [webhelp, damiaSolar, handle, semic, lagrafica, ajLaseu]
+	otherJobs = [trekform, becariAlcoletge, grupindex, telecentrePallars]
+
+	#TODO: add this link: https://www.credly.com/badges/7db4f934-d828-4864-857e-cfe635b641ff/public_url
+	ACE = Training(
+		"Google Cloud Certified - Associate Cloud Engineer",
+		"2024/07", "2024/07",
+		"Credly by Pearson",
+		"Barcelona",
+		skills = SkillSet([cloudArch, cloudComp, cloudSec, cloudStore, compEngine, GKE, GCP, IAM, IaC, net, pubSub, sql])
+	)
 
 	udl = Training(
 		T(
@@ -669,7 +691,7 @@ def GetResume(privateData):
 			"Studium der Industrie- und Automatisierungstechnik"
 		),
 		"2015",
-		T("(en curs)", "(en curso)", "(in progress)", "(im Gange)"),
+		T("(en pausa)", "(en pausa)", "(standby)", "(standby)"),
 		T(
 			"Escola Politècnica Superior – Universitat de Lleida",
 			"Escuela Politécnica Superior - Universidad de Lleida",
@@ -727,16 +749,16 @@ def GetResume(privateData):
 
 	aversicuela = Event(
 		T(
-			"Concursant – Jornada de petits i joves emprenedors",
-			"Concursante – Jornada de pequeños y jóvenes emprendedores",
-			"Contestant – Day of small and young entrepreneurs",
-			"Kandidat – Tag der Klein- und Jungunternehmer"
+			"Xarxa social aversicuela.com",
+			"Red social aversicuela.com",
+			"Social network aversicuela.com",
+			"soziales Netzwerk aversicuela.com"
 		),
 		T(
-			"L'objectiu de la jornada era el de donar una oportunitat als alumnes de diferents instituts de presentar els seus respectius projectes emprenedors.",
-			"El objetivo de la jornada era dar una oportunidad a los alumnos de diferentes institutos de presentar sus respectivos proyectos emprendedores.",
-			"The aim of the day was to give students from different institutes an opportunity to present their respective entrepreneurial projects.",
-			"Ziel des Tages war es, Studierenden verschiedener Institute die Möglichkeit zu geben, ihre jeweiligen unternehmerischen Projekte vorzustellen."
+			"Concursant – Jornada de petits i joves emprenedors. L'objectiu de la jornada era el de donar una oportunitat als alumnes de diferents instituts de presentar els seus respectius projectes emprenedors.",
+			"Concursante – Jornada de pequeños y jóvenes emprendedores. El objetivo de la jornada era dar una oportunidad a los alumnos de diferentes institutos de presentar sus respectivos proyectos emprendedores.",
+			"Contestant – Day of small and young entrepreneurs. The aim of the day was to give students from different institutes an opportunity to present their respective entrepreneurial projects.",
+			"Kandidat – Tag der Klein- und Jungunternehmer. Ziel des Tages war es, Studierenden verschiedener Institute die Möglichkeit zu geben, ihre jeweiligen unternehmerischen Projekte vorzustellen."
 		),
 		SkillSet([php, html, css, security, team, mysql, design]),
 		None, "2012/05/17", "La Seu d'Urgell",
@@ -817,8 +839,8 @@ def GetResume(privateData):
 			"Kandidat – Webseiten-Designwettbewerb – CatSkills"
 		),
 		T(
-			"Els concursants havien de crear un lloc web d'una empresa immobiliària.",
-			"Los concursantes debían crear un sitio web de una empresa inmobiliaria.",
+			"Els concursants havíem de crear un lloc web d'una empresa immobiliària.",
+			"Los concursantes debíamos crear un sitio web de una empresa inmobiliaria.",
 			"Contestants had to create a website for a real estate company.",
 			"Die Teilnehmer mussten eine Website für ein Immobilienunternehmen erstellen."
 		),
@@ -840,8 +862,8 @@ def GetResume(privateData):
 		"2003", "2007", "IES de Tremp", "Tremp"
 	)
 
-	trainings = [udl, caparrella, joanBrudieu, hugRoger, eso]
-	otherTrainings = [udl, caparrella, joanBrudieu, hugRoger, eso]
+	trainings = [ACE, udl, caparrella, joanBrudieu, hugRoger]
+	otherTrainings = [eso]
 
 	freelance = Project(
 		T("Consultor tecnològic freelance", "Consultor tecnológico freelance", "Freelance technology consultant", "Freiberuflicher Technologieberater"),
@@ -896,7 +918,7 @@ def GetResume(privateData):
 			"Da die Wartung von 4 verschiedenen Versionen dieses Dokuments eine sehr mühsame Aufgabe zu sein schien, entschied ich mich, dieses Dokument mit Code zu generieren. Die Daten meines Lebenslaufs werden in ein Markdown-Dokument exportiert und anschließend mit pandoc in ein PDF umgewandelt."
 		),
 		skills = SkillSet([python, git, linux, bash, pdf, html, css, translation, svg, inkscape, es, ca, en, de]),
-		startDate = "2023/03", endDate = "2024/07"
+		startDate = "2023/03", endDate = "2024/08"
 	)
 
 	multiIsochrone = Project(
