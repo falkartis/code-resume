@@ -38,6 +38,7 @@ img {
 	height: 1.5em;
 }
 a {
+	/* TODO: Adjust this colour. */
 	color: #000;
 }
 img[alt="Drupal"], img[alt="NPM"] {
@@ -71,4 +72,5 @@ col {
 	height: 13em;
 	margin-left: 1em;
 	width: 13em;
+	background: #d8dad9;
 }

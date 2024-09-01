@@ -6,6 +6,7 @@
 
 	.content {
 		background-color: #01050a;
+		/* TODO: Adjust this colour. */
 		color: hsl(170 13% 47% / 1);
 	}
 	path {
@@ -22,6 +23,7 @@
 		}
 	}
 
+	/* TODO: Adjust this 4 colours. */
 	tr.odd {
 		background-color: #070b10;
 	}

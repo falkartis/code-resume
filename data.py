@@ -217,7 +217,7 @@ def GetResume(privateData):
 			"Apigee ist die native API-Verwaltungsplattform von Google Cloud, mit der APIs erstellt, verwaltet und gesichert werden können."
 		),
 		webhelpTasks,
-		SkillSet([postgresql, database, xml, security, team, linux, git, bash, html, http, tcpIp, cassandra, openldap, qpid, zookeeper, distributed, json, webservice, api, docker, terraform, infra, document, customer, en]),
+		SkillSet([postgresql, database, xml, security, team, linux, ssh, git, bash, html, http, tcpIp, cassandra, openldap, qpid, zookeeper, distributed, json, webservice, api, docker, terraform, infra, document, customer, en]),
 		None, "2023/11", "2024/04"
 	)
 	bigData = Project(
@@ -229,7 +229,7 @@ def GetResume(privateData):
 			"Im Big Data & AI-Shard verwalten wir Kundenprobleme im Zusammenhang mit allen Big Data- und künstlichen Intelligenzprodukten auf der Google Cloud Platform."
 		),
 		webhelpTasks,
-		SkillSet([database, linux, security, postgresql, xml, team, git, bash, html, python, http, tcpIp, distributed, json, webservice, api, bigquery, kubernetes, java, docker, terraform, infra, document, customer, en]),
+		SkillSet([database, linux, ssh, security, postgresql, xml, team, git, bash, html, python, http, tcpIp, distributed, json, webservice, api, bigquery, kubernetes, java, docker, terraform, infra, document, customer, en]),
 		None, "2024/04", "2024/07"
 	)
 
