@@ -250,15 +250,19 @@ class Resume:
 		txt += ctx.Header(ctx.Translations["jobsTitle"])
 
 		ctx.IncHeadLevel()
+		ctx.IncHeadLevel()
 		for job in self.Jobs:
 			txt += ctx.Render(job)
+		ctx.DecHeadLevel()
 		ctx.DecHeadLevel()
 
 		txt += ctx.Header(ctx.Translations["trainTitle"])
 
 		ctx.IncHeadLevel()
+		ctx.IncHeadLevel()
 		for training in self.Trainings:
 			txt += ctx.Render(training)
+		ctx.DecHeadLevel()
 		ctx.DecHeadLevel()
 
 		# TODO: add here list of personal projects
@@ -266,15 +270,19 @@ class Resume:
 		txt += ctx.Header(ctx.Translations["otherJobsTitle"])
 
 		ctx.IncHeadLevel()
+		ctx.IncHeadLevel()
 		for job in self.OtherJobs:
 			txt += ctx.Render(job)
+		ctx.DecHeadLevel()
 		ctx.DecHeadLevel()
 
 		txt += ctx.Header(ctx.Translations["otherTrainTitle"])
 
 		ctx.IncHeadLevel()
+		ctx.IncHeadLevel()
 		for training in self.OtherTrainings:
 			txt += ctx.Render(training)
+		ctx.DecHeadLevel()
 		ctx.DecHeadLevel()
 
 		# From here on "annex"

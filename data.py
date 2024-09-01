@@ -193,10 +193,10 @@ def GetResume(privateData):
 	programmer = T("Programador", "Programador", "Programmer", "Programmierer")
 
 	TSR = T(
-		"Google Cloud Platform - Representant de suport tècnic",
-		"Google Cloud Platform - Representante de soporte técnico",
-		"Google Cloud Platform - Technical support Representative",
-		"Google Cloud Platform - Vertreter des technischen Supports"
+		"Google Cloud Platform – Representant de suport tècnic",
+		"Google Cloud Platform – Representante de soporte técnico",
+		"Google Cloud Platform – Technical support Representative",
+		"Google Cloud Platform – Vertreter des technischen Supports"
 	)
 
 	webhelpTasks = T(

@@ -4,6 +4,10 @@
 		background: #888;
 	}
 
+	.content {
+		background-color: #01050a;
+		color: hsl(170 13% 47% / 1);
+	}
 	path {
 		animation-duration: 60s;
 		animation-name: draw;
@@ -19,16 +23,16 @@
 	}
 
 	tr.odd {
-		background-color: #ECECEC;
+		background-color: #070b10;
 	}
 	tr.even {
-		background-color: #F5F5F5;
+		background-color: #05060a;
 	}
 	tr.odd td:nth-child(1) {
-		background-color: #E3E3E3;
+		background-color: #01060b;
 	}
 	tr.even td:nth-child(1) {
-		background-color: #ECECEC;
+		background-color: #070b10;
 	}
 
 }
