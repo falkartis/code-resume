@@ -200,10 +200,10 @@ def GetResume(privateData):
 	)
 
 	webhelpTasks = T(
-		"Gestió d'incidències del client, proporcionar una comunicació directa i continuada amb el client.<br>Investigar la causa principal del problema.<br>Resoldre el problema del client.<br>Realitzar els passos de reproducció del problema.<br>Comunicar-se amb altres membres de l'equip, especialistes i altres enginyers.<br>Oferir solucions, solucions alternatives i mitigacions.",
-		"Gestión de Incidencias de Clientes, proporcionar comunicación directa y continua con el cliente.<br>Investigue la causa raíz del problema.<br>Solucionar el problema del cliente.<br>Realice los pasos de reproducción del problema.<br>Comunicarse con otros miembros del equipo, especialistas y otros ingenieros.<br>Ofrecer soluciones, soluciones alternativas y mitigaciones.",
-		"Customer Incident management, provide direct and continuous communication with the customer.<br>Investigate the root cause of the issue.<br>Troubleshoot the customer's issue.<br>Perform issue reproduction steps.<br>Communicate with other team members, specialists and other engineers.<br>Offer solutions, workarounds and mitigations",
-		"Kundenvorfallmanagement, direkte und kontinuierliche Kommunikation mit dem Kunden.<br>Untersuchen Sie die Grundursache des Problems.<br>Beheben Sie das Problem des Kunden.<br>Führen Sie Schritte zur Reproduktion des Problems durch.<br>Kommunizieren Sie mit anderen Teammitgliedern, Spezialisten und anderen Ingenieuren.<br>Bieten Sie Lösungen, Workarounds und Abhilfemaßnahmen an."
+		"Gestió d'incidències del client:<br>Proporcionar una comunicació directa i continuada amb el client.<br>Investigar la causa principal del problema.<br>Resoldre el problema del client.<br>Realitzar els passos de reproducció del problema.<br>Comunicar-se amb altres membres de l'equip, especialistes i enginyers.<br>Oferir solucions, alternatives i mitigacions.",
+		"Gestión de incidencias de clientes:<br>Proporcionar comunicación directa y continua con el cliente.<br>Investigar la causa raíz del problema.<br>Solucionar el problema del cliente.<br>Realizar pasos de reproducción del problema.<br>Comunicarse con otros miembros del equipo, especialistas e ingenieros.<br>Ofrecer soluciones, alternativas y mitigaciones.",
+		"Customer incident management:<br>Provide direct and continuous communication with the customer.<br>Investigate the root cause of the issue.<br>Troubleshoot the customer's issue.<br>Perform issue reproduction steps.<br>Communicate with other team members, specialists and engineers.<br>Offer solutions, workarounds and mitigations",
+		"Kundenvorfallmanagement:<br>Direkte und kontinuierliche Kommunikation mit dem Kunden.<br>Untersuchen Sie die Grundursache des Problems.<br>Beheben Sie das Problem des Kunden.<br>Führen Sie Schritte zur Reproduktion des Problems durch.<br>Kommunizieren Sie mit anderen Teammitgliedern, Spezialisten und Ingenieuren.<br>Bieten Sie Lösungen, Workarounds und Abhilfemaßnahmen an."
 	)
 
 	# APIGEE: Cassandra, Edge UI, Management Server, Message Processor, OpenLDAP, Postgres Server, Qpid Server, Router, Zookeeper
@@ -259,15 +259,15 @@ def GetResume(privateData):
 	)
 	trekform = Job(programmer, "Trekform", "2023/04", "2023/06", "Cornellà de Llobregat", [trekformProject])
 
-	dsPlace = T("Tècnic Servei d'assistència tècnica", "Técnico Servicio de asistencia técnica", "Help Desk Technician", "Help Desk Techniker")
+	dsPlace = T("Servei d'assistència tècnica", "Servicio de asistencia técnica", "Help Desk Technician", "Help Desk Techniker")
 	dsWeb = Project(
 		T("Revisió i migració web", "Revisión y migración web" , "Web review and migration", "Web-Überprüfung und -Migration"),
 		None,
 		T(
-			"La meva funció era la de revisar la migració de la botiga en línia des d'una plataforma obsoleta a una nova plataforma. També revisar continguts del blog i informes de SEO.",
-			"Mi función era la de revisar la migración de la tienda online desde una plataforma obsoleta a una nueva plataforma. También revisar contenidos del blog e informes de SEO.",
-			"My role was to review the migration of the online store from an outdated platform to a new platform. Also to review blog content and SEO reports.",
-			"Meine Rolle bestand darin, die Migration des Online-Shops von einer veralteten Plattform auf eine neue Plattform zu überprüfen. Auch Blog-Inhalte und SEO-Berichte zu überprüfen."
+			"Revisar la migració de la botiga en línia des d'una plataforma obsoleta a una nova plataforma. També revisar continguts del blog i informes de SEO.",
+			"Revisar la migración de la tienda online desde una plataforma obsoleta a una nueva plataforma. También revisar contenidos del blog e informes de SEO.",
+			"Review the migration of the online store from an outdated platform to a new platform. Also to review blog content and SEO reports.",
+			"Die Migration des Online-Shops von einer veralteten Plattform auf eine neue Plattform zu überprüfen. Auch Blog-Inhalte und SEO-Berichte zu überprüfen."
 		),
 		SkillSet([linux, seo, presta, cletu])
 	)
@@ -275,10 +275,10 @@ def GetResume(privateData):
 		T("Banc de proves", "Banco de pruebas", "Test bank", "Prüfstand"),
 		None,
 		T(
-			"Planificar la instal·lació de panells fotovoltaics, dissenyar un quadre elèctric, posar a prova equips, implementar millores.",
-			"Planificar la instalación de paneles fotovoltaicos, diseñar un cuadro eléctrico, poner a prueba equipos, implementar mejoras.",
+			"Planificar la instal·lació de panells fotovoltaics, dissenyar quadres elèctrics, posar a prova equips, implementar millores.",
+			"Planificar la instalación de paneles fotovoltaicos, diseñar cuadros eléctricos, poner a prueba equipos, implementar mejoras.",
 			"Plan the installation of photovoltaic panels, design electrical panels, test equipment, implement improvements.",
-			"Die Installation von Photovoltaikmodulen planen, Entwurf eines elektrisches Panel, Geräte testen, Verbesserungen einbringen."
+			"Die Installation von Photovoltaikmodulen planen, Entwurf elektrisches Panele, Geräte testen, Verbesserungen einbringen."
 		),
 		SkillSet([kicad, git, linux ,electr, team, solar, wind, batteries, schema])
 	)
@@ -286,10 +286,10 @@ def GetResume(privateData):
 		T("Servei d'assistència tècnica", "Servicio de asistencia técnica", "Help Desk", "Help Desk"),
 		None,
 		T(
-			"Resoldre els dubtes i les incidències que es poden trobar els clients amb els productes de l'empresa. Donar consells i indicacions a companys/es de l'empresa. Diagnosticar avaries i reparar equips. Implementar millores.",
-			"Resolver las dudas y las incidencias que pueden encontrarse los clientes con los productos de la empresa. Dar consejos e indicaciones a compañeros/as de la empresa. Diagnosticar averías y reparar equipos. Implementar mejoras.",
+			"Resoldre els dubtes i les incidències que es puguin trobar els clients amb els productes de l'empresa. Donar consells i indicacions a companys/es de l'empresa. Diagnosticar avaries i reparar equips. Implementar millores.",
+			"Resolver las dudas y las incidencias que puedan encontrarse los clientes con los productos de la empresa. Dar consejos e indicaciones a compañeros/as de la empresa. Diagnosticar averías y reparar equipos. Implementar mejoras.",
 			"Resolve doubts and incidents that customers may encounter with the company's products. Give advice and instructions to company colleagues. Diagnose faults and repair equipment. Implement improvements.",
-			"Beheben von Zweifel und Vorfälle, die Kunden mit den Produkten des Unternehmens begegnen können. Kollegen im Unternehmen Ratschläge und Anweisungen Geben. Fehler diagnostizieren und Geräte reparieren. Verbesserungen implementieren."
+			"Beheben von Zweifel und Vorfälle, die Kunden mit den Produkten des Unternehmens begegnen könten. Kollegen im Unternehmen Ratschläge und Anweisungen Geben. Fehler diagnostizieren und Geräte reparieren. Verbesserungen implementieren."
 		),
 		SkillSet([linux, logistic, team, solar, wind, batteries, customer, incident, diplomacy, document, warranty, en, de, optim])
 	)
@@ -332,8 +332,8 @@ def GetResume(privateData):
 	oda = Project(
 		"Open Design Alliance",
 		T(
-			"La llibreria de l'open design alliance, es coneguda per ser farragosa i complicada de fer servir. L'objectiu era d'aportar un conjunt de funcionalitats per facilitar la implantació de la llibreria.",
-			"La librería del open design aliance, es conocida por ser engorrosas y complicada de utilizar. El objetivo era aportar un conjunto de funcionalidades para facilitar la implantación de la librería.",
+			"La llibreria de l'open design alliance es coneguda per ser farragosa i complicada de fer servir. L'objectiu era d'aportar un conjunt de funcionalitats per facilitar la implantació de la llibreria.",
+			"La librería del open design aliance es conocida por ser engorrosa y complicada de utilizar. El objetivo era aportar un conjunto de funcionalidades para facilitar la implantación de la librería.",
 			"The open design alliance library is known to be cumbersome and complicated to use. The goal was to provide a set of functionalities to facilitate the implementation of the library.",
 			"Die Open Design Alliance Funktionenbibliothek ist bekanntermaßen umständlich und kompliziert zu bedienen. Das Ziel war es, eine Reihe von Funktionalitäten bereitzustellen, um die Implementierung der Bibliothek zu erleichtern."
 		),
@@ -349,8 +349,8 @@ def GetResume(privateData):
 	bim360 = Project(
 		T("Client API BIM-360", "Cliente API BIM-360", "BIM-360 API Client", "BIM-360-API-Client"),
 		T(
-			"La api BIM-360 d'Autodesk ofereix una plataforma de gestió de documents relacionats amb l'arquitectura.",
-			"La apio BIM-360 de Autodesk ofrece una plataforma de gestión de documentos relacionados con la arquitectura.",
+			"La API BIM-360 d'Autodesk ofereix una plataforma de gestió de documents relacionats amb l'arquitectura.",
+			"La API BIM-360 de Autodesk ofrece una plataforma de gestión de documentos relacionados con la arquitectura.",
 			"Autodesk's BIM-360 API provides an architecture-related document management platform.",
 			"Die BIM-360-API von Autodesk bietet eine architekturbezogene Dokumentenverwaltungsplattform."
 		),
@@ -485,8 +485,8 @@ def GetResume(privateData):
 			"TMI ist ein Unternehmen, das Maschinen zum Palettieren von Waren herstellt."
 		),
 		T(
-			"Realitzar tasques de manteniment de la web. Resoldre incidència en la xarxa del client.",
-			"Realizar labores de mantenimiento de la web. Resolver incidencia en la red del cliente.",
+			"Realitzar tasques de manteniment de la web. Resoldre incidències en la xarxa del client.",
+			"Realizar labores de mantenimiento de la web. Resolver incidencias en la red del cliente.",
 			"Perform website maintenance tasks. Resolve incidents in the client's network.",
 			"Durchführen von Webwartungsaufgaben. Störungsbeseitigung im Netzwerk des Kunden."
 		),
@@ -496,10 +496,10 @@ def GetResume(privateData):
 	semicOther = Project(
 		otherWebsites, 
 		T(
-			"A SEMIC un gran volum dels clients son les administracions publiques com ajuntaments.",
-			"En SEMIC un gran volumen de clientes son las administraciones públicas como ayuntamientos.",
-			"At SEMIC, a large volume of customers are public administrations such as town councils.",
-			"Ein großer Teil der Kunden von SEMIC sind öffentliche Verwaltungen wie Stadtverwaltungen."
+			"A SEMIC un gran volum dels clients son les administracions publiques com, per exemple, ajuntaments.",
+			"En SEMIC un gran volumen de clientes son las administraciones públicas como, por ejemplo, ayuntamientos.",
+			"At SEMIC, a large volume of customers are public administrations such as town councils, for example.",
+			"Ein großer Teil der Kunden von SEMIC sind öffentliche Verwaltungen wie Zum beispiel Stadtverwaltungen."
 		),
 		T(
 			"Realitzar tasques de manteniment de les pagines web fetes amb plone o drupal.",
@@ -533,7 +533,7 @@ def GetResume(privateData):
 	eixcomercial = Project(
 		"Eix comercial Lleida",
 		T(
-			"L'Eix comercial es una associació de negocis de Lleida. El projecte consistia en crear una plataforma en línia per donar visibilitat als negocis en qüestió.",
+			"L'Eix comercial és una associació de negocis de Lleida. El projecte consistia en crear una plataforma en línia per a donar visibilitat als negocis en qüestió.",
 			"Eix comercial es una asociación de negocios de Lleida. El proyecto consistía en crear una plataforma online para dar visibilidad a los negocios en cuestión.",
 			"Eix comercial is a business association from Lleida. The project consisted of creating an online platform to give visibility to the businesses in question.",
 			"Eix comercial ist ein Unternehmensverband aus Lleida. Das Projekt bestand darin, eine Online-Plattform zu schaffen, um die betreffenden Unternehmen sichtbar zu machen."
@@ -546,7 +546,7 @@ def GetResume(privateData):
 	jqueralt = Project(
 		"JQueralt",
 		T(
-			"JQueralt es una immobiliària de Lleida que precisava d'una pagina web.",
+			"JQueralt és una immobiliària de Lleida que precisava d'una pagina web.",
 			"JQueralt es una inmobiliaria de Lleida que precisaba de una pagina web.",
 			"JQueralt is a real estate company in Lleida that needed a website.",
 			"JQueralt ist ein Immobilienunternehmen in Lleida, das eine Website brauchte."
@@ -559,10 +559,10 @@ def GetResume(privateData):
 	oceanAlmond = Project(
 		"OceanAlmond",
 		T(
-			"OceanAlmond es una empresa agrònoma especialitzada en el cultiu d'ametlles que precisava d'una pagina web.",
-			"OceanAlmond es una empresa agrónoma especializada en el cultivo de almendras que precisaba de una pagina web.",
-			"OceanAlmond is an agricultural company specialized in the cultivation of almonds that needed a website.",
-			"OceanAlmond ist ein landwirtschaftliches Unternehmen, das sich auf den Anbau von Mandeln spezialisiert hat und eine Website benötigte."
+			"OceanAlmond és una empresa agrònoma, especialitzada en el cultiu d'ametlles, que precisava d'una pagina web.",
+			"OceanAlmond es una empresa agrónoma, especializada en el cultivo de almendras, que precisaba de una pagina web.",
+			"OceanAlmond is an agricultural company, specialized in the cultivation of almonds, that needed a website.",
+			"OceanAlmond ist ein landwirtschaftliches Unternehmen, das sich auf den Anbau von Mandeln spezialisiert hat, und eine Website benötigte."
 		),
 		webamida,
 		SkillSet([html,css, php, googlemaps, bootstrap, js, mysql, codeigniter, grocerycrud, responsive])
@@ -570,14 +570,14 @@ def GetResume(privateData):
 
 	lagraficaOthr = Project(otherWebsites,None,webamida,SkillSet([html,css,php,bootstrap,wordpress,js,mysql,codeigniter,grocerycrud,responsive,en,video]))
 
-	lagrafica = Job(webDeveloper, "LaGrafica", "2014/06", "2015/07", "Lleida", [okhabitat, eixcomercial, jqueralt, oceanAlmond, lagraficaOthr])
+	lagrafica = Job(webDeveloper, "LaGràfica", "2014/06", "2015/07", "Lleida", [okhabitat, eixcomercial, jqueralt, oceanAlmond, lagraficaOthr])
 
 	timebank = Project(
 		T("Banc del temps", "Banco del tiempo", "Time bank", "Zeitbank"),
 		T(
-			"Un banc del temps es una forma de intercanviar feines entre els membres d'una comunitat sense que s'hi involucrin els diners. En canvi es comptabilitzen hores.",
-			"Un banco del tiempo es una forma de intercambiar trabajos entre los miembros de una comunidad sin que se involucre el dinero. En cambio, se contabilizan horas.",
-			"A time bank is a way of exchanging jobs between members of a community without money being involved. Instead, hours are counted.",
+			"Un banc del temps és una forma d'intercanviar feines entre els membres d'una comunitat comptabilitzant hores sense que s'hi involucrin els diners.",
+			"Un banco del tiempo es una forma de intercambiar trabajos entre los miembros de una comunidad contabilizando horas sin que se involucre el dinero.",
+			"A time bank is a way of exchanging jobs between members of a community counting hours instead of money being involved.",
 			"Eine Zeitbank ist eine Möglichkeit, Jobs zwischen Mitgliedern einer Gemeinschaft auszutauschen, ohne dass Geld im Spiel ist. Stattdessen werden Stunden gezählt."
 		),
 		T(
@@ -611,13 +611,13 @@ def GetResume(privateData):
 		T(
 			"El poliesportiu de la ciutat demana que se li faci arribar als membres subscrits informació de forma diària per SMS.",
 			"El polideportivo de la ciudad pide que se le haga llegar a los miembros suscritos información de forma diaria por SMS.",
-			"The city' sports center requests that subscribed members receive information on a daily basis by SMS.",
+			"The city' sports center requests that subscribed members receive information by SMS on a daily basis.",
 			"Das Sportzentrum der Stadt fordert, dass abonnierte Mitglieder täglich Informationen per SMS erhalten."
 		),
 		T(
-			"Implementar un script que obtingui la informació en qüestió i l'envii als destinataris subscrits.",
+			"Implementar un script que obtingui la informació en qüestió i l'envïi als destinataris subscrits.",
 			"Implementar un script que obtenga la información en cuestión y lo envíe a los destinatarios suscritos.",
-			"Implement a script that obtains the information in question and sends it to the subscribed recipients.",
+			"Implement a script that obtains the information in question and sends it to the subscribers.",
 			"Implementierung eines Skripts, das die betreffenden Informationen erhält und an die abonnierten Empfänger sendet."
 		),
 		SkillSet([linux, bash, cron])
@@ -643,8 +643,8 @@ def GetResume(privateData):
 	ids = Project(
 		"IDS",
 		T(
-			"Per tal de garantir la seguretat i el bon funcionament de la xarxa de l'ajuntament es va implantar un sistema de detecció d'intrusions.",
-			"Para garantizar la seguridad y buen funcionamiento de la red del ayuntamiento se implantó un sistema de detección de intrusiones.",
+			"Per tal de garantir la seguretat i el bon funcionament de la xarxa de l'ajuntament, es va implantar un sistema de detecció d'intrusions.",
+			"Para garantizar la seguridad y buen funcionamiento de la red del ayuntamiento, se implantó un sistema de detección de intrusiones.",
 			"In order to guarantee the security and proper functioning of the council's network, an intrusion detection system was implemented.",
 			"Um die Sicherheit und das ordnungsgemäße Funktionieren des Gemeindenetzwerks zu gewährleisten, wurde ein Intrusion Detection System implementiert."
 		),
@@ -694,7 +694,7 @@ def GetResume(privateData):
 		T("(en pausa)", "(en pausa)", "(standby)", "(standby)"),
 		T(
 			"Escola Politècnica Superior – Universitat de Lleida",
-			"Escuela Politécnica Superior - Universidad de Lleida",
+			"Escuela Politécnica Superior – Universidad de Lleida",
 			"Higher Polytechnic School – University of Lleida",
 			"Höhere Polytechnische Schule – Universität Lleida"
 		),
@@ -730,7 +730,7 @@ def GetResume(privateData):
 		T(
 			"Els concursants havíem de presentar un robot que fos capaç de seguir una línia pintada al ring.",
 			"Los concursantes debíamos presentar un robot que fuera capaz de seguir una línea pintada en el ring.",
-			"We contestants had to present a robot that was able to follow a line painted in the ring.",
+			"We, the contestants, had to present a robot that was able to follow a line painted in the ring.",
 			"Wir Teilnehmer mussten einen Roboter präsentieren, der einer in den Ring gemalten Linie folgen konnte."
 		),
 		SkillSet([cpp, firmware, team, digital, batteries, analog, pcb, component, schema, proteus, sensors]),
@@ -755,8 +755,8 @@ def GetResume(privateData):
 			"soziales Netzwerk aversicuela.com"
 		),
 		T(
-			"Concursant – Jornada de petits i joves emprenedors. L'objectiu de la jornada era el de donar una oportunitat als alumnes de diferents instituts de presentar els seus respectius projectes emprenedors.",
-			"Concursante – Jornada de pequeños y jóvenes emprendedores. El objetivo de la jornada era dar una oportunidad a los alumnos de diferentes institutos de presentar sus respectivos proyectos emprendedores.",
+			"Concursant – Jornada de petits i joves emprenedors. L'objectiu de la jornada era el de donar l'oportunitat als alumnes de diferents instituts de presentar els seus respectius projectes emprenedors.",
+			"Concursante – Jornada de pequeños y jóvenes emprendedores. El objetivo de la jornada era dar la oportunidad a los alumnos de diferentes institutos de presentar sus respectivos proyectos emprendedores.",
 			"Contestant – Day of small and young entrepreneurs. The aim of the day was to give students from different institutes an opportunity to present their respective entrepreneurial projects.",
 			"Kandidat – Tag der Klein- und Jungunternehmer. Ziel des Tages war es, Studierenden verschiedener Institute die Möglichkeit zu geben, ihre jeweiligen unternehmerischen Projekte vorzustellen."
 		),
@@ -765,7 +765,7 @@ def GetResume(privateData):
 		Header(
 			T("Projecte presentat", "Proyecto presentado", "Project presented", "Vorgestelltes Projekt"),
 			T(
-				"A ver si cuela (aversicuela.com) es el projecte que vam presentar en el nostre equip. Es tracta d'una plataforma social en línia per compartir contingut d'humor. La plataforma va estar en producció, funcionant i amb usuaris reals entre el 2012/04/01 i el 2013/02/21.",
+				"A ver si cuela (aversicuela.com) és el projecte que vam presentar el nostre equip. Es tracta d'una plataforma social en línia per a compartir contingut d'humor. La plataforma va estar en producció, funcionant i amb usuaris reals entre el 2012/04/01 i el 2013/02/21.",
 				"A ver si cuela (aversicuela.com) es el proyecto que presentamos en nuestro equipo. Se trata de una plataforma social online para compartir contenido de humor. La plataforma estuvo en producción, funcionando y con usuarios reales entre el 2012/04/01 y el 2013/02/21.",
 				"A ver si cuela (aversicuela.com) is the project that we presented in our team. It is an online social platform for sharing humorous content. The platform was in production, working and with real users between 2012/04/01 and 2013/02/21.",
 				"A ver si cuela (aversicuela.com) ist das Projekt, das wir in unserem Team vorgestellt haben. Es ist eine soziale Online-Plattform zum Teilen von humorvollen Inhalten. Die Plattform war zwischen dem 2012/04/01 und dem 2013/02/21 in Betrieb und mit echten Benutzern."
@@ -780,13 +780,13 @@ def GetResume(privateData):
 		"Teilnehmer – Programmierwettbewerb – ProgramaMe"
 	)
 	programameDesc = T(
-		"Els concursants havien de resoldre problemes matemàtics amb l'ajuda de lògica i codi.",
-		"Los concursantes debían resolver problemas matemáticos con ayuda de lógica y código.",
-		"Contestants had to solve math problems with the help of logic and code.",
+		"Els concursants havien de resoldre problemes matemàtics amb l'ajuda de la lògica i codi.",
+		"Los concursantes debían resolver problemas matemáticos con ayuda de la lógica y código.",
+		"Contestants had to solve math problems with the help of logics and code.",
 		"Die Teilnehmer mussten mathematische Probleme mit Hilfe von Logik und Code lösen."
 	)
 	programame2ndPrize = T(
-		"IES Baix Camp, Reus. vam obtenir el 2n premi.",
+		"IES Baix Camp, Reus. Vam obtenir el 2n premi.",
 		"IES Baix Camp, Reus. Obtuvimos el 2º premio.",
 		"IES Baix Camp, Reus. We won the 2nd prize.",
 		"IES Baix Camp, Reus. Wir hatten den 2en Preis gewonnen."
@@ -806,9 +806,9 @@ def GetResume(privateData):
 	linuxClassroom = Project(
 		T("Aula Linux", "Aula Linux", "Linux classroom", "Linux-Klassenzimmer"),
 		T(
-			"Implementació d'una aula d'informàtica de baix cost que aprofiti el maquinari antic o de gamma baixa i un o varis servidors que assumeixin la carrega de treball.",
+			"Implementació d'una aula d'informàtica de baix cost que aprofiti el hardware antic o de gamma baixa i un o varis servidors que assumeixin la carrega de treball.",
 			"Implementación de un aula de informática de bajo coste que aproveche el hardware antiguo o de gama baja y uno o varios servidores que asuman la carga de trabajo.",
-			"Implementation of a low-cost IT classroom that takes advantage of old or low-end hardware and one or more servers that take on the workload.",
+			"Implementation of a low-cost IT classroom that reuses old or low-end hardware and one or more servers that take on the workload.",
 			"Implementierung eines kostengünstigen IT-Klassenzimmers, das alte oder Low-End-Hardware und einen oder mehrere Server nutzt, die die Arbeitslast übernehmen."
 		),
 		T(
@@ -825,7 +825,7 @@ def GetResume(privateData):
 		T(
 			"CFGS – Administració de Sistemes Informàtics en Xarxa",
 			"CFGS – Administración de Sistemas Informáticos en Red",
-			"Higher Level Training Curse – Computer Network Systems Administration",
+			"Higher Level Training Course – Computer Network Systems Administration",
 			"Fachabitur – Verwaltung von Netzwerkcomputersystemen"
 		),
 		"2011", "2013", "IES Joan Brudieu", "La Seu d'Urgell", [programames, linuxClassroom, aversicuela]
@@ -833,8 +833,8 @@ def GetResume(privateData):
 
 	catskills = Event(
 		T(
-			"Concursant – Competició de disseny de pagines web – CatSkills",
-			"Concursante – Competición de diseño de paginas web – CatSkills",
+			"Concursant – Competició de disseny de pàgines web – CatSkills",
+			"Concursante – Competición de diseño de páginas web – CatSkills",
 			"Contestant – Web page design competition – CatSkills",
 			"Kandidat – Webseiten-Designwettbewerb – CatSkills"
 		),
@@ -876,31 +876,31 @@ def GetResume(privateData):
 			"Implementierung eines REST-API-Clients für Skigebiets-Informationsbildschirme. HTML, JavaScript, JSON, jQuery, CSS."
 		),
 		T(
-			"Manteniment de instal·lació fotovoltaica aïllada. Manteniment de bateries estacionaries i inversor, energia solar.",
+			"Manteniment d'instal·lació fotovoltaica aïllada. Manteniment de bateries estacionaries i inversor, energia solar.",
 			"Mantenimiento de instalación fotovoltaica aislada. Mantenimiento de baterías estacionarias e inversor, energía solar.",
 			"Maintenance of isolated photovoltaic installation. Maintenance of stationary batteries and inverter, solar energy.",
 			"Wartung einer isolierten Photovoltaikanlage. Wartung von stationären Batterien und Wechselrichter, Solarenergie."
 		),
 		T(
-			"Manteniment de instal·lació fotovoltaica aïllada. Substitució de regulador, inversor i proteccions, energia solar.",
+			"Manteniment d'instal·lació fotovoltaica aïllada. Substitució de regulador, inversor i proteccions, energia solar.",
 			"Mantenimiento de instalación fotovoltaica aislada. Sustitución de regulador, inversor y protecciones, energía solar.",
 			"Maintenance of isolated photovoltaic installation. Replacement of regulator, inverter and protections, solar energy.",
 			"Wartung einer isolierten Photovoltaikanlage. Austausch von Laderegler, Wechselrichter und Schutzvorrichtungen, Solarenergie."
 		),
 		T(
 			"Implementació del frontend d'una botiga en línia de productes d'hostaleria a l'engròs. HTML, CSS, PHP, MYSQL, JavaScript, SOAP, XML.",
-			"Implementación del frontendo de una tienda online de productos de hostelería al por mayor. HTML, CSS, PHP, MYSQL, JavaScript, SOAP, XML.",
+			"Implementación del frontend de una tienda online de productos de hostelería al por mayor. HTML, CSS, PHP, MYSQL, JavaScript, SOAP, XML.",
 			"Implementation of the front-end of an online store of wholesale hospitality products. HTML, CSS, PHP, MYSQL, JavaScript, SOAP, XML.",
 			"Implementierung des Frontends eines Online-Shops für Großhandelsprodukte für das Gastgewerbe. HTML, CSS, PHP, MYSQL, JavaScript, SOAP, XML."
 		),
 		T(
-			"Creació de pagina web d'una casa rural. HTML, PHP, CSS,  JavaScript, MySQL, Photoshop.",
-			"Creación de pagina web de una casa rural. HTML, PHP, CSS, JavaScript, MySQL, Photoshop.",
+			"Creació de la pàgina web d'una casa rural. HTML, PHP, CSS,  JavaScript, MySQL, Photoshop.",
+			"Creación de la página web de una casa rural. HTML, PHP, CSS, JavaScript, MySQL, Photoshop.",
 			"Creation of a rural house website. HTML, PHP, CSS, JavaScript, MySQL, Photoshop.",
 			"Erstellung einer Landhaus-Website. HTML, PHP, CSS, JavaScript, MySQL, Photoshop."
 		),
 		T(
-			"Altres. Recomanacions tècniques varies.",
+			"Altres. Recomanacions tècniques diverses.",
 			"Otros. Recomendaciones técnicas varias.",
 			"Others. Various technical recommendations.",
 			"Andere. Verschiedene technische Empfehlungen."
@@ -912,10 +912,10 @@ def GetResume(privateData):
 	thisresume = Project(
 		T("Aquest currículum", "Este currículum", "This resume", "Dieser Lebenslauf"),
 		T(
-			"Com que mantenir 4 versions diferents d'aquest document em semblava un treball molt tediós he decidit generar aquest document amb codi. Les dades del meu currículum son exportades a un document markdown i posteriorment mitjançant pandoc aquest es transforma a PDF.",
-			"Puesto que mantener 4 versiones distintas de este documento me parecía un trabajo muy tedioso he decidido generar este documento con código. Los datos de mi currículum son exportados a un documento markdown y posteriormente mediante pandoc éste se transforma a PDF.",
-			"Since maintaining 4 different versions of this document seemed like a very tedious task I decided to generate this document with code. The data of my resume is exported to a markdown document and subsequently using pandoc it is transformed into a PDF.",
-			"Da die Wartung von 4 verschiedenen Versionen dieses Dokuments eine sehr mühsame Aufgabe zu sein schien, entschied ich mich, dieses Dokument mit Code zu generieren. Die Daten meines Lebenslaufs werden in ein Markdown-Dokument exportiert und anschließend mit pandoc in ein PDF umgewandelt."
+			"Com que mantenir 4 versions diferents d'aquest document em sembla un treball molt tediós, he decidit generar aquest document amb codi. Les dades del meu currículum són exportades a un document markdown i, posteriorment, mitjançant pandoc, aquest es transforma a PDF.",
+			"Puesto que mantener 4 versiones distintas de este documento me parece un trabajo muy tedioso, he decidido generar este documento con código. Los datos de mi currículum son exportados a un documento markdown y, posteriormente, mediante pandoc, éste se transforma a PDF.",
+			"Since maintaining 4 different versions of this document is a very tedious task, I decided to generate this document with code. The data of my resume is exported to a markdown document and, subsequently, using pandoc, it is transformed into a PDF.",
+			"Da die Wartung von 4 verschiedenen Versionen dieses Dokuments eine sehr mühsame Aufgabe ist, entschied ich mich, dieses Dokument mit Code zu generieren. Die Daten meines Lebenslaufs werden in ein Markdown-Dokument exportiert und, anschließend, mit pandoc, in ein PDF umgewandelt."
 		),
 		skills = SkillSet([python, git, linux, bash, pdf, html, css, translation, svg, inkscape, es, ca, en, de]),
 		startDate = "2023/03", endDate = "2024/08"
@@ -924,10 +924,10 @@ def GetResume(privateData):
 	multiIsochrone = Project(
 		"Multi-Isochrone",
 		T(
-			"La funció d'aquesta eina es la de generar corbes isòcrones en escenari de múltiples destinacions recurrents.",
-			"La función de esta herramienta es la de generar curvas isócronas en escenario de múltiples destinos recurrentes.",
-			"The function of this tool is to generate isochronous curves in the scenario of multiple recurring destinations.",
-			"Die Funktion dieses Tools besteht darin, im Szenario mehrerer wiederkehrender Ziele isochrone Kurven zu erzeugen."
+			"La funció d'aquesta eina és la de generar corbes isòcrones en escenaris de múltiples destinacions recurrents.",
+			"La función de esta herramienta es la de generar curvas isócronas en escenarios de múltiples destinos recurrentes.",
+			"The function of this tool is to generate isochronous curves in scenarios of multiple recurring destinations.",
+			"Die Funktion dieses Tools besteht darin, Szenarien mehrerer wiederkehrender Ziele isochrone Kurven zu erzeugen."
 		),
 		None,
 		SkillSet([html, css, ts, git, googlemaps, npm, algorithms, optim]),
@@ -953,10 +953,10 @@ def GetResume(privateData):
 			"Kunstprojekt – Fractals & More – verfügbar auf YouTube"
 		),
 		T(
-			"L'art generatiu sempre m’ha apassionat. Des de que vaig descobrir que aquest tipus d’art està a l’abast de tothom que tingui 4 nocions de programació m’he anat endinsant cada vegada més en aquest mon.",
-			"El arte generativo siempre me ha apasionado. Desde que descubrí que este tipo de arte está al alcance de todo el mundo que tenga 4 nociones de programación me he ido adentrando cada vez más en este mundo.",
-			"I have always been passionate about generative art. Since I discovered that this type of art is within the reach of everyone who has 4 notions of programming, I have been getting deeper and deeper into this world.",
-			"Generative Kunst hat mich schon immer begeistert. Seit ich entdeckt habe, dass diese Art von Kunst für jeden erreichbar ist, der 4 Vorstellungen von Programmierung hat, bin ich immer tiefer in diese Welt eingedrungen."
+			"L'art generatiu sempre m’ha apassionat. Des de que vaig descobrir que aquest tipus d’art està a l’abast de tothom que tingui 4 nocions de matemàtiques m’he anat endinsant cada vegada més en aquest món.",
+			"El arte generativo siempre me ha apasionado. Desde que descubrí que este tipo de arte está al alcance de todo el mundo que tenga 4 nociones de matemáticas, me he ido adentrando cada vez más en este mundo.",
+			"I have always been passionate about generative art. Since I discovered that this type of art is within the reach of everyone who has basic notions of maths, I have been getting deeper and deeper into this world.",
+			"Generative Kunst hat mich schon immer begeistert. Seit ich entdeckt habe, dass diese Art von Kunst für jeden erreichbar ist, der über Grundkenntnisse in Mathematik verfügt, bin ich immer tiefer in diese Welt eingedrungen."
 		),
 		None,
 		SkillSet([php, python, cpp, git, bash, youtubeApi, json, foto, simu, compNum, mandel, julia, algebra, algorithms, optim, video, en]),
@@ -965,8 +965,8 @@ def GetResume(privateData):
 
 	rgb = Event(
 		T(
-			"Membre de Jurat – Robots Great Battle RGB Zaragoza",
-			"Miembro de Jurado – Robots Great Battle RGB Zaragoza",
+			"Membre del Jurat – Robots Great Battle RGB Zaragoza",
+			"Miembro del Jurado – Robots Great Battle RGB Zaragoza",
 			"Jury member – Robots Great Battle RGB Zaragoza",
 			"Jurymitglied – Robots Great Battle RGB Zaragoza"
 		),
@@ -1000,13 +1000,13 @@ def GetResume(privateData):
 
 	battery = Project(
 		T(
-			"Disseny i desenvolupament prototip – Anàlisis de bateries",
-			"Diseño y desarrollo prototipo – Análisis de baterías",
+			"Disseny i desenvolupament del prototip – Anàlisis de bateries",
+			"Diseño y desarrollo del prototipo – Análisis de baterías",
 			"Prototype design and development – Battery analyses",
 			"Prototypendesign und -entwicklung – Batterieanalysen"
 		),
 		T(
-			"La funció del prototip es la de mesurar el voltatge de múltiples bateries estacionaries i mostrar els respectius voltatges en una pantalla LCD. La missió del projecte es desenvolupar una eina que pugui detectar de forma precoç anomalies en bateries individuals del banc.",
+			"La funció del prototip és la de mesurar el voltatge de múltiples bateries estacionaries i mostrar els respectius voltatges en una pantalla LCD. La missió del projecte és desenvolupar una eina que pugui detectar de forma precoç anomalies en bateries individuals del banc.",
 			"La función del prototipo es medir el voltaje de múltiples baterías estacionarias y mostrar los respectivos voltajes en una pantalla LCD. La misión del proyecto es desarrollar una herramienta que pueda detectar de forma precoz anomalías en baterías individuales del banco.",
 			"The function of the prototype is to measure the voltage of multiple stationary batteries and display the respective voltages on an LCD screen. The mission of the project is to develop a tool that can early detect anomalies in individual batteries in the bank.",
 			"Die Funktion des Prototyps besteht darin, die Spannung mehrerer stationärer Batterien zu messen und die jeweiligen Spannungen auf einem LCD-Bildschirm anzuzeigen. Die Mission des Projekts ist die Entwicklung eines Werkzeugs, das Anomalien in einzelnen Batterien in der Bank frühzeitig erkennen kann."
@@ -1024,10 +1024,10 @@ def GetResume(privateData):
 			"Firmware-Design – Solarpumpen-Controller"
 		),
 		T(
-			"Partint d’una instal·lació de bombeig solar directe controlada per un variador de freqüència i un microcontrolador, era necessari reescriure el firmware per complert ja que la implementació del proveïdor no complia amb les expectatives del client. El projecte ha durat varis anys ja que durant la meva formació he anat adquirint nous coneixements útils per millorar el rendiment del firmware.",
+			"Partint d’una instal·lació de bombeig solar directe controlada per un variador de freqüència i un microcontrolador, era necessari reescriure el firmware al complet ja que la implementació del proveïdor no complia amb les expectatives del client. El projecte ha durat diversos anys ja que durant la meva formació he anat adquirint nous coneixements útils per a millorar el rendiment del firmware.",
 			"Partiendo de una instalación de bombeo solar directo controlada por un variador de frecuencia y un microcontrolador, era necesario reescribir el firmware por completo puesto que la implementación del proveedor no cumplía con las expectativas del cliente. El proyecto ha durado varios años, ya que durante mi formación he ido adquiriendo nuevos conocimientos útiles para mejorar el rendimiento del firmware.",
 			"Starting from a direct solar pumping installation controlled by a frequency inverter and a microcontroller, it was necessary to completely rewrite the firmware as the supplier's implementation did not meet the client's expectations. The project has lasted several years as during my training I have been acquiring new useful knowledge to improve the performance of the firmware.",
-			"Ausgehend von einer direkten Solarpumpanlage, die von einem Frequenzumrichter und einem Mikrocontroller gesteuert wird, war es notwendig, die Firmware komplett neu zu schreiben, da die Implementierung des Lieferanten nicht den Erwartungen des Kunden entsprach. Das Projekt hat mehrere Jahre gedauert, da ich während meiner Ausbildung neues nützliches Wissen erworben habe, um die Leistung der Firmware zu verbessern."
+			"Ausgehend von einer direkten Solarpumpanlage, die von einem Frequenzumrichter und einem Mikrocontroller gesteuert wird, war es notwendig, die Firmware komplett neu zu schreiben, da die Implementierung des Lieferanten nicht den Erwartungen des Kunden entsprach. Das Projekt hat mehrere Jahre gedauert, da ich während meiner Ausbildung immer wieder neue nützliche Wissen erworben habe, um die Leistung der Firmware zu verbessern."
 		),
 		skills = SkillSet([git, cpp, firmware, solar, digital, analog, sensors, field, feedback]),
 		startDate = "2019/06",
@@ -1037,10 +1037,10 @@ def GetResume(privateData):
 	threeDprinter = Project(
 		T("Curs d'impressores 3D", "Curso de impresoras 3D", "3D printer course", "3D-Drucker Kurs"),
 		T(
-			"Juntament amb 2 altres professors vam impartir un curs pràctic per crear, configurar i fer servir una impressora 3D.",
-			"Junto con otros 2 profesores impartimos un curso práctico para crear, configurar y utilizar una impresora 3D.",
-			"Along with 2 other teachers we taught a practical course to create, configure and use a 3D printer.",
-			"Zusammen mit 2 anderen Lehrern haben wir einen praktischen Kurs zum Erstellen, Konfigurieren und Verwenden eines 3D-Druckers durchgeführt."
+			"Juntament amb 2 altres professors vaig impartir un curs pràctic per a crear, configurar i fer servir una impressora 3D.",
+			"Junto con otros 2 profesores impartí un curso práctico para crear, configurar y utilizar una impresora 3D.",
+			"Along with 2 other teachers I taught a practical course to create, configure and use a 3D printer.",
+			"Zusammen mit 2 anderen Lehrern habe ich einen praktischen Kurs zum Erstellen, Konfigurieren und Verwenden eines 3D-Druckers durchgeführt."
 		),
 		skills = SkillSet([firmware, team, digital, analog, design3d]),
 		startDate = "2015/09",
@@ -1050,9 +1050,9 @@ def GetResume(privateData):
 	lanParty = Event(
 		T("Col·laborador – Lan Party Soses", "Colaborador - Lan Party Soses", "Collaborator – Lan Party Soses", "Mitarbeiter – Lan Party Soses"),
 		T(
-			"Com a col·laborador de la lan party he donat una classe practica d’introducció als microcontroladors i circuits de desenvolupament Arduino i Raspberry Pi.",
-			"Como colaborador de la lan party he dado una clase práctica de introducción a los microcontroladores y circuitos de desarrollo Arduino y Raspberry Pi.",
-			"As a collaborator of the lan party I gave a practical introduction class to Arduino and Raspberry Pi microcontrollers and development circuits.",
+			"Com a col·laborador de la lan party vaig impartir una classe pràctica d’introducció als microcontroladors i circuits de desenvolupament Arduino i Raspberry Pi.",
+			"Como colaborador de la lan party impartí una clase práctica de introducción a los microcontroladores y circuitos de desarrollo Arduino y Raspberry Pi.",
+			"As a collaborator of the lan party I taught a practical introduction class to Arduino and Raspberry Pi microcontrollers and development circuits.",
 			"Als Mitarbeiter der LAN-Party habe ich einen praktischen Einführungskurs zu Arduino- und Raspberry Pi-Mikrocontrollern und Entwicklungsschaltungen gegeben."
 		),
 		None, None, date = "2014/05/31", location = "Soses"
@@ -1081,7 +1081,7 @@ def GetExtraTranslations():
 	translations["interval"] = T("Període", "Periodo", "Period", "Zeitraum")
 	translations["location"] = T("Localitat", "Localidad", "Location", "Ortschaft")
 	translations["description"] = T("Descripció del projecte", "Descripción del proyecto", "Project description", "Beschreibung des Projekts")
-	translations["tasks"] = T("Tasques realitzades", "Tareas realizadas", "Tasks performed", "Ausgeführte Aufgaben")
+	translations["tasks"] = T("Tasques realitzades", "Tareas realizadas", "Performed tasks", "Ausgeführte Aufgaben")
 	translations["skills"] = T("Eines i coneixements", "Herramientas y conocimientos", "Skills and tools", "Fähigkeiten und Werkzeuge")
 	translations["link"] = T("Enllaç", "Enlace", "Link", "Verknüpfung")
 	translations["school"] = T("Centre", "Centro", "School", "Schule")
