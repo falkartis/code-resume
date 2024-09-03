@@ -918,7 +918,7 @@ def GetResume(privateData):
 			"Da die Wartung von 4 verschiedenen Versionen dieses Dokuments eine sehr mühsame Aufgabe ist, entschied ich mich, dieses Dokument mit Code zu generieren. Die Daten meines Lebenslaufs werden in ein Markdown-Dokument exportiert und, anschließend, mit pandoc, in ein PDF umgewandelt."
 		),
 		skills = SkillSet([python, git, linux, bash, pdf, html, css, translation, svg, inkscape, es, ca, en, de]),
-		startDate = "2023/03", endDate = "2024/08"
+		startDate = "2023/03", endDate = "2024/09"
 	)
 
 	multiIsochrone = Project(
