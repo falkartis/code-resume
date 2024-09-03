@@ -13,7 +13,7 @@ class RenderContext:
 		self.Skills = {}
 
 	def RenderGitStatus(self):
-		return F"<p class=\"revision\"><span class=\"label\">Revision:</span> <span class=\"value\"span>{self.GitStatus}</span></p>"
+		return F"<p class=\"revision\"><span class=\"label\">Rev.:</span> <span class=\"value\"span>{self.GitStatus}</span></p>"
 
 	def RenderArg(self, arg):
 		txt = ""
