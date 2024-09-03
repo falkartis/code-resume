@@ -173,9 +173,16 @@ def GetResume(privateData):
 	others = T("Altres dades", "Otros datos", "Other information", "Sonstige Angaben")
 
 	headers = privateData + [
-		#Header(drivingLicense, myDLicense),
 		Header(languages, myLangs)
 	]
+
+	learning = T(
+		"Les oportunitats són les que ofereixen nous aprenentatges i experiències sobre els quals construir i desenvolupar nous coneixements i habilitats, no viceversa.",
+		"Las oportunidades son las que ofrecen nuevos aprendizajes y experiencias sobre los que construir y desarrollar nuevos conocimientos y habilidades, no viceversa.",
+		"Opportunities are those that offer new learning and experiences on which to build and develop new knowledge and skills, not the other way around.",
+		"Chancen sind solche, die neues Lernen und Erfahrungen ermöglichen, auf deren Grundlage neue Kenntnisse und Fähigkeiten aufgebaut und entwickelt werden können, und nicht umgekehrt."
+	)
+
 	doctors = T(
 		"Si el cos humà canvies al ritme que ho fa la tecnologia, els metges també es passarien el dia fent consultes a internet.",
 		"Si el cuerpo humano cambiara al ritmo que lo hace la tecnología, los médicos también se pasarían el día haciendo consultas a internet.",
@@ -188,9 +195,9 @@ def GetResume(privateData):
 		"With a racing car you can't plow the field, with a tractor you can.",
 		"Mit einem Rennwagen kann man das Feld nicht pflügen, mit einem Traktor schon."
 	)
-	headerData = HeaderData(headers, [doctors, tractor])
+	headerData = HeaderData(headers, [learning, doctors, tractor])
 
-	programmer = T("Programador", "Programador", "Programmer", "Programmierer")
+	programmer = T("Analista Programador", "Analista Programador", "Programmer Analyst", "Programmierer-Analyst")
 
 	TSR = T(
 		"Google Cloud Platform – Representant de suport tècnic",
@@ -217,7 +224,7 @@ def GetResume(privateData):
 			"Apigee ist die native API-Verwaltungsplattform von Google Cloud, mit der APIs erstellt, verwaltet und gesichert werden können."
 		),
 		webhelpTasks,
-		SkillSet([postgresql, database, xml, security, team, linux, ssh, git, bash, html, http, tcpIp, cassandra, openldap, qpid, zookeeper, distributed, json, webservice, api, docker, terraform, infra, document, customer, en]),
+		SkillSet([postgresql, database, xml, security, team, translation, linux, ssh, git, bash, html, http, tcpIp, cassandra, openldap, qpid, zookeeper, distributed, json, webservice, api, docker, terraform, infra, document, customer, en]),
 		None, "2023/11", "2024/04"
 	)
 	bigData = Project(
@@ -229,7 +236,7 @@ def GetResume(privateData):
 			"Im Big Data & AI-Shard verwalten wir Kundenprobleme im Zusammenhang mit allen Big Data- und künstlichen Intelligenzprodukten auf der Google Cloud Platform."
 		),
 		webhelpTasks,
-		SkillSet([database, linux, ssh, security, postgresql, xml, team, git, bash, html, python, http, tcpIp, distributed, json, webservice, api, bigquery, kubernetes, java, docker, terraform, infra, document, customer, en]),
+		SkillSet([database, linux, ssh, security, postgresql, xml, team, translation, git, bash, html, python, http, tcpIp, distributed, json, webservice, api, bigquery, kubernetes, java, docker, terraform, infra, document, customer, en]),
 		None, "2024/04", "2024/07"
 	)
 
@@ -291,7 +298,7 @@ def GetResume(privateData):
 			"Resolve doubts and incidents that customers may encounter with the company's products. Give advice and instructions to company colleagues. Diagnose faults and repair equipment. Implement improvements.",
 			"Beheben von Zweifel und Vorfälle, die Kunden mit den Produkten des Unternehmens begegnen könten. Kollegen im Unternehmen Ratschläge und Anweisungen Geben. Fehler diagnostizieren und Geräte reparieren. Verbesserungen implementieren."
 		),
-		SkillSet([linux, logistic, team, solar, wind, batteries, customer, incident, diplomacy, document, warranty, en, de, optim])
+		SkillSet([linux, logistic, team, solar, wind, batteries, translation, customer, incident, diplomacy, document, warranty, en, de, optim])
 	)
 	damiaSolar = Job(dsPlace, "Damia Solar", "2020/08", "2022/07", "La Pobla de Segur", [dsWeb, dsTesting, dsSAT])
 
@@ -396,13 +403,15 @@ def GetResume(privateData):
 		)
 	]
 	becari = T("Becari", "Becario", "Intern", "Praktikant")
+	becariSA = T("Becari SysAdmin", "Becario SysAdmin", "Intern SysAdmin", "Praktikant SysAdmin")
+
 	becariAlcoletge = Job(
 		becari,
 		T("Taller d'electrònica", "Taller de electrónica", "Electronics workshop", "Elektronik Werkstatt"),
 		"2018/02", "2018/06", "Alcoletge", alcoletgeProjects
 	)
 
-	webDeveloper = T("Desenvolupador web", "Desarrollador web", "Web developer", "Web-Entwickler")
+	FSDeveloper = T("Desenvolupador Full Stack", "Desarrollador Full Stack", "Full Stack developer", "Full Stack-Entwickler")
 
 	tuteorica = Project(
 		"Tuteorica",
@@ -457,7 +466,7 @@ def GetResume(privateData):
 
 	gIother = Project(otherWebsites, None, webamida, SkillSet([html, css, php, linux, bootstrap, js, mysql, codeigniter, grocerycrud, responsive, en]))
 
-	grupindex = Job(webDeveloper, "grupIndex", "2017/02", "2018/02", "Balaguer", [tuteorica, emilio, josepBP, gIother])
+	grupindex = Job(FSDeveloper, "grupIndex", "2017/02", "2018/02", "Balaguer", [tuteorica, emilio, josepBP, gIother])
 
 	inaem = Project(
 		"Inaem",
@@ -510,7 +519,7 @@ def GetResume(privateData):
 		SkillSet([html, css, python, plone, drupal, linux, js])
 	)
 
-	semic = Job(webDeveloper, "SEMIC", "2015/09", "2016/06", "Lleida", [inaem, tmi, semicOther])
+	semic = Job(FSDeveloper, "SEMIC", "2015/09", "2016/06", "Lleida", [inaem, tmi, semicOther])
 
 	okhabitat = Project(
 		"OkHabitat",
@@ -570,7 +579,7 @@ def GetResume(privateData):
 
 	lagraficaOthr = Project(otherWebsites,None,webamida,SkillSet([html,css,php,bootstrap,wordpress,js,mysql,codeigniter,grocerycrud,responsive,en,video]))
 
-	lagrafica = Job(webDeveloper, "LaGràfica", "2014/06", "2015/07", "Lleida", [okhabitat, eixcomercial, jqueralt, oceanAlmond, lagraficaOthr])
+	lagrafica = Job(FSDeveloper, "LaGràfica", "2014/06", "2015/07", "Lleida", [okhabitat, eixcomercial, jqueralt, oceanAlmond, lagraficaOthr])
 
 	timebank = Project(
 		T("Banc del temps", "Banco del tiempo", "Time bank", "Zeitbank"),
@@ -658,7 +667,7 @@ def GetResume(privateData):
 	)
 
 	ajLaseu = Job(
-		becari,
+		becariSA,
 		T("Ajuntament de La Seu d'Urgell", "Ayuntamiento de La Seu d'Urgell", "City Council of La Seu d'Urgell", "Rathaus von La Seu d'Urgell"),
 		"2012", "2013", "La Seu d'Urgell", [timebank, camimages, smssending, hiking, ids]
 	)
