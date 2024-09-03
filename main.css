@@ -21,6 +21,9 @@ h3 {
 	margin: 0.2em 0 0.1em;
 	font-size: 1.4em;
 }
+h1:first-of-type {
+	margin-top: 0;
+}
 
 .content {
 	width: 210mm;
@@ -38,8 +41,9 @@ img {
 	height: 1.5em;
 }
 a {
-	/* TODO: Adjust this colour. */
-	color: #000;
+	color: hsl(170 13% 47% / 1);
+	word-wrap:break-word;
+	word-break: break-word; /*For chrome*/
 }
 img[alt="Drupal"], img[alt="NPM"] {
 	height: 1.2em;
@@ -84,7 +88,7 @@ col {
 }
 
 body {
-	background: #888;
+	background: #020a15;
 }
 
 .content {
@@ -105,4 +109,7 @@ tr.odd td:nth-child(1) {
 }
 tr.even td:nth-child(1) {
 	background-color: #070b10;
+}
+td:nth-child(2) {
+	font-family: "Ubuntu Mono", sans-serif;
 }
