@@ -227,6 +227,9 @@ class HeaderData:
 		txt += ctx.TableHead(" "," ")
 		for header in self.Headers:
 			txt += ctx.Render(header)
+		
+		txt += ctx.RenderGitStatus()
+		
 		for quote in self.Quotes:
 			txt += ctx.Paragraph("> ", ctx.Italic(quote))
 		return txt
@@ -244,6 +247,7 @@ class Resume:
 	def Render(self, ctx):
 
 		txt = ""
+
 		txt += ctx.Header(self.Name)
 		txt += ctx.Render(self.HeaderData)
 

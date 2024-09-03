@@ -1,14 +1,5 @@
 @media screen {
 
-	body {
-		background: #888;
-	}
-
-	.content {
-		background-color: #01050a;
-		/* TODO: Adjust this colour. */
-		color: hsl(170 13% 47% / 1);
-	}
 	path {
 		animation-duration: 60s;
 		animation-name: draw;
@@ -22,19 +13,4 @@
 			stroke-dasharray: 100 0;
 		}
 	}
-
-	/* TODO: Adjust this 4 colours. */
-	tr.odd {
-		background-color: #070b10;
-	}
-	tr.even {
-		background-color: #05060a;
-	}
-	tr.odd td:nth-child(1) {
-		background-color: #01060b;
-	}
-	tr.even td:nth-child(1) {
-		background-color: #070b10;
-	}
-
 }

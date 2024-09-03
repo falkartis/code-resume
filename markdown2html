@@ -1,9 +1,13 @@
 #!/bin/bash
 
-time python3 renderer.py ca > resume_ca.md
-time python3 renderer.py es > resume_es.md
-time python3 renderer.py en > resume_en.md
-time python3 renderer.py de > resume_de.md
+test -z "$(git status --porcelain)" \
+    && STATUS="$(git rev-parse --short HEAD)" \
+    || STATUS="$(git rev-parse --short HEAD)-mod"
+
+time python3 renderer.py ca $STATUS > resume_ca.md
+time python3 renderer.py es $STATUS > resume_es.md
+time python3 renderer.py en $STATUS > resume_en.md
+time python3 renderer.py de $STATUS > resume_de.md
 
 time pandoc -H head.html -B before.html -A foot.html resume_ca.md -o resume_ca.html
 time pandoc -H head.html -B before.html -A foot.html resume_es.md -o resume_es.html

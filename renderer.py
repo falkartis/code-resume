@@ -4,12 +4,16 @@ from data import GetResume, GetExtraTranslations
 from private_data import GetPrivateData
 
 class RenderContext:
-	def __init__(self, lang, translations):
+	def __init__(self, lang, gitStatus, translations):
 		self.Lang = lang
 		self.Translations = translations
+		self.GitStatus = gitStatus
 		self.Text = ""
 		self.HeadLevel = 1
 		self.Skills = {}
+
+	def RenderGitStatus(self):
+		return F"<p class=\"revision\"><span class=\"label\">Revision:</span> <span class=\"value\"span>{self.GitStatus}</span></p>"
 
 	def RenderArg(self, arg):
 		txt = ""
@@ -182,13 +186,12 @@ def main(argv):
 	resume = GetResume(privateData)
 	extraTranslations = GetExtraTranslations()
 
-	ctx = RenderContext(argv[0], extraTranslations)
+	ctx = RenderContext(argv[0], argv[1], extraTranslations)
 
 	txt = resume.Render(ctx)
 
 	print(txt)
 
-	pass
-
 if __name__ == "__main__":
+
 	main(sys.argv[1:])

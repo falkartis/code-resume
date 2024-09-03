@@ -74,3 +74,35 @@ col {
 	width: 13em;
 	background: #d8dad9;
 }
+
+.revision {
+	text-align: right;
+	margin-top: 0;
+	margin-right: 1em;
+	font-family: "Ubuntu Mono", sans-serif;
+	clear: both;
+}
+
+body {
+	background: #888;
+}
+
+.content {
+	background-color: #01050a;
+	/* TODO: Adjust this colour. */
+	color: hsl(170 13% 47% / 1);
+}
+
+/* TODO: Adjust this 4 colours. */
+tr.odd {
+	background-color: #070b10;
+}
+tr.even {
+	background-color: #05060a;
+}
+tr.odd td:nth-child(1) {
+	background-color: #01060b;
+}
+tr.even td:nth-child(1) {
+	background-color: #070b10;
+}
