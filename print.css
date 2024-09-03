@@ -29,8 +29,21 @@
 		page-break-inside: avoid;
 		break-inside: avoid;
 
+		margin: 0;
 		margin-bottom: 0.5em;
 		padding-top: 10mm;
+	}
+	h1 {
+		padding: 0.8em 0 0.3em;
+	}
+	h2 {
+		padding: 0.5em 0 0.2em;
+	}
+	h3 {
+		padding: 0.4em 0 0.1em;
+	}
+	h1:first-of-type {
+		padding-top: 0;
 	}
 
 	@page {
