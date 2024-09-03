@@ -12,23 +12,31 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
 	margin: 1.2em 0 0.3em;
 	font-size: 2.2em;
+	color: #2cc97a;
 }
 h2 {
 	margin: 0.5em 0 0.4em;
 	font-size: 1.9em;
+	color: #db0026;
 }
 h3 {
 	margin: 0.4em 0 0.3em;
 	font-size: 1.4em;
+	color: #0aa0da;
 }
 h1:first-of-type {
 	margin-top: 0;
+}
+td:nth-child(1) {
+	color: #c17f33;
+}
+td:nth-child(1) {
+	color: #5e69ba;
 }
 
 .content {
 	width: 210mm;
 	margin: 10mm auto;
-	background: #FFF;
 	padding: 15mm;
 	box-sizing: border-box;
 }
@@ -93,7 +101,7 @@ body {
 .content {
 	background-color: #01050a;
 	/* TODO: Adjust this colour. */
-	color: hsl(170 13% 47% / 1);
+	color: #688782;
 }
 
 /* TODO: Adjust this 4 colours. */
