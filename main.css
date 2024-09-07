@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&family=Ubuntu+Mono&family=Ubuntu+Sans:ital,wdth,wght@0,75..100,100..800;1,75..100,100..800&display=swap');
 
 /*
-"Negre": #171421,
+"Negre": #171421
 Verd: #26a269
 Blau fosc: #12488b
 Vermell: #c01c28
@@ -35,7 +35,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
 	margin: 1.2em 0 0.3em;
 	font-size: 2.2em;
-	color: hsl(152 100% 45% / 1);
+	color: hsl(144 93% 37% / 1);
 }
 h2 {
 	margin: 0.5em 0 0.4em;
@@ -69,9 +69,13 @@ img {
 	height: 1.5em;
 }
 a {
-	color: hsl(170 13% 47% / 1);
+	color: #d0cfcc;
 	word-wrap:break-word;
 	word-break: break-word; /*For chrome*/
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
 }
 img[alt="Drupal"], img[alt="NPM"] {
 	height: 1.2em;
@@ -83,6 +87,9 @@ table {
 }
 table:first-of-type {
 	width: 68%;
+}
+tbody {
+	border: 0 none;
 }
 table, th, td {
 	border: 0 none;
