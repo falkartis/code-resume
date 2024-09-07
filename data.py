@@ -184,7 +184,7 @@ def GetResume(privateData):
 	)
 
 	doctors = T(
-		"Si el cos humà canvies al ritme que ho fa la tecnologia, els metges també es passarien el dia fent consultes a internet.",
+		"Si el cos humà canviés al ritme que ho fa la tecnologia, els metges també es passarien el dia fent consultes a internet.",
 		"Si el cuerpo humano cambiara al ritmo que lo hace la tecnología, los médicos también se pasarían el día haciendo consultas a internet.",
 		"If the human body changed at the rate that technology does, doctors would also spend the entire day making queries on internet.",
 		"Wenn sich der menschliche Körper so schnell verändern würde wie die Technologie, würden Ärzte auch den ganzen Tag mit Internet verbringen."
