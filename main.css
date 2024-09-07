@@ -1,13 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&family=Ubuntu+Mono&family=Ubuntu+Sans:ital,wdth,wght@0,75..100,100..800;1,75..100,100..800&display=swap');
 
+html {
+	background-color: #020a15;
+}
 body {
-  font-family: "Ubuntu Sans", sans-serif;
-  font-optical-sizing: auto;
+	font-family: "Ubuntu Sans", sans-serif;
+	font-optical-sizing: auto;
+	margin: 0;
+	padding: 0;
+}
+blockquote {
+	border: 0;
 }
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Ubuntu Condensed", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+	font-family: "Ubuntu Condensed", sans-serif;
+	font-weight: 400;
+	font-style: normal;
 }
 h1 {
 	margin: 1.2em 0 0.3em;
@@ -55,6 +63,10 @@ img[alt="Drupal"], img[alt="NPM"] {
 }
 table {
 	margin: 0 0 0.8em;
+	display: table;
+}
+table:first-of-type {
+	width: 68%;
 }
 table, th, td {
 	border: 0 none;
@@ -79,8 +91,8 @@ col {
 #ProfilePicture {
 	float: right;
 	height: 13em;
-	margin-left: 1em;
-	width: 13em;
+	margin-left: 0.5%;
+	width: 31%;
 	background: #d8dad9;
 }
 
