@@ -1,5 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&family=Ubuntu+Mono&family=Ubuntu+Sans:ital,wdth,wght@0,75..100,100..800;1,75..100,100..800&display=swap');
 
+/*
+"Negre": #171421,
+Verd: #26a269
+Blau fosc: #12488b
+Vermell: #c01c28
+Lila: #a347ba
+Blanc: #d0cfcc
+Cian: #2aa1b3  #66ebff
+Taronja: #a2734c hsl(21 100% 64% / 1)
+
+*/
+
+
 html {
 	background-color: #020a15;
 }
@@ -8,9 +21,11 @@ body {
 	font-optical-sizing: auto;
 	margin: 0;
 	padding: 0;
+	max-width: none;
 }
 blockquote {
 	border: 0;
+	color: hsl(21 100% 64% / 1);
 }
 h1, h2, h3, h4, h5, h6 {
 	font-family: "Ubuntu Condensed", sans-serif;
@@ -20,23 +35,23 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
 	margin: 1.2em 0 0.3em;
 	font-size: 2.2em;
-	color: hsl(140 89% 43% / 1);
+	color: hsl(152 100% 45% / 1);
 }
 h2 {
 	margin: 0.5em 0 0.4em;
 	font-size: 1.9em;
-	color: hsl(350 100% 43% / 1);
+	color: hsl(356 77% 47% / 1);
 }
 h3 {
 	margin: 0.4em 0 0.3em;
 	font-size: 1.4em;
-	color: hsl(202 100% 43% / 1);
+	color: hsl(213 100% 49% / 1);
 }
 h1:first-of-type {
 	margin-top: 0;
 }
 td:nth-child(1) {
-	color: hsl(233 40% 43% / 1);
+	color: hsl(288 64% 57% / 1);
 }
 
 .content {
@@ -63,7 +78,8 @@ img[alt="Drupal"], img[alt="NPM"] {
 }
 table {
 	margin: 0 0 0.8em;
-	display: table;
+	display: inline-block;
+	width: auto;
 }
 table:first-of-type {
 	width: 68%;
@@ -109,8 +125,7 @@ body {
 
 .content {
 	background-color: #01050a;
-	/* TODO: Adjust this colour. */
-	color: #688782;
+	color: #d0cfcc;
 }
 
 /* TODO: Adjust this 4 colours. */
