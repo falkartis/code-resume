@@ -1,6 +1,5 @@
 from myTypes import *
 
-
 def GetResume(privateData):
 
 	T = Translation

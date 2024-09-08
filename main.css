@@ -12,7 +12,6 @@ Taronja: #a2734c hsl(21 100% 64% / 1)
 
 */
 
-
 html {
 	background-color: #020a15;
 }
@@ -76,6 +75,17 @@ a {
 }
 a:hover {
 	text-decoration: underline;
+}
+a.internLink {
+	color: #403f3c;
+}
+h1:hover a.internLink, h2:hover a.internLink, h3:hover a.internLink {
+	color: #d0cfcc;
+}
+.internAnchor {
+  margin-top: -1.5em;
+  position: absolute;
+  display: block;
 }
 img[alt="Drupal"], img[alt="NPM"] {
 	height: 1.2em;

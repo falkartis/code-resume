@@ -1,6 +1,24 @@
 import os.path
 import collections.abc
 
+class IndexEntry:
+	NextEntryNumber = 1
+	def __init__(self):
+		self.EntryNumber = IndexEntry.NextEntryNumber
+		IndexEntry.NextEntryNumber = IndexEntry.NextEntryNumber + 1
+
+	def IndexAnchor(self):
+		return F"<a class=\"internAnchor\" name=\"iEntry{self.EntryNumber}\"></a>"
+
+	def BodyAnchor(self):
+		return F"<a class=\"internAnchor\" name=\"bEntry{self.EntryNumber}\"></a>"
+
+	def IndexLink(self):
+		return F" <a class=\"internLink\" href=\"#iEntry{self.EntryNumber}\">#</a>"
+		
+	def BodyLink(self):
+		return F" <a class=\"internLink\" href=\"#bEntry{self.EntryNumber}\">#</a>"
+
 class Translation:
 	def __init__(self, ca, es, en, de):
 		self.Ca = ca
@@ -137,8 +155,9 @@ class Event(Activity):
 
 		return txt
 
-class Job:
+class Job(IndexEntry):
 	def __init__(self, place, company, startDate, endDate, location, projects, skills = None):
+		IndexEntry.__init__(self)
 		self.Place = place
 		self.Company = company
 		self.StartDate = startDate
@@ -150,7 +169,8 @@ class Job:
 	def Render(self, ctx):
 		txt = ""
 
-		txt += ctx.Header(self.Place, " – ", self.Company)
+		txt += ctx.Header(self.IndexAnchor(), self.Place, " – ", self.Company, self.BodyLink())
+
 		txt += ctx.TableHead(" ", " ")
 		txt += ctx.TableRow(ctx.Translations["interval"], ctx.Render(self.StartDate, " – ", self.EndDate))
 		txt += ctx.TableRow(ctx.Translations["location"], self.Location)
@@ -165,7 +185,7 @@ class Job:
 
 		if self.Projects is not None:
 
-			txt += ctx.Header(self.Company)
+			txt += ctx.Header(self.BodyAnchor(), self.Company, self.IndexLink())
 
 			ctx.IncHeadLevel()
 			for project in self.Projects:
@@ -174,8 +194,9 @@ class Job:
 		
 		return txt
 
-class Training:
+class Training(IndexEntry):
 	def __init__(self, name, startDate, endDate, school, location, projects = None, skills = None):
+		IndexEntry.__init__(self)
 		self.Name = name
 		self.StartDate = startDate
 		self.EndDate = endDate
@@ -186,7 +207,7 @@ class Training:
 
 	def Render(self, ctx):
 		txt = ""
-		txt += ctx.Header(self.Name)
+		txt += ctx.Header(self.IndexAnchor(), self.Name, self.BodyLink())
 		txt += ctx.TableHead(" "," ")
 		txt += ctx.TableRow(ctx.Translations["interval"], ctx.Render(self.StartDate, " – ", self.EndDate))
 		txt += ctx.TableRow(ctx.Translations["school"], self.School)
@@ -201,7 +222,7 @@ class Training:
 		txt = ""
 
 		if self.Projects is not None:
-			txt += ctx.Header(self.Name)
+			txt += ctx.Header(self.BodyAnchor(), self.Name, self.IndexLink())
 			ctx.IncHeadLevel()
 			for project in self.Projects:
 				txt += ctx.Render(project)
