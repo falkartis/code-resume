@@ -310,7 +310,7 @@ class Resume:
 		ctx.DecHeadLevel()
 		ctx.DecHeadLevel()
 
-		# From here on "annex"
+		txt += ctx.Header(ctx.Translations["annex"])
 
 		txt += ctx.Header(ctx.Translations["workProjects"])
 
