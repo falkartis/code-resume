@@ -666,7 +666,7 @@ def GetResume(privateData):
 	ajLaseu = Job(
 		"SysAdmin",
 		T("Ajuntament de La Seu d'Urgell", "Ayuntamiento de La Seu d'Urgell", "City Council of La Seu d'Urgell", "Rathaus von La Seu d'Urgell"),
-		"2012", "2013", "La Seu d'Urgell", [timebank, camimages, smssending, hiking, ids]
+		"2012", "2013", "La Seu d'Urgell", [ids, camimages, smssending, hiking, timebank]
 	)
 
 	telecentrePallars = Job(
