@@ -444,7 +444,7 @@ def GetResume(privateData):
 		),
 		webamida,
 		SkillSet([html, css, php, linux, bootstrap, js, mysql, codeigniter, grocerycrud, responsive, en]),
-		"https://www.emilioferrerfotos.com/ca/"
+		"https://www.emilioferrerfotos.com/"
 	)
 
 	josepBP = Project(

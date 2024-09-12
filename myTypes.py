@@ -8,16 +8,16 @@ class IndexEntry:
 		IndexEntry.NextEntryNumber = IndexEntry.NextEntryNumber + 1
 
 	def IndexAnchor(self):
-		return F"<a class=\"internAnchor\" name=\"iEntry{self.EntryNumber}\"></a>"
+		return F"<a class=\"internAnchor\" name=\"ien{self.EntryNumber}\"></a>"
 
 	def BodyAnchor(self):
-		return F"<a class=\"internAnchor\" name=\"bEntry{self.EntryNumber}\"></a>"
+		return F"<a class=\"internAnchor\" name=\"ben{self.EntryNumber}\"></a>"
 
 	def IndexLink(self):
-		return F" <a class=\"internLink\" href=\"#iEntry{self.EntryNumber}\">#</a>"
+		return F" <a class=\"internLink\" href=\"#ien{self.EntryNumber}\">#</a>"
 		
 	def BodyLink(self):
-		return F" <a class=\"internLink\" href=\"#bEntry{self.EntryNumber}\">#</a>"
+		return F" <a class=\"internLink\" href=\"#ben{self.EntryNumber}\">#</a>"
 
 class Translation:
 	def __init__(self, ca, es, en, de):
