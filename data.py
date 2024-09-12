@@ -401,11 +401,9 @@ def GetResume(privateData):
 			None
 		)
 	]
-	becari = T("Becari", "Becario", "Intern", "Praktikant")
-	becariSA = T("Becari SysAdmin", "Becario SysAdmin", "Intern SysAdmin", "Praktikant SysAdmin")
 
-	becariAlcoletge = Job(
-		becari,
+	tallerAlcoletge = Job(
+		T("Tècnic de reparació", "Técnico de reparación", "Repair technician", "Reparaturtechniker"),
 		T("Taller d'electrònica", "Taller de electrónica", "Electronics workshop", "Elektronik Werkstatt"),
 		"2018/02", "2018/06", "Alcoletge", alcoletgeProjects
 	)
@@ -666,21 +664,21 @@ def GetResume(privateData):
 	)
 
 	ajLaseu = Job(
-		becariSA,
+		"SysAdmin",
 		T("Ajuntament de La Seu d'Urgell", "Ayuntamiento de La Seu d'Urgell", "City Council of La Seu d'Urgell", "Rathaus von La Seu d'Urgell"),
 		"2012", "2013", "La Seu d'Urgell", [timebank, camimages, smssending, hiking, ids]
 	)
 
 	telecentrePallars = Job(
-		becari,
+		"SysAdmin",
 		T("Telecentre del Pallars Sobirà", "Telecentro del Pallars Sobirà", "Pallars Sobirà telecentre", "Telezentrum Pallars Sobirà"),
 		"2009", "2010", "Sort",
 		None,
 		SkillSet([html, css, drupal, access, computermaint])
 	)
 
-	newak = Project(
-		T("Soci i desenvolupador – Newak", "Socio y desarrollador – Newak", "Partner and developer – Newak", "Partner und Entwickler – Newak"),
+	newakProject = Project(
+		T("Empresa startup", "Empresa startup", "Startup company", "Startup-Unternehmen"),
 		T(
 			"Degut al contracte de confidencialitat que vaig signar no hi ha detalls.",
 			"Debido al contrato de confidencialidad que firmé no hay detalles.",
@@ -688,14 +686,16 @@ def GetResume(privateData):
 			"Aufgrund der von mir unterzeichneten Vertraulichkeitsvereinbarung gibt es keine Details."
 		),
 		skills = SkillSet([
-			python, cpp, git, kicad, arduino, http, html, css, mongodb, linux, bash, blender, team, database, firmware, js, ssh, digital, mysql, api, analog, pcb, component, softwarePlan, raspberry, protocols, design3d, document, tcpIp, gsm, en
-		]),
-		startDate = "2016",
-		endDate = "2021"
+			python, cpp, git, kicad, http, html, css, mongodb, linux, bash, blender, team, database, firmware, js, ssh, digital, mysql, analog, pcb, arduino, api, component, softwarePlan, raspberry, protocols, design3d, document, tcpIp, gsm, en
+		])
 	)
 
-	jobs = [webhelp, damiaSolar, handle, semic, lagrafica, ajLaseu]
-	otherJobs = [trekform, becariAlcoletge, grupindex, telecentrePallars]
+	newakJob = Job(
+		T("Arquitecte de programari", "Arquitecto de software", "Software Architect", "Softwarearchitekt"),
+		"Newak", "2016", "2021", "Balaguer", [newakProject])
+
+	jobs = [webhelp, damiaSolar, handle, newakJob, semic, lagrafica, ajLaseu]
+	otherJobs = [trekform, tallerAlcoletge, grupindex, telecentrePallars]
 
 	#TODO: add this link: https://www.credly.com/badges/7db4f934-d828-4864-857e-cfe635b641ff/public_url
 	ACE = Training(
@@ -1066,7 +1066,7 @@ def GetResume(privateData):
 		None, None, date = "2014/05/31", location = "Soses"
 	)
 
-	projects = [thisresume, multiIsochrone, loom, youtube, rgb, newak, battery, pump, threeDprinter, lanParty]
+	projects = [thisresume, multiIsochrone, loom, youtube, rgb, battery, pump, threeDprinter, lanParty]
 
 	resume = Resume(name, headerData, jobs, trainings, projects, otherJobs, otherTrainings)
 

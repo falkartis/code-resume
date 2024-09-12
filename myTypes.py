@@ -317,6 +317,8 @@ class Resume:
 		ctx.IncHeadLevel()
 		for job in self.Jobs:
 			txt += job.RenderProjects(ctx)
+		for job in self.OtherJobs:
+			txt += job.RenderProjects(ctx)
 		ctx.DecHeadLevel()
 
 		txt += ctx.Header(ctx.Translations["academicProjects"])
@@ -329,8 +331,10 @@ class Resume:
 		txt += ctx.Header(ctx.Translations["personalProjects"])
 
 		ctx.IncHeadLevel()
+		ctx.IncHeadLevel()
 		for project in self.Projects:
 			txt += ctx.Render(project)
+		ctx.DecHeadLevel()
 		ctx.DecHeadLevel()
 
 		txt += ctx.Header(ctx.Translations["icons"])
