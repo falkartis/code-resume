@@ -576,7 +576,7 @@ def GetResume(privateData):
 		SkillSet([html,css, php, googlemaps, bootstrap, js, mysql, codeigniter, grocerycrud, responsive])
 	)
 
-	lagraficaOthr = Project(otherWebsites,None,webamida,SkillSet([html,css,php,bootstrap,wordpress,js,mysql,codeigniter,grocerycrud,responsive,en,video]))
+	lagraficaOthr = Project(otherWebsites, None, webamida, SkillSet([html, css, php, bootstrap, wordpress, js, mysql, codeigniter, grocerycrud, responsive, en, video]))
 
 	lagrafica = Job(FSDeveloper, "LaGràfica", "2014/06", "2015/07", "Lleida", [okhabitat, eixcomercial, jqueralt, oceanAlmond, lagraficaOthr])
 
@@ -677,6 +677,21 @@ def GetResume(privateData):
 		"2009", "2010", "Sort",
 		None,
 		SkillSet([html, css, drupal, access, computermaint])
+	)
+
+	newak = Project(
+		T("Soci i desenvolupador – Newak", "Socio y desarrollador – Newak", "Partner and developer – Newak", "Partner und Entwickler – Newak"),
+		T(
+			"Degut al contracte de confidencialitat que vaig signar no hi ha detalls.",
+			"Debido al contrato de confidencialidad que firmé no hay detalles.",
+			"Due to the confidentiality agreement I signed there are no details.",
+			"Aufgrund der von mir unterzeichneten Vertraulichkeitsvereinbarung gibt es keine Details."
+		),
+		skills = SkillSet([
+			python, cpp, git, kicad, arduino, http, html, css, mongodb, linux, bash, blender, team, database, firmware, js, ssh, digital, mysql, api, analog, pcb, component, softwarePlan, raspberry, protocols, design3d, document, tcpIp, gsm, en
+		]),
+		startDate = "2016",
+		endDate = "2021"
 	)
 
 	jobs = [webhelp, damiaSolar, handle, semic, lagrafica, ajLaseu]
@@ -991,21 +1006,6 @@ def GetResume(privateData):
 		]
 	)
 
-	newak = Project(
-		T("Soci i desenvolupador – Newak", "Socio y desarrollador – Newak", "Partner and developer – Newak", "Partner und Entwickler – Newak"),
-		T(
-			"Degut al contracte de confidencialitat que vaig signar no hi ha detalls.",
-			"Debido al contrato de confidencialidad que firmé no hay detalles.",
-			"Due to the confidentiality agreement I signed there are no details.",
-			"Aufgrund der von mir unterzeichneten Vertraulichkeitsvereinbarung gibt es keine Details."
-		),
-		skills = SkillSet([
-			python, cpp, git, kicad, arduino, http, html, css, mongodb, linux, bash, blender, team, database, firmware, js, ssh, digital, mysql, api, analog, pcb, component, softwarePlan, raspberry, protocols, design3d, document, tcpIp, gsm, en
-		]),
-		startDate = "2016",
-		endDate = "2021"
-	)
-
 	battery = Project(
 		T(
 			"Disseny i desenvolupament del prototip – Anàlisis de bateries",
@@ -1085,7 +1085,6 @@ def GetExtraTranslations():
 	translations["academicProjects"] = T("PROJECTES ACADÈMICS", "PROYECTOS ACADÉMICOS", "ACADEMIC PROJECTS", "AKADEMISCHE PROJEKTE")
 	translations["personalProjects"] = T("PROJECTES PERSONALS", "PROYECTOS PERSONALES", "PERSONAL PROJECTS", "PERSÖNLICHE PROJEKTE")
 
-	#translations["interval"] = T("Interval", "Intervalo", "Interval", "Intervall")
 	translations["interval"] = T("Període", "Periodo", "Period", "Zeitraum")
 	translations["location"] = T("Localitat", "Localidad", "Location", "Ortschaft")
 	translations["description"] = T("Descripció del projecte", "Descripción del proyecto", "Project description", "Beschreibung des Projekts")
